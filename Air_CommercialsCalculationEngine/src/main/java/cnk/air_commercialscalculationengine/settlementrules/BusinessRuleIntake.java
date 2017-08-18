@@ -104,7 +104,127 @@ public class BusinessRuleIntake implements java.io.Serializable
          this.getMaintenanceFee().getOtherFees().setIsApplicable(isApplicable);
       }
    }
+   
+   public void modifyIntegrationFee(String commercialType, String contractType, boolean isApplicable)
+   {
 
+      if (this.getIntegrationFee() != null)
+      {
+
+         this.getIntegrationFee().getOtherFees().setCommercialType(commercialType);
+         this.getIntegrationFee().getOtherFees().setContractType(contractType);
+         this.getIntegrationFee().getOtherFees().setIsApplicable(isApplicable);
+      }
+   }
+
+   public void modifyLicenceFee(String commercialType, String contractType, boolean isApplicable)
+   {
+
+      if (this.getLicenceFee() != null)
+      {
+
+         this.getLicenceFee().getOtherFees().setCommercialType(commercialType);
+         this.getLicenceFee().getOtherFees().setContractType(contractType);
+         this.getLicenceFee().getOtherFees().setIsApplicable(isApplicable);
+      }
+   }
+
+   public void modifyWebServiceFee(String commercialType, String contractType, boolean isApplicable)
+   {
+
+      if (this.getWebServiceFee() != null)
+      {
+
+         this.getWebServiceFee().getOtherFees().setCommercialType(commercialType);
+         this.getWebServiceFee().getOtherFees().setContractType(contractType);
+         this.getWebServiceFee().getOtherFees().setIsApplicable(isApplicable);
+      }
+   }
+   
+   public void modifyLoyaltyBonus(String commercialType, String contractType, boolean isApplicable)
+   {
+
+      if (this.getLoyaltyBonus() != null)
+      {
+
+         this.getLoyaltyBonus().getOtherFees().setCommercialType(commercialType);
+         this.getLoyaltyBonus().getOtherFees().setContractType(contractType);
+         this.getLoyaltyBonus().getOtherFees().setIsApplicable(isApplicable);
+      }
+   }
+
+   public void modifyPreferenceBenefit(String commercialType, String contractType, boolean isApplicable)
+   {
+
+      if (this.getPreferenceBenefit() != null)
+      {
+
+         this.getPreferenceBenefit().getOtherFees().setCommercialType(commercialType);
+         this.getPreferenceBenefit().getOtherFees().setContractType(contractType);
+         this.getPreferenceBenefit().getOtherFees().setIsApplicable(isApplicable);
+      }
+   }
+   
+   public void modifyRetainerFee(String commercialType, String contractType, boolean isApplicable)
+   {
+
+      if (this.getRetainerFee() != null)
+      {
+
+         this.getRetainerFee().getOtherFees().setCommercialType(commercialType);
+         this.getRetainerFee().getOtherFees().setContractType(contractType);
+         this.getRetainerFee().getOtherFees().setIsApplicable(isApplicable);
+      }
+   }
+   
+   public void modifyListingFee(String commercialType, String contractType, boolean isApplicable)
+   {
+
+      if (this.getListingFee() != null)
+      {
+
+         this.getListingFee().getOtherFees().setCommercialType(commercialType);
+         this.getListingFee().getOtherFees().setContractType(contractType);
+         this.getListingFee().getOtherFees().setIsApplicable(isApplicable);
+      }
+   }
+
+   public void modifySignUpFee(String commercialType, String contractType, boolean isApplicable)
+   {
+
+      if (this.getSignUpFee() != null)
+      {
+
+         this.getSignUpFee().getOtherFees().setCommercialType(commercialType);
+         this.getSignUpFee().getOtherFees().setContractType(contractType);
+         this.getSignUpFee().getOtherFees().setIsApplicable(isApplicable);
+      }
+   }
+
+   public void modifyContentAccessFee(String commercialType, String contractType, boolean isApplicable)
+   {
+
+      if (this.getContentAccessFee() != null)
+      {
+
+         this.getContentAccessFee().getOtherFees().setCommercialType(commercialType);
+         this.getContentAccessFee().getOtherFees().setContractType(contractType);
+         this.getContentAccessFee().getOtherFees().setIsApplicable(isApplicable);
+      }
+   }
+   
+   public void modifyTrainingFee(String commercialType, String contractType, boolean isApplicable)
+   {
+
+      if (this.getTrainingFee() != null)
+      {
+
+         this.getTrainingFee().getOtherFees().setCommercialType(commercialType);
+         this.getTrainingFee().getOtherFees().setContractType(contractType);
+         this.getTrainingFee().getOtherFees().setIsApplicable(isApplicable);
+      }
+   }   
+   
    public static boolean checkDayOfWeek(String day, Date d)
    {
       DateFormat formatter = new SimpleDateFormat("EEEE");
@@ -236,7 +356,198 @@ public class BusinessRuleIntake implements java.io.Serializable
          }
       }
    }
+   
+   public void calculateIntegrationFee(List<String> commercialNamesList, List<String> commercialPercentagesList)
+   {
 
+      for (int i = 0; i < commercialNamesList.size(); i++)
+      {
+
+         for (FeeDetails feeDetails : this.getIntegrationFee().getOtherFees().getFeeDetails())
+         {
+
+            if (commercialNamesList.get(i).equals(feeDetails.getCommercialName()))
+            {
+
+               this.getIntegrationFee().getOtherFees().setCommercialAmount(this.getIntegrationFee().getOtherFees().getCommercialAmount() + (feeDetails.getCommercialAmount() * Double.valueOf(commercialPercentagesList.get(i)) / 100));
+               break;
+            }
+         }
+      }
+   }
+   
+   public void calculateLicenceFee(List<String> commercialNamesList, List<String> commercialPercentagesList)
+   {
+
+      for (int i = 0; i < commercialNamesList.size(); i++)
+      {
+
+         for (FeeDetails feeDetails : this.getLicenceFee().getOtherFees().getFeeDetails())
+         {
+
+            if (commercialNamesList.get(i).equals(feeDetails.getCommercialName()))
+            {
+
+               this.getLicenceFee().getOtherFees().setCommercialAmount(this.getLicenceFee().getOtherFees().getCommercialAmount() + (feeDetails.getCommercialAmount() * Double.valueOf(commercialPercentagesList.get(i)) / 100));
+               break;
+            }
+         }
+      }
+   }
+   
+   public void calculateWebServiceFee(List<String> commercialNamesList, List<String> commercialPercentagesList)
+   {
+
+      for (int i = 0; i < commercialNamesList.size(); i++)
+      {
+
+         for (FeeDetails feeDetails : this.getWebServiceFee().getOtherFees().getFeeDetails())
+         {
+
+            if (commercialNamesList.get(i).equals(feeDetails.getCommercialName()))
+            {
+
+               this.getWebServiceFee().getOtherFees().setCommercialAmount(this.getWebServiceFee().getOtherFees().getCommercialAmount() + (feeDetails.getCommercialAmount() * Double.valueOf(commercialPercentagesList.get(i)) / 100));
+               break;
+            }
+         }
+      }
+   }
+   
+   
+   public void calculateLoyaltyBonus(List<String> commercialNamesList, List<String> commercialPercentagesList)
+   {
+
+      for (int i = 0; i < commercialNamesList.size(); i++)
+      {
+
+         for (FeeDetails feeDetails : this.getLoyaltyBonus().getOtherFees().getFeeDetails())
+         {
+
+            if (commercialNamesList.get(i).equals(feeDetails.getCommercialName()))
+            {
+
+               this.getLoyaltyBonus().getOtherFees().setCommercialAmount(this.getLoyaltyBonus().getOtherFees().getCommercialAmount() + (feeDetails.getCommercialAmount() * Double.valueOf(commercialPercentagesList.get(i)) / 100));
+               break;
+            }
+         }
+      }
+   }
+   
+   public void calculatePreferenceBenefit(List<String> commercialNamesList, List<String> commercialPercentagesList)
+   {
+
+      for (int i = 0; i < commercialNamesList.size(); i++)
+      {
+
+         for (FeeDetails feeDetails : this.getPreferenceBenefit().getOtherFees().getFeeDetails())
+         {
+
+            if (commercialNamesList.get(i).equals(feeDetails.getCommercialName()))
+            {
+
+               this.getPreferenceBenefit().getOtherFees().setCommercialAmount(this.getPreferenceBenefit().getOtherFees().getCommercialAmount() + (feeDetails.getCommercialAmount() * Double.valueOf(commercialPercentagesList.get(i)) / 100));
+               break;
+            }
+         }
+      }
+   }
+   
+   public void calculateRetainerFee(List<String> commercialNamesList, List<String> commercialPercentagesList)
+   {
+
+      for (int i = 0; i < commercialNamesList.size(); i++)
+      {
+
+         for (FeeDetails feeDetails : this.getRetainerFee().getOtherFees().getFeeDetails())
+         {
+
+            if (commercialNamesList.get(i).equals(feeDetails.getCommercialName()))
+            {
+
+               this.getRetainerFee().getOtherFees().setCommercialAmount(this.getRetainerFee().getOtherFees().getCommercialAmount() + (feeDetails.getCommercialAmount() * Double.valueOf(commercialPercentagesList.get(i)) / 100));
+               break;
+            }
+         }
+      }
+   }
+   
+   public void calculateListingFee(List<String> commercialNamesList, List<String> commercialPercentagesList)
+   {
+
+      for (int i = 0; i < commercialNamesList.size(); i++)
+      {
+
+         for (FeeDetails feeDetails : this.getListingFee().getOtherFees().getFeeDetails())
+         {
+
+            if (commercialNamesList.get(i).equals(feeDetails.getCommercialName()))
+            {
+
+               this.getListingFee().getOtherFees().setCommercialAmount(this.getListingFee().getOtherFees().getCommercialAmount() + (feeDetails.getCommercialAmount() * Double.valueOf(commercialPercentagesList.get(i)) / 100));
+               break;
+            }
+         }
+      }
+   }
+   
+   public void calculateSignUpFee(List<String> commercialNamesList, List<String> commercialPercentagesList)
+   {
+
+      for (int i = 0; i < commercialNamesList.size(); i++)
+      {
+
+         for (FeeDetails feeDetails : this.getSignUpFee().getOtherFees().getFeeDetails())
+         {
+
+            if (commercialNamesList.get(i).equals(feeDetails.getCommercialName()))
+            {
+
+               this.getSignUpFee().getOtherFees().setCommercialAmount(this.getSignUpFee().getOtherFees().getCommercialAmount() + (feeDetails.getCommercialAmount() * Double.valueOf(commercialPercentagesList.get(i)) / 100));
+               break;
+            }
+         }
+      }
+   }
+   
+   public void calculateContentAccessFee(List<String> commercialNamesList, List<String> commercialPercentagesList)
+   {
+
+      for (int i = 0; i < commercialNamesList.size(); i++)
+      {
+
+         for (FeeDetails feeDetails : this.getContentAccessFee().getOtherFees().getFeeDetails())
+         {
+
+            if (commercialNamesList.get(i).equals(feeDetails.getCommercialName()))
+            {
+
+               this.getContentAccessFee().getOtherFees().setCommercialAmount(this.getContentAccessFee().getOtherFees().getCommercialAmount() + (feeDetails.getCommercialAmount() * Double.valueOf(commercialPercentagesList.get(i)) / 100));
+               break;
+            }
+         }
+      }
+   }
+   
+   public void calculateTrainingFee(List<String> commercialNamesList, List<String> commercialPercentagesList)
+   {
+
+      for (int i = 0; i < commercialNamesList.size(); i++)
+      {
+
+         for (FeeDetails feeDetails : this.getTrainingFee().getOtherFees().getFeeDetails())
+         {
+
+            if (commercialNamesList.get(i).equals(feeDetails.getCommercialName()))
+            {
+
+               this.getTrainingFee().getOtherFees().setCommercialAmount(this.getTrainingFee().getOtherFees().getCommercialAmount() + (feeDetails.getCommercialAmount() * Double.valueOf(commercialPercentagesList.get(i)) / 100));
+               break;
+            }
+         }
+      }
+   }
+   
    static final long serialVersionUID = 1L;
 
    private java.lang.String ruleFlowName;
