@@ -27,6 +27,24 @@ public class BusinessRuleIntake implements java.io.Serializable
 
    private cnk.air_commercialscalculationengine.settlementrules.IntegrationFee integrationFee;
 
+   private cnk.air_commercialscalculationengine.settlementrules.LicenceFee licenceFee;
+
+   private cnk.air_commercialscalculationengine.settlementrules.WebServiceFee webServiceFee;
+
+   private cnk.air_commercialscalculationengine.settlementrules.LoyaltyBonus loyaltyBonus;
+
+   private cnk.air_commercialscalculationengine.settlementrules.PreferenceBenefit preferenceBenefit;
+
+   private cnk.air_commercialscalculationengine.settlementrules.RetainerFee retainerFee;
+
+   private cnk.air_commercialscalculationengine.settlementrules.ListingFee listingFee;
+
+   private cnk.air_commercialscalculationengine.settlementrules.SignUpFee signUpFee;
+
+   private cnk.air_commercialscalculationengine.settlementrules.ContentAccessFee contentAccessFee;
+
+   private cnk.air_commercialscalculationengine.settlementrules.TrainingFee trainingFee;
+
    public void modifyIncentiveOnTopUp(String commercialType, String contractType, boolean isApplicable)
    {
 
@@ -352,6 +370,105 @@ public class BusinessRuleIntake implements java.io.Serializable
       this.integrationFee = integrationFee;
    }
 
+   public cnk.air_commercialscalculationengine.settlementrules.LicenceFee getLicenceFee()
+   {
+      return this.licenceFee;
+   }
+
+   public void setLicenceFee(
+         cnk.air_commercialscalculationengine.settlementrules.LicenceFee licenceFee)
+   {
+      this.licenceFee = licenceFee;
+   }
+
+   public cnk.air_commercialscalculationengine.settlementrules.WebServiceFee getWebServiceFee()
+   {
+      return this.webServiceFee;
+   }
+
+   public void setWebServiceFee(
+         cnk.air_commercialscalculationengine.settlementrules.WebServiceFee webServiceFee)
+   {
+      this.webServiceFee = webServiceFee;
+   }
+
+   public cnk.air_commercialscalculationengine.settlementrules.LoyaltyBonus getLoyaltyBonus()
+   {
+      return this.loyaltyBonus;
+   }
+
+   public void setLoyaltyBonus(
+         cnk.air_commercialscalculationengine.settlementrules.LoyaltyBonus loyaltyBonus)
+   {
+      this.loyaltyBonus = loyaltyBonus;
+   }
+
+   public cnk.air_commercialscalculationengine.settlementrules.PreferenceBenefit getPreferenceBenefit()
+   {
+      return this.preferenceBenefit;
+   }
+
+   public void setPreferenceBenefit(
+         cnk.air_commercialscalculationengine.settlementrules.PreferenceBenefit preferenceBenefit)
+   {
+      this.preferenceBenefit = preferenceBenefit;
+   }
+
+   public cnk.air_commercialscalculationengine.settlementrules.RetainerFee getRetainerFee()
+   {
+      return this.retainerFee;
+   }
+
+   public void setRetainerFee(
+         cnk.air_commercialscalculationengine.settlementrules.RetainerFee retainerFee)
+   {
+      this.retainerFee = retainerFee;
+   }
+
+   public cnk.air_commercialscalculationengine.settlementrules.ListingFee getListingFee()
+   {
+      return this.listingFee;
+   }
+
+   public void setListingFee(
+         cnk.air_commercialscalculationengine.settlementrules.ListingFee listingFee)
+   {
+      this.listingFee = listingFee;
+   }
+
+   public cnk.air_commercialscalculationengine.settlementrules.SignUpFee getSignUpFee()
+   {
+      return this.signUpFee;
+   }
+
+   public void setSignUpFee(
+         cnk.air_commercialscalculationengine.settlementrules.SignUpFee signUpFee)
+   {
+      this.signUpFee = signUpFee;
+   }
+
+   public cnk.air_commercialscalculationengine.settlementrules.ContentAccessFee getContentAccessFee()
+   {
+      return this.contentAccessFee;
+   }
+
+   public void setContentAccessFee(
+         cnk.air_commercialscalculationengine.settlementrules.ContentAccessFee contentAccessFee)
+   {
+      this.contentAccessFee = contentAccessFee;
+   }
+
+   public cnk.air_commercialscalculationengine.settlementrules.TrainingFee getTrainingFee()
+   {
+      return this.trainingFee;
+   }
+
+   public void setTrainingFee(
+         cnk.air_commercialscalculationengine.settlementrules.TrainingFee trainingFee)
+   {
+      this.trainingFee = trainingFee;
+   }
+
    public BusinessRuleIntake(
          cnk.air_commercialscalculationengine.settlementrules.AdvancedDefinition advancedDefinition,
          cnk.air_commercialscalculationengine.settlementrules.IncentiveOnTopUp incentiveOnTopUp,
@@ -360,6 +477,15 @@ public class BusinessRuleIntake implements java.io.Serializable
          cnk.air_commercialscalculationengine.settlementrules.MSFFee msfFee,
          cnk.air_commercialscalculationengine.settlementrules.MaintenanceFee maintenanceFee,
          cnk.air_commercialscalculationengine.settlementrules.IntegrationFee integrationFee,
+         cnk.air_commercialscalculationengine.settlementrules.LicenceFee licenceFee,
+         cnk.air_commercialscalculationengine.settlementrules.WebServiceFee webServiceFee,
+         cnk.air_commercialscalculationengine.settlementrules.LoyaltyBonus loyaltyBonus,
+         cnk.air_commercialscalculationengine.settlementrules.PreferenceBenefit preferenceBenefit,
+         cnk.air_commercialscalculationengine.settlementrules.RetainerFee retainerFee,
+         cnk.air_commercialscalculationengine.settlementrules.ListingFee listingFee,
+         cnk.air_commercialscalculationengine.settlementrules.SignUpFee signUpFee,
+         cnk.air_commercialscalculationengine.settlementrules.ContentAccessFee contentAccessFee,
+         cnk.air_commercialscalculationengine.settlementrules.TrainingFee trainingFee,
          java.lang.String ruleFlowName,
          java.lang.String selectedRow,
          cnk.air_commercialscalculationengine.settlementrules.CommonElements commonElements,
@@ -372,6 +498,15 @@ public class BusinessRuleIntake implements java.io.Serializable
       this.msfFee = msfFee;
       this.maintenanceFee = maintenanceFee;
       this.integrationFee = integrationFee;
+      this.licenceFee = licenceFee;
+      this.webServiceFee = webServiceFee;
+      this.loyaltyBonus = loyaltyBonus;
+      this.preferenceBenefit = preferenceBenefit;
+      this.retainerFee = retainerFee;
+      this.listingFee = listingFee;
+      this.signUpFee = signUpFee;
+      this.contentAccessFee = contentAccessFee;
+      this.trainingFee = trainingFee;
       this.ruleFlowName = ruleFlowName;
       this.selectedRow = selectedRow;
       this.commonElements = commonElements;
