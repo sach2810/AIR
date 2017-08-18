@@ -72,6 +72,18 @@ public class BusinessRuleIntake implements java.io.Serializable
          this.getMsfFee().setIsApplicable(isApplicable);
       }
    }
+   
+   public void modifyMaintenanceFee(String commercialType, String contractType, boolean isApplicable)
+   {
+
+      if (this.getMaintenanceFee() != null)
+      {
+
+         this.getMaintenanceFee().getOtherFees().setCommercialType(commercialType);
+         this.getMaintenanceFee().getOtherFees().setContractType(contractType);
+         this.getMaintenanceFee().getOtherFees().setIsApplicable(isApplicable);
+      }
+   }   
 
    public static boolean checkDayOfWeek(String day, Date d)
    {
@@ -185,6 +197,26 @@ public class BusinessRuleIntake implements java.io.Serializable
          }
       }
    }
+   
+   public void calculateMaintenanceFee(List<String> commercialNamesList, List<String> commercialPercentagesList)
+   {
+
+      for (int i = 0; i < commercialNamesList.size(); i++)
+      {
+
+         for (FeeDetails feeDetails : this.getMaintenanceFee().getOtherFees().getFeeDetails())
+         {
+
+            if (commercialNamesList.get(i).equals(feeDetails.getCommercialName()))
+            {
+
+               this.getMaintenanceFee().getOtherFees().setCommercialAmount(this.getMaintenanceFee().getOtherFees().getCommercialAmount() + (feeDetails.getCommercialAmount() * Double.valueOf(commercialPercentagesList.get(i)) / 100));
+               break;
+            }
+         }
+      }
+   }
+   
 
    static final long serialVersionUID = 1L;
 
