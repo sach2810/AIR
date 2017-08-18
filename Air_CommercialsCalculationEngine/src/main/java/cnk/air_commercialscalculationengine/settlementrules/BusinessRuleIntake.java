@@ -25,6 +25,8 @@ public class BusinessRuleIntake implements java.io.Serializable
 
    private cnk.air_commercialscalculationengine.settlementrules.MaintenanceFee maintenanceFee;
 
+   private cnk.air_commercialscalculationengine.settlementrules.IntegrationFee integrationFee;
+
    public void modifyIncentiveOnTopUp(String commercialType, String contractType, boolean isApplicable)
    {
 
@@ -72,7 +74,7 @@ public class BusinessRuleIntake implements java.io.Serializable
          this.getMsfFee().setIsApplicable(isApplicable);
       }
    }
-   
+
    public void modifyMaintenanceFee(String commercialType, String contractType, boolean isApplicable)
    {
 
@@ -83,7 +85,7 @@ public class BusinessRuleIntake implements java.io.Serializable
          this.getMaintenanceFee().getOtherFees().setContractType(contractType);
          this.getMaintenanceFee().getOtherFees().setIsApplicable(isApplicable);
       }
-   }   
+   }
 
    public static boolean checkDayOfWeek(String day, Date d)
    {
@@ -197,7 +199,7 @@ public class BusinessRuleIntake implements java.io.Serializable
          }
       }
    }
-   
+
    public void calculateMaintenanceFee(List<String> commercialNamesList, List<String> commercialPercentagesList)
    {
 
@@ -216,7 +218,6 @@ public class BusinessRuleIntake implements java.io.Serializable
          }
       }
    }
-   
 
    static final long serialVersionUID = 1L;
 
@@ -340,6 +341,17 @@ public class BusinessRuleIntake implements java.io.Serializable
       this.maintenanceFee = maintenanceFee;
    }
 
+   public cnk.air_commercialscalculationengine.settlementrules.IntegrationFee getIntegrationFee()
+   {
+      return this.integrationFee;
+   }
+
+   public void setIntegrationFee(
+         cnk.air_commercialscalculationengine.settlementrules.IntegrationFee integrationFee)
+   {
+      this.integrationFee = integrationFee;
+   }
+
    public BusinessRuleIntake(
          cnk.air_commercialscalculationengine.settlementrules.AdvancedDefinition advancedDefinition,
          cnk.air_commercialscalculationengine.settlementrules.IncentiveOnTopUp incentiveOnTopUp,
@@ -347,6 +359,7 @@ public class BusinessRuleIntake implements java.io.Serializable
          cnk.air_commercialscalculationengine.settlementrules.TerminationFee terminationFee,
          cnk.air_commercialscalculationengine.settlementrules.MSFFee msfFee,
          cnk.air_commercialscalculationengine.settlementrules.MaintenanceFee maintenanceFee,
+         cnk.air_commercialscalculationengine.settlementrules.IntegrationFee integrationFee,
          java.lang.String ruleFlowName,
          java.lang.String selectedRow,
          cnk.air_commercialscalculationengine.settlementrules.CommonElements commonElements,
@@ -358,6 +371,7 @@ public class BusinessRuleIntake implements java.io.Serializable
       this.terminationFee = terminationFee;
       this.msfFee = msfFee;
       this.maintenanceFee = maintenanceFee;
+      this.integrationFee = integrationFee;
       this.ruleFlowName = ruleFlowName;
       this.selectedRow = selectedRow;
       this.commonElements = commonElements;
