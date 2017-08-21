@@ -252,7 +252,91 @@ public class BusinessRuleIntake implements java.io.Serializable
          this.getRemittanceFee().setIsApplicable(isApplicable);
       }
    }
-   
+
+	  public boolean CheckRange(String configuredInput, double checkingValue)
+	  {
+
+	      String[] configuredInputList = configuredInput.split(";");
+	      if (configuredInputList[0].equals("LESSTHANEQUALTO"))
+	      {
+
+	         return LESSTHANEQUALTO(Double.parseDouble(configuredInputList[1]), checkingValue);
+	      }
+	      else if (configuredInputList[0].equals("GREATERTHANEQUALTO"))
+	      {
+
+	         return GREATERTHANEQUALTO(Double.parseDouble(configuredInputList[1]), checkingValue);
+	      }
+	      else if (configuredInputList[0].equals("BETWEEN"))
+	      {
+
+	         return BETWEEN(Double.parseDouble(configuredInputList[1]), Double.parseDouble(configuredInputList[2]), checkingValue);
+	      }
+	      else if (configuredInputList[0].equals("EQUALTO"))
+	      {
+
+	         return EQUAL(Double.parseDouble(configuredInputList[1]), checkingValue);
+	      }
+	      else if (configuredInputList[0].equals("IN"))
+	      {
+
+	         return IN(configuredInputList[1], checkingValue);
+	      }
+
+	      return false;
+
+	  }
+
+	  public boolean LESSTHANEQUALTO(double configuredInput, double checkingValue)
+	  {
+
+	      if (checkingValue <= configuredInput)
+	         return true;
+
+	      return false;
+	  }
+
+	  public boolean GREATERTHANEQUALTO(double configuredInput, double checkingValue)
+	  {
+
+	      if (checkingValue >= configuredInput)
+	         return true;
+
+	      return false;
+	  }
+
+	  public boolean BETWEEN(double lowerLimit, double upperLimit, double checkingValue)
+	  {
+
+	      if (GREATERTHANEQUALTO(lowerLimit, checkingValue) && LESSTHANEQUALTO(upperLimit, checkingValue))
+	         return true;
+
+	      return false;
+	  }
+
+	  public boolean EQUAL(double configuredInput, double checkingValue)
+	  {
+
+	      if (checkingValue == configuredInput)
+	         return true;
+
+	      return false;
+	  }
+
+	  public boolean IN(String configuredInput, double checkingValue)
+	  {
+
+	      String[] configuredInputList = configuredInput.split("/");
+	      for (String tempConfiguredInput : configuredInputList)
+	      {
+
+	         if (EQUAL(Double.parseDouble(tempConfiguredInput), checkingValue))
+	            return true;
+	      }
+
+	      return false;
+	  }
+
    
    public static boolean checkDayOfWeek(String day, Date d)
    {
