@@ -49,6 +49,8 @@ public class BusinessRuleIntake implements java.io.Serializable
 
    private cnk.air_commercialscalculationengine.settlementrules.RemittanceFee remittanceFee;
 
+   private cnk.air_commercialscalculationengine.settlementrules.LookToBook lookToBook;
+
    public void modifyIncentiveOnTopUp(String commercialType, String contractType, boolean isApplicable)
    {
 
@@ -253,91 +255,90 @@ public class BusinessRuleIntake implements java.io.Serializable
       }
    }
 
-	  public boolean CheckRange(String configuredInput, double checkingValue)
-	  {
+   public boolean CheckRange(String configuredInput, double checkingValue)
+   {
 
-	      String[] configuredInputList = configuredInput.split(";");
-	      if (configuredInputList[0].equals("LESSTHANEQUALTO"))
-	      {
+      String[] configuredInputList = configuredInput.split(";");
+      if (configuredInputList[0].equals("LESSTHANEQUALTO"))
+      {
 
-	         return LESSTHANEQUALTO(Double.parseDouble(configuredInputList[1]), checkingValue);
-	      }
-	      else if (configuredInputList[0].equals("GREATERTHANEQUALTO"))
-	      {
+         return LESSTHANEQUALTO(Double.parseDouble(configuredInputList[1]), checkingValue);
+      }
+      else if (configuredInputList[0].equals("GREATERTHANEQUALTO"))
+      {
 
-	         return GREATERTHANEQUALTO(Double.parseDouble(configuredInputList[1]), checkingValue);
-	      }
-	      else if (configuredInputList[0].equals("BETWEEN"))
-	      {
+         return GREATERTHANEQUALTO(Double.parseDouble(configuredInputList[1]), checkingValue);
+      }
+      else if (configuredInputList[0].equals("BETWEEN"))
+      {
 
-	         return BETWEEN(Double.parseDouble(configuredInputList[1]), Double.parseDouble(configuredInputList[2]), checkingValue);
-	      }
-	      else if (configuredInputList[0].equals("EQUALTO"))
-	      {
+         return BETWEEN(Double.parseDouble(configuredInputList[1]), Double.parseDouble(configuredInputList[2]), checkingValue);
+      }
+      else if (configuredInputList[0].equals("EQUALTO"))
+      {
 
-	         return EQUAL(Double.parseDouble(configuredInputList[1]), checkingValue);
-	      }
-	      else if (configuredInputList[0].equals("IN"))
-	      {
+         return EQUAL(Double.parseDouble(configuredInputList[1]), checkingValue);
+      }
+      else if (configuredInputList[0].equals("IN"))
+      {
 
-	         return IN(configuredInputList[1], checkingValue);
-	      }
+         return IN(configuredInputList[1], checkingValue);
+      }
 
-	      return false;
+      return false;
 
-	  }
+   }
 
-	  public boolean LESSTHANEQUALTO(double configuredInput, double checkingValue)
-	  {
+   public boolean LESSTHANEQUALTO(double configuredInput, double checkingValue)
+   {
 
-	      if (checkingValue <= configuredInput)
-	         return true;
+      if (checkingValue <= configuredInput)
+         return true;
 
-	      return false;
-	  }
+      return false;
+   }
 
-	  public boolean GREATERTHANEQUALTO(double configuredInput, double checkingValue)
-	  {
+   public boolean GREATERTHANEQUALTO(double configuredInput, double checkingValue)
+   {
 
-	      if (checkingValue >= configuredInput)
-	         return true;
+      if (checkingValue >= configuredInput)
+         return true;
 
-	      return false;
-	  }
+      return false;
+   }
 
-	  public boolean BETWEEN(double lowerLimit, double upperLimit, double checkingValue)
-	  {
+   public boolean BETWEEN(double lowerLimit, double upperLimit, double checkingValue)
+   {
 
-	      if (GREATERTHANEQUALTO(lowerLimit, checkingValue) && LESSTHANEQUALTO(upperLimit, checkingValue))
-	         return true;
+      if (GREATERTHANEQUALTO(lowerLimit, checkingValue) && LESSTHANEQUALTO(upperLimit, checkingValue))
+         return true;
 
-	      return false;
-	  }
+      return false;
+   }
 
-	  public boolean EQUAL(double configuredInput, double checkingValue)
-	  {
+   public boolean EQUAL(double configuredInput, double checkingValue)
+   {
 
-	      if (checkingValue == configuredInput)
-	         return true;
+      if (checkingValue == configuredInput)
+         return true;
 
-	      return false;
-	  }
+      return false;
+   }
 
-	  public boolean IN(String configuredInput, double checkingValue)
-	  {
+   public boolean IN(String configuredInput, double checkingValue)
+   {
 
-	      String[] configuredInputList = configuredInput.split("/");
-	      for (String tempConfiguredInput : configuredInputList)
-	      {
+      String[] configuredInputList = configuredInput.split("/");
+      for (String tempConfiguredInput : configuredInputList)
+      {
 
-	         if (EQUAL(Double.parseDouble(tempConfiguredInput), checkingValue))
-	            return true;
-	      }
+         if (EQUAL(Double.parseDouble(tempConfiguredInput), checkingValue))
+            return true;
+      }
 
-	      return false;
-	  }
+      return false;
+   }
 
-   
    public static boolean checkDayOfWeek(String day, Date d)
    {
       DateFormat formatter = new SimpleDateFormat("EEEE");
@@ -914,6 +915,17 @@ public class BusinessRuleIntake implements java.io.Serializable
       this.remittanceFee = remittanceFee;
    }
 
+   public cnk.air_commercialscalculationengine.settlementrules.LookToBook getLookToBook()
+   {
+      return this.lookToBook;
+   }
+
+   public void setLookToBook(
+         cnk.air_commercialscalculationengine.settlementrules.LookToBook lookToBook)
+   {
+      this.lookToBook = lookToBook;
+   }
+
    public BusinessRuleIntake(
          cnk.air_commercialscalculationengine.settlementrules.AdvancedDefinition advancedDefinition,
          cnk.air_commercialscalculationengine.settlementrules.IncentiveOnTopUp incentiveOnTopUp,
@@ -933,6 +945,7 @@ public class BusinessRuleIntake implements java.io.Serializable
          cnk.air_commercialscalculationengine.settlementrules.TrainingFee trainingFee,
          cnk.air_commercialscalculationengine.settlementrules.SignUpBonus signUpBonus,
          cnk.air_commercialscalculationengine.settlementrules.RemittanceFee remittanceFee,
+         cnk.air_commercialscalculationengine.settlementrules.LookToBook lookToBook,
          java.lang.String ruleFlowName,
          java.lang.String selectedRow,
          cnk.air_commercialscalculationengine.settlementrules.CommonElements commonElements,
@@ -956,6 +969,7 @@ public class BusinessRuleIntake implements java.io.Serializable
       this.trainingFee = trainingFee;
       this.signUpBonus = signUpBonus;
       this.remittanceFee = remittanceFee;
+      this.lookToBook = lookToBook;
       this.ruleFlowName = ruleFlowName;
       this.selectedRow = selectedRow;
       this.commonElements = commonElements;
