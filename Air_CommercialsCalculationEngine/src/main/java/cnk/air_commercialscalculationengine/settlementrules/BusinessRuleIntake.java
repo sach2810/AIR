@@ -241,6 +241,19 @@ public class BusinessRuleIntake implements java.io.Serializable
       }
    }
 
+   public void modifyRemittanceFee(String commercialType, String contractType, boolean isApplicable)
+   {
+
+      if (this.getRemittanceFee() != null)
+      {
+
+         this.getRemittanceFee().setCommercialType(commercialType);
+         this.getRemittanceFee().setContractType(contractType);
+         this.getRemittanceFee().setIsApplicable(isApplicable);
+      }
+   }
+   
+   
    public static boolean checkDayOfWeek(String day, Date d)
    {
       DateFormat formatter = new SimpleDateFormat("EEEE");
