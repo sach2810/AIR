@@ -47,6 +47,8 @@ public class BusinessRuleIntake implements java.io.Serializable
 
    private cnk.air_commercialscalculationengine.settlementrules.SignUpBonus signUpBonus;
 
+   private cnk.air_commercialscalculationengine.settlementrules.RemittanceFee remittanceFee;
+
    public void modifyIncentiveOnTopUp(String commercialType, String contractType, boolean isApplicable)
    {
 
@@ -226,7 +228,7 @@ public class BusinessRuleIntake implements java.io.Serializable
          this.getTrainingFee().getOtherFees().setIsApplicable(isApplicable);
       }
    }
-   
+
    public void modifySignUpBonus(String commercialType, String contractType, boolean isApplicable)
    {
 
@@ -238,7 +240,6 @@ public class BusinessRuleIntake implements java.io.Serializable
          this.getSignUpBonus().setIsApplicable(isApplicable);
       }
    }
-   
 
    public static boolean checkDayOfWeek(String day, Date d)
    {
@@ -805,6 +806,17 @@ public class BusinessRuleIntake implements java.io.Serializable
       this.signUpBonus = signUpBonus;
    }
 
+   public cnk.air_commercialscalculationengine.settlementrules.RemittanceFee getRemittanceFee()
+   {
+      return this.remittanceFee;
+   }
+
+   public void setRemittanceFee(
+         cnk.air_commercialscalculationengine.settlementrules.RemittanceFee remittanceFee)
+   {
+      this.remittanceFee = remittanceFee;
+   }
+
    public BusinessRuleIntake(
          cnk.air_commercialscalculationengine.settlementrules.AdvancedDefinition advancedDefinition,
          cnk.air_commercialscalculationengine.settlementrules.IncentiveOnTopUp incentiveOnTopUp,
@@ -823,6 +835,7 @@ public class BusinessRuleIntake implements java.io.Serializable
          cnk.air_commercialscalculationengine.settlementrules.ContentAccessFee contentAccessFee,
          cnk.air_commercialscalculationengine.settlementrules.TrainingFee trainingFee,
          cnk.air_commercialscalculationengine.settlementrules.SignUpBonus signUpBonus,
+         cnk.air_commercialscalculationengine.settlementrules.RemittanceFee remittanceFee,
          java.lang.String ruleFlowName,
          java.lang.String selectedRow,
          cnk.air_commercialscalculationengine.settlementrules.CommonElements commonElements,
@@ -845,6 +858,7 @@ public class BusinessRuleIntake implements java.io.Serializable
       this.contentAccessFee = contentAccessFee;
       this.trainingFee = trainingFee;
       this.signUpBonus = signUpBonus;
+      this.remittanceFee = remittanceFee;
       this.ruleFlowName = ruleFlowName;
       this.selectedRow = selectedRow;
       this.commonElements = commonElements;
