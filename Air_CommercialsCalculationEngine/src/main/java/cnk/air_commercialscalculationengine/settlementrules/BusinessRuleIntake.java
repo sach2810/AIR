@@ -255,6 +255,18 @@ public class BusinessRuleIntake implements java.io.Serializable
       }
    }
 
+   public void modifyLookToBook(String commercialType, String contractType, boolean isApplicable)
+   {
+
+      if (this.getLookToBook() != null)
+      {
+
+         this.getLookToBook().setCommercialType(commercialType);
+         this.getLookToBook().setContractType(contractType);
+         this.getLookToBook().setIsApplicable(isApplicable);
+      }
+   }   
+   
    public boolean CheckRange(String configuredInput, double checkingValue)
    {
 
