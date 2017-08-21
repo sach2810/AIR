@@ -45,6 +45,8 @@ public class BusinessRuleIntake implements java.io.Serializable
 
    private cnk.air_commercialscalculationengine.settlementrules.TrainingFee trainingFee;
 
+   private cnk.air_commercialscalculationengine.settlementrules.SignUpBonus signUpBonus;
+
    public void modifyIncentiveOnTopUp(String commercialType, String contractType, boolean isApplicable)
    {
 
@@ -104,7 +106,7 @@ public class BusinessRuleIntake implements java.io.Serializable
          this.getMaintenanceFee().getOtherFees().setIsApplicable(isApplicable);
       }
    }
-   
+
    public void modifyIntegrationFee(String commercialType, String contractType, boolean isApplicable)
    {
 
@@ -140,7 +142,7 @@ public class BusinessRuleIntake implements java.io.Serializable
          this.getWebServiceFee().getOtherFees().setIsApplicable(isApplicable);
       }
    }
-   
+
    public void modifyLoyaltyBonus(String commercialType, String contractType, boolean isApplicable)
    {
 
@@ -164,7 +166,7 @@ public class BusinessRuleIntake implements java.io.Serializable
          this.getPreferenceBenefit().getOtherFees().setIsApplicable(isApplicable);
       }
    }
-   
+
    public void modifyRetainerFee(String commercialType, String contractType, boolean isApplicable)
    {
 
@@ -176,7 +178,7 @@ public class BusinessRuleIntake implements java.io.Serializable
          this.getRetainerFee().getOtherFees().setIsApplicable(isApplicable);
       }
    }
-   
+
    public void modifyListingFee(String commercialType, String contractType, boolean isApplicable)
    {
 
@@ -212,7 +214,7 @@ public class BusinessRuleIntake implements java.io.Serializable
          this.getContentAccessFee().getOtherFees().setIsApplicable(isApplicable);
       }
    }
-   
+
    public void modifyTrainingFee(String commercialType, String contractType, boolean isApplicable)
    {
 
@@ -223,8 +225,8 @@ public class BusinessRuleIntake implements java.io.Serializable
          this.getTrainingFee().getOtherFees().setContractType(contractType);
          this.getTrainingFee().getOtherFees().setIsApplicable(isApplicable);
       }
-   }   
-   
+   }
+
    public static boolean checkDayOfWeek(String day, Date d)
    {
       DateFormat formatter = new SimpleDateFormat("EEEE");
@@ -356,7 +358,7 @@ public class BusinessRuleIntake implements java.io.Serializable
          }
       }
    }
-   
+
    public void calculateIntegrationFee(List<String> commercialNamesList, List<String> commercialPercentagesList)
    {
 
@@ -375,7 +377,7 @@ public class BusinessRuleIntake implements java.io.Serializable
          }
       }
    }
-   
+
    public void calculateLicenceFee(List<String> commercialNamesList, List<String> commercialPercentagesList)
    {
 
@@ -394,7 +396,7 @@ public class BusinessRuleIntake implements java.io.Serializable
          }
       }
    }
-   
+
    public void calculateWebServiceFee(List<String> commercialNamesList, List<String> commercialPercentagesList)
    {
 
@@ -413,8 +415,7 @@ public class BusinessRuleIntake implements java.io.Serializable
          }
       }
    }
-   
-   
+
    public void calculateLoyaltyBonus(List<String> commercialNamesList, List<String> commercialPercentagesList)
    {
 
@@ -433,7 +434,7 @@ public class BusinessRuleIntake implements java.io.Serializable
          }
       }
    }
-   
+
    public void calculatePreferenceBenefit(List<String> commercialNamesList, List<String> commercialPercentagesList)
    {
 
@@ -452,7 +453,7 @@ public class BusinessRuleIntake implements java.io.Serializable
          }
       }
    }
-   
+
    public void calculateRetainerFee(List<String> commercialNamesList, List<String> commercialPercentagesList)
    {
 
@@ -471,7 +472,7 @@ public class BusinessRuleIntake implements java.io.Serializable
          }
       }
    }
-   
+
    public void calculateListingFee(List<String> commercialNamesList, List<String> commercialPercentagesList)
    {
 
@@ -490,7 +491,7 @@ public class BusinessRuleIntake implements java.io.Serializable
          }
       }
    }
-   
+
    public void calculateSignUpFee(List<String> commercialNamesList, List<String> commercialPercentagesList)
    {
 
@@ -509,7 +510,7 @@ public class BusinessRuleIntake implements java.io.Serializable
          }
       }
    }
-   
+
    public void calculateContentAccessFee(List<String> commercialNamesList, List<String> commercialPercentagesList)
    {
 
@@ -528,7 +529,7 @@ public class BusinessRuleIntake implements java.io.Serializable
          }
       }
    }
-   
+
    public void calculateTrainingFee(List<String> commercialNamesList, List<String> commercialPercentagesList)
    {
 
@@ -547,7 +548,7 @@ public class BusinessRuleIntake implements java.io.Serializable
          }
       }
    }
-   
+
    static final long serialVersionUID = 1L;
 
    private java.lang.String ruleFlowName;
@@ -780,6 +781,17 @@ public class BusinessRuleIntake implements java.io.Serializable
       this.trainingFee = trainingFee;
    }
 
+   public cnk.air_commercialscalculationengine.settlementrules.SignUpBonus getSignUpBonus()
+   {
+      return this.signUpBonus;
+   }
+
+   public void setSignUpBonus(
+         cnk.air_commercialscalculationengine.settlementrules.SignUpBonus signUpBonus)
+   {
+      this.signUpBonus = signUpBonus;
+   }
+
    public BusinessRuleIntake(
          cnk.air_commercialscalculationengine.settlementrules.AdvancedDefinition advancedDefinition,
          cnk.air_commercialscalculationengine.settlementrules.IncentiveOnTopUp incentiveOnTopUp,
@@ -797,6 +809,7 @@ public class BusinessRuleIntake implements java.io.Serializable
          cnk.air_commercialscalculationengine.settlementrules.SignUpFee signUpFee,
          cnk.air_commercialscalculationengine.settlementrules.ContentAccessFee contentAccessFee,
          cnk.air_commercialscalculationengine.settlementrules.TrainingFee trainingFee,
+         cnk.air_commercialscalculationengine.settlementrules.SignUpBonus signUpBonus,
          java.lang.String ruleFlowName,
          java.lang.String selectedRow,
          cnk.air_commercialscalculationengine.settlementrules.CommonElements commonElements,
@@ -818,6 +831,7 @@ public class BusinessRuleIntake implements java.io.Serializable
       this.signUpFee = signUpFee;
       this.contentAccessFee = contentAccessFee;
       this.trainingFee = trainingFee;
+      this.signUpBonus = signUpBonus;
       this.ruleFlowName = ruleFlowName;
       this.selectedRow = selectedRow;
       this.commonElements = commonElements;
