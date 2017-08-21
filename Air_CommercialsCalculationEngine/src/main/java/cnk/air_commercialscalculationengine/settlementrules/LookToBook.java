@@ -17,7 +17,7 @@ public class LookToBook implements java.io.Serializable
    private java.lang.String commercialType;
    private boolean isCumulative;
    private boolean isApplicable;
-   private int refreshCounter;
+   private boolean refreshCounter;
 
    public LookToBook()
    {
@@ -103,20 +103,20 @@ public class LookToBook implements java.io.Serializable
       this.isApplicable = isApplicable;
    }
 
-   public int getRefreshCounter()
+   public boolean isRefreshCounter()
    {
       return this.refreshCounter;
    }
 
-   public void setRefreshCounter(int refreshCounter)
+   public void setRefreshCounter(boolean refreshCounter)
    {
       this.refreshCounter = refreshCounter;
    }
 
    public LookToBook(java.lang.String contractType, int numberofLooks,
-         int numberofBooks, double commercialAmount,
-         java.lang.String currency, java.lang.String commercialType,
-         boolean isCumulative, boolean isApplicable, int refreshCounter)
+         int numberofBooks, double commercialAmount, java.lang.String currency,
+         java.lang.String commercialType, boolean isCumulative,
+         boolean isApplicable, boolean refreshCounter)
    {
       this.contractType = contractType;
       this.numberofLooks = numberofLooks;
