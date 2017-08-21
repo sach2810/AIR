@@ -226,6 +226,19 @@ public class BusinessRuleIntake implements java.io.Serializable
          this.getTrainingFee().getOtherFees().setIsApplicable(isApplicable);
       }
    }
+   
+   public void modifySignUpBonus(String commercialType, String contractType, boolean isApplicable)
+   {
+
+      if (this.getSignUpBonus() != null)
+      {
+
+         this.getSignUpBonus().setCommercialType(commercialType);
+         this.getSignUpBonus().setContractType(contractType);
+         this.getSignUpBonus().setIsApplicable(isApplicable);
+      }
+   }
+   
 
    public static boolean checkDayOfWeek(String day, Date d)
    {
