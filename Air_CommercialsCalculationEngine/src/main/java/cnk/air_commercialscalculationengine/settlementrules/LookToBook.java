@@ -10,8 +10,8 @@ public class LookToBook implements java.io.Serializable
    static final long serialVersionUID = 1L;
 
    private java.lang.String contractType;
-   private int numberofLooks;
-   private int numberofBooks;
+   private double numberofLooks;
+   private double numberofBooks;
    private double commercialAmount;
    private java.lang.String currency;
    private java.lang.String commercialType;
@@ -31,26 +31,6 @@ public class LookToBook implements java.io.Serializable
    public void setContractType(java.lang.String contractType)
    {
       this.contractType = contractType;
-   }
-
-   public int getNumberofLooks()
-   {
-      return this.numberofLooks;
-   }
-
-   public void setNumberofLooks(int numberofLooks)
-   {
-      this.numberofLooks = numberofLooks;
-   }
-
-   public int getNumberofBooks()
-   {
-      return this.numberofBooks;
-   }
-
-   public void setNumberofBooks(int numberofBooks)
-   {
-      this.numberofBooks = numberofBooks;
    }
 
    public double getCommercialAmount()
@@ -113,10 +93,30 @@ public class LookToBook implements java.io.Serializable
       this.refreshCounter = refreshCounter;
    }
 
-   public LookToBook(java.lang.String contractType, int numberofLooks,
-         int numberofBooks, double commercialAmount, java.lang.String currency,
-         java.lang.String commercialType, boolean isCumulative,
-         boolean isApplicable, boolean refreshCounter)
+   public double getNumberofLooks()
+   {
+      return this.numberofLooks;
+   }
+
+   public void setNumberofLooks(double numberofLooks)
+   {
+      this.numberofLooks = numberofLooks;
+   }
+
+   public double getNumberofBooks()
+   {
+      return this.numberofBooks;
+   }
+
+   public void setNumberofBooks(double numberofBooks)
+   {
+      this.numberofBooks = numberofBooks;
+   }
+
+   public LookToBook(java.lang.String contractType, double numberofLooks,
+         double numberofBooks, double commercialAmount,
+         java.lang.String currency, java.lang.String commercialType,
+         boolean isCumulative, boolean isApplicable, boolean refreshCounter)
    {
       this.contractType = contractType;
       this.numberofLooks = numberofLooks;
