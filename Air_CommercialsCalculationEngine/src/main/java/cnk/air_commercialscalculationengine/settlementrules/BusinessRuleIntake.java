@@ -269,6 +269,18 @@ public class BusinessRuleIntake implements java.io.Serializable
       }
    }
 
+   public void modifyFreeofCosts(String commercialType, String contractType, boolean isApplicable)
+   {
+
+      if (this.getFreeofCosts() != null)
+      {
+
+         this.getFreeofCosts().setCommercialType(commercialType);
+         this.getFreeofCosts().setContractType(contractType);
+         this.getFreeofCosts().setIsApplicable(isApplicable);
+      }
+   }
+      
    public boolean CheckRange(String configuredInput, double checkingValue)
    {
 
