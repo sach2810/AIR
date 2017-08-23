@@ -51,6 +51,8 @@ public class BusinessRuleIntake implements java.io.Serializable
 
    private cnk.air_commercialscalculationengine.settlementrules.LookToBook lookToBook;
 
+   private cnk.air_commercialscalculationengine.settlementrules.FreeofCosts freeofCosts;
+
    public void modifyIncentiveOnTopUp(String commercialType, String contractType, boolean isApplicable)
    {
 
@@ -265,8 +267,8 @@ public class BusinessRuleIntake implements java.io.Serializable
          this.getLookToBook().setContractType(contractType);
          this.getLookToBook().setIsApplicable(isApplicable);
       }
-   }   
-   
+   }
+
    public boolean CheckRange(String configuredInput, double checkingValue)
    {
 
@@ -938,6 +940,17 @@ public class BusinessRuleIntake implements java.io.Serializable
       this.lookToBook = lookToBook;
    }
 
+   public cnk.air_commercialscalculationengine.settlementrules.FreeofCosts getFreeofCosts()
+   {
+      return this.freeofCosts;
+   }
+
+   public void setFreeofCosts(
+         cnk.air_commercialscalculationengine.settlementrules.FreeofCosts freeofCosts)
+   {
+      this.freeofCosts = freeofCosts;
+   }
+
    public BusinessRuleIntake(
          cnk.air_commercialscalculationengine.settlementrules.AdvancedDefinition advancedDefinition,
          cnk.air_commercialscalculationengine.settlementrules.IncentiveOnTopUp incentiveOnTopUp,
@@ -958,6 +971,7 @@ public class BusinessRuleIntake implements java.io.Serializable
          cnk.air_commercialscalculationengine.settlementrules.SignUpBonus signUpBonus,
          cnk.air_commercialscalculationengine.settlementrules.RemittanceFee remittanceFee,
          cnk.air_commercialscalculationengine.settlementrules.LookToBook lookToBook,
+         cnk.air_commercialscalculationengine.settlementrules.FreeofCosts freeofCosts,
          java.lang.String ruleFlowName,
          java.lang.String selectedRow,
          cnk.air_commercialscalculationengine.settlementrules.CommonElements commonElements,
@@ -982,6 +996,7 @@ public class BusinessRuleIntake implements java.io.Serializable
       this.signUpBonus = signUpBonus;
       this.remittanceFee = remittanceFee;
       this.lookToBook = lookToBook;
+      this.freeofCosts = freeofCosts;
       this.ruleFlowName = ruleFlowName;
       this.selectedRow = selectedRow;
       this.commonElements = commonElements;
