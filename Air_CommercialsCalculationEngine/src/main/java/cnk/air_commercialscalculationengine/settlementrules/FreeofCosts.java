@@ -10,7 +10,7 @@ public class FreeofCosts implements java.io.Serializable
    static final long serialVersionUID = 1L;
 
    private java.lang.String contractType;
-   private java.lang.String PLBApplicable;
+   private boolean PLBApplicable;
    private java.lang.String commercialType;
    private boolean isApplicable;
    private java.util.List<cnk.air_commercialscalculationengine.settlementrules.SlabDetails> slabDetails;
@@ -30,16 +30,6 @@ public class FreeofCosts implements java.io.Serializable
    public void setContractType(java.lang.String contractType)
    {
       this.contractType = contractType;
-   }
-
-   public java.lang.String getPLBApplicable()
-   {
-      return this.PLBApplicable;
-   }
-
-   public void setPLBApplicable(java.lang.String PLBApplicable)
-   {
-      this.PLBApplicable = PLBApplicable;
    }
 
    public java.lang.String getCommercialType()
@@ -106,9 +96,19 @@ public class FreeofCosts implements java.io.Serializable
       this.focUpgrades = focUpgrades;
    }
 
+   public boolean isPLBApplicable()
+   {
+      return this.PLBApplicable;
+   }
+
+   public void setPLBApplicable(boolean PLBApplicable)
+   {
+      this.PLBApplicable = PLBApplicable;
+   }
+
    public FreeofCosts(
          java.lang.String contractType,
-         java.lang.String PLBApplicable,
+         boolean PLBApplicable,
          java.lang.String commercialType,
          boolean isApplicable,
          java.util.List<cnk.air_commercialscalculationengine.settlementrules.SlabDetails> slabDetails,
