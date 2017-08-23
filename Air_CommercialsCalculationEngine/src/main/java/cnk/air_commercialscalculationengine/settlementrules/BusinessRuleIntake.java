@@ -269,7 +269,7 @@ public class BusinessRuleIntake implements java.io.Serializable
       }
    }
 
-   public void modifyFreeofCosts(String commercialType, String contractType, boolean isApplicable)
+   public void modifyFreeofCosts(String commercialType, String contractType, boolean isApplicable,boolean plbApplicable)
    {
 
       if (this.getFreeofCosts() != null)
@@ -278,6 +278,7 @@ public class BusinessRuleIntake implements java.io.Serializable
          this.getFreeofCosts().setCommercialType(commercialType);
          this.getFreeofCosts().setContractType(contractType);
          this.getFreeofCosts().setIsApplicable(isApplicable);
+         this.getFreeofCosts().setPLBApplicable(plbApplicable);
       }
    }
       
