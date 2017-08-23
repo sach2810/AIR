@@ -7,8 +7,11 @@ package cnk.air_commercialscalculationengine.settlementrules;
 public class SlabDetails implements java.io.Serializable
 {
 
-  public boolean CheckRange(String configuredInput, double checkingValue)
-  {
+   @org.kie.api.definition.type.Label(value = "Only for FOC")
+   private java.lang.String cabinClass;
+
+   public boolean CheckRange(String configuredInput, double checkingValue)
+   {
 
       String[] configuredInputList = configuredInput.split(";");
       if (configuredInputList[0].equals("LESSTHANEQUALTO"))
@@ -39,46 +42,46 @@ public class SlabDetails implements java.io.Serializable
 
       return false;
 
-  }
+   }
 
-  public boolean LESSTHANEQUALTO(double configuredInput, double checkingValue)
-  {
+   public boolean LESSTHANEQUALTO(double configuredInput, double checkingValue)
+   {
 
       if (checkingValue <= configuredInput)
          return true;
 
       return false;
-  }
+   }
 
-  public boolean GREATERTHANEQUALTO(double configuredInput, double checkingValue)
-  {
+   public boolean GREATERTHANEQUALTO(double configuredInput, double checkingValue)
+   {
 
       if (checkingValue >= configuredInput)
          return true;
 
       return false;
-  }
+   }
 
-  public boolean BETWEEN(double lowerLimit, double upperLimit, double checkingValue)
-  {
+   public boolean BETWEEN(double lowerLimit, double upperLimit, double checkingValue)
+   {
 
       if (GREATERTHANEQUALTO(lowerLimit, checkingValue) && LESSTHANEQUALTO(upperLimit, checkingValue))
          return true;
 
       return false;
-  }
+   }
 
-  public boolean EQUAL(double configuredInput, double checkingValue)
-  {
+   public boolean EQUAL(double configuredInput, double checkingValue)
+   {
 
       if (checkingValue == configuredInput)
          return true;
 
       return false;
-  }
+   }
 
-  public boolean IN(String configuredInput, double checkingValue)
-  {
+   public boolean IN(String configuredInput, double checkingValue)
+   {
 
       String[] configuredInputList = configuredInput.split("/");
       for (String tempConfiguredInput : configuredInputList)
@@ -89,8 +92,7 @@ public class SlabDetails implements java.io.Serializable
       }
 
       return false;
-  }
-
+   }
 
    static final long serialVersionUID = 1L;
 
@@ -132,9 +134,20 @@ public class SlabDetails implements java.io.Serializable
       this.isCompleted = isCompleted;
    }
 
-   public SlabDetails(java.lang.String slabType, double slabTypeValue,
-         boolean isCompleted)
+   public java.lang.String getCabinClass()
    {
+      return this.cabinClass;
+   }
+
+   public void setCabinClass(java.lang.String cabinClass)
+   {
+      this.cabinClass = cabinClass;
+   }
+
+   public SlabDetails(java.lang.String cabinClass, java.lang.String slabType,
+         double slabTypeValue, boolean isCompleted)
+   {
+      this.cabinClass = cabinClass;
       this.slabType = slabType;
       this.slabTypeValue = slabTypeValue;
       this.isCompleted = isCompleted;
