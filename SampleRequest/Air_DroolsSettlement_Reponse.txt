@@ -1,0 +1,767 @@
+{
+   "type": "SUCCESS",
+   "msg": "Container AirCommercialsCalculationSettlementEngine successfully called.",
+   "result": {"execution-results":    {
+      "results": [      {
+         "key": "Response",
+         "value": [{"cnk.air_commercialscalculationengine.settlementrules.Root":          {
+            "header":             {
+               "userID": "Sachin",
+               "transactionID": "12345",
+               "sessionID": "abc@123",
+               "operationName": "Search",
+               "status": null
+            },
+            "businessRuleIntake":             [
+                              {
+                  "advancedDefinition":                   {
+                     "isAdvanceDefinition": false,
+                     "ticketingDate": 1486665000000,
+                     "travelDate": 1491762600000,
+                     "travelType": "SITI",
+                     "journeyType": "OneWay",
+                     "flightType": "Via",
+                     "flightLineType": "Online",
+                     "codeShareFlightIncluded": true,
+                     "travelProductName": "Flights",
+                     "fromContinent": "Asia",
+                     "fromCountry": "India",
+                     "fromCity": "Mumbai",
+                     "viaContinent": "Asia",
+                     "viaCountry": "India",
+                     "viaCity": "Chennai",
+                     "toContinent": "Asia",
+                     "toCountry": "India",
+                     "toCity": "Delhi",
+                     "connectivitySupplier": "Indigo",
+                     "connectivitySupplierType": "LCC",
+                     "cabinClass": "Economy",
+                     "fareBasisValue": "YEEYEE",
+                     "dealCode": "DC01",
+                     "credentialsName": "Indigo",
+                     "bookingType": "Online",
+                     "rbd": "S"
+                  },
+                  "incentiveOnTopUp":                   {
+                     "contractType": "Final",
+                     "modeofPayment": "CreditCard",
+                     "bankName": "ICICI Bank",
+                     "incentiveCurrency": "INR",
+                     "incentiveAmount": 100000,
+                     "incentivePercentage": 5,
+                     "topUpDateTime": 1506336000000,
+                     "incentiveRateType": "RT1",
+                     "incentiveRateCode": "RC1",
+                     "commercialAmount": 5000,
+                     "commercialType": "Payable",
+                     "isApplicable": true
+                  },
+                  "penaltyFee":                   {
+                     "contractType": "Final",
+                     "slabDetails":                      [
+                                                {
+                           "cabinClass": null,
+                           "slabType": "TotalTurnOver",
+                           "slabTypeValue": 800,
+                           "isCompleted": true
+                        },
+                                                {
+                           "cabinClass": null,
+                           "slabType": "NumberOfBookings",
+                           "slabTypeValue": 700,
+                           "isCompleted": true
+                        }
+                     ],
+                     "minimumtoAchieve": 0,
+                     "commercialAmount": 1080,
+                     "commercialCurrency": "INR",
+                     "commercialType": "Payable",
+                     "isApplicable": true,
+                     "percentageValue": 10
+                  },
+                  "terminationFee":                   {
+                     "contractType": "Final",
+                     "commercialAmount": 240,
+                     "commercialCurrency": "INR",
+                     "commercialType": "Payable",
+                     "isApplicable": true,
+                     "returnableCommercialHead":                      [
+                                                {
+                           "commercialName": "SegmentFees",
+                           "commercialAmount": 700
+                        },
+                                                {
+                           "commercialName": "ServiceCharge",
+                           "commercialAmount": 1000
+                        }
+                     ]
+                  },
+                  "msfFee":                   {
+                     "contractType": "Final",
+                     "transactionType": "Online",
+                     "paymentType": "CreditCard",
+                     "cardType": "Visa",
+                     "totalFare": 3800,
+                     "commercialAmount": 190,
+                     "commercialCurrency": null,
+                     "commercialType": "Payable",
+                     "isApplicable": true,
+                     "msfchargeType": "OnUs"
+                  },
+                  "maintenanceFee": {"otherFees":                   {
+                     "contractType": "Final",
+                     "commercialAmount": 134,
+                     "commercialCurrency": null,
+                     "commercialType": "Payable",
+                     "isApplicable": true,
+                     "feeDetails":                      [
+                                                {
+                           "commercialName": "IntegrationFee",
+                           "commercialAmount": 500
+                        },
+                                                {
+                           "commercialName": "LicenceFee",
+                           "commercialAmount": 1200
+                        }
+                     ]
+                  }},
+                  "integrationFee": {"otherFees":                   {
+                     "contractType": "Final",
+                     "commercialAmount": 134,
+                     "commercialCurrency": null,
+                     "commercialType": "Payable",
+                     "isApplicable": true,
+                     "feeDetails":                      [
+                                                {
+                           "commercialName": "IntegrationFee",
+                           "commercialAmount": 500
+                        },
+                                                {
+                           "commercialName": "LicenceFee",
+                           "commercialAmount": 1200
+                        }
+                     ]
+                  }},
+                  "licenceFee": {"otherFees":                   {
+                     "contractType": "Final",
+                     "commercialAmount": 134,
+                     "commercialCurrency": null,
+                     "commercialType": "Payable",
+                     "isApplicable": true,
+                     "feeDetails":                      [
+                                                {
+                           "commercialName": "IntegrationFee",
+                           "commercialAmount": 500
+                        },
+                                                {
+                           "commercialName": "LicenceFee",
+                           "commercialAmount": 1200
+                        }
+                     ]
+                  }},
+                  "webServiceFee": {"otherFees":                   {
+                     "contractType": "Final",
+                     "commercialAmount": 134,
+                     "commercialCurrency": null,
+                     "commercialType": "Payable",
+                     "isApplicable": true,
+                     "feeDetails":                      [
+                                                {
+                           "commercialName": "IntegrationFee",
+                           "commercialAmount": 500
+                        },
+                                                {
+                           "commercialName": "LicenceFee",
+                           "commercialAmount": 1200
+                        }
+                     ]
+                  }},
+                  "loyaltyBonus": {"otherFees":                   {
+                     "contractType": "Final",
+                     "commercialAmount": 134,
+                     "commercialCurrency": null,
+                     "commercialType": "Payable",
+                     "isApplicable": true,
+                     "feeDetails":                      [
+                                                {
+                           "commercialName": "IntegrationFee",
+                           "commercialAmount": 500
+                        },
+                                                {
+                           "commercialName": "LicenceFee",
+                           "commercialAmount": 1200
+                        }
+                     ]
+                  }},
+                  "preferenceBenefit": {"otherFees":                   {
+                     "contractType": "Final",
+                     "commercialAmount": 134,
+                     "commercialCurrency": null,
+                     "commercialType": "Payable",
+                     "isApplicable": true,
+                     "feeDetails":                      [
+                                                {
+                           "commercialName": "IntegrationFee",
+                           "commercialAmount": 500
+                        },
+                                                {
+                           "commercialName": "LicenceFee",
+                           "commercialAmount": 1200
+                        }
+                     ]
+                  }},
+                  "retainerFee": {"otherFees":                   {
+                     "contractType": "Final",
+                     "commercialAmount": 134,
+                     "commercialCurrency": null,
+                     "commercialType": "Payable",
+                     "isApplicable": true,
+                     "feeDetails":                      [
+                                                {
+                           "commercialName": "IntegrationFee",
+                           "commercialAmount": 500
+                        },
+                                                {
+                           "commercialName": "LicenceFee",
+                           "commercialAmount": 1200
+                        }
+                     ]
+                  }},
+                  "listingFee": {"otherFees":                   {
+                     "contractType": "Final",
+                     "commercialAmount": 134,
+                     "commercialCurrency": null,
+                     "commercialType": "Payable",
+                     "isApplicable": true,
+                     "feeDetails":                      [
+                                                {
+                           "commercialName": "IntegrationFee",
+                           "commercialAmount": 500
+                        },
+                                                {
+                           "commercialName": "LicenceFee",
+                           "commercialAmount": 1200
+                        }
+                     ]
+                  }},
+                  "signUpFee": {"otherFees":                   {
+                     "contractType": "Final",
+                     "commercialAmount": 134,
+                     "commercialCurrency": null,
+                     "commercialType": "Payable",
+                     "isApplicable": true,
+                     "feeDetails":                      [
+                                                {
+                           "commercialName": "IntegrationFee",
+                           "commercialAmount": 500
+                        },
+                                                {
+                           "commercialName": "LicenceFee",
+                           "commercialAmount": 1200
+                        }
+                     ]
+                  }},
+                  "contentAccessFee": {"otherFees":                   {
+                     "contractType": "Final",
+                     "commercialAmount": 134,
+                     "commercialCurrency": null,
+                     "commercialType": "Payable",
+                     "isApplicable": true,
+                     "feeDetails":                      [
+                                                {
+                           "commercialName": "IntegrationFee",
+                           "commercialAmount": 500
+                        },
+                                                {
+                           "commercialName": "LicenceFee",
+                           "commercialAmount": 1200
+                        }
+                     ]
+                  }},
+                  "trainingFee": {"otherFees":                   {
+                     "contractType": "Final",
+                     "commercialAmount": 134,
+                     "commercialCurrency": null,
+                     "commercialType": "Payable",
+                     "isApplicable": true,
+                     "feeDetails":                      [
+                                                {
+                           "commercialName": "IntegrationFee",
+                           "commercialAmount": 500
+                        },
+                                                {
+                           "commercialName": "LicenceFee",
+                           "commercialAmount": 1200
+                        }
+                     ]
+                  }},
+                  "signUpBonus":                   {
+                     "contractType": "Final",
+                     "commercialAmount": 2200,
+                     "commercialCurrency": "INR",
+                     "commercialType": "Payable",
+                     "isApplicable": true,
+                     "slabDetails":                      [
+                                                {
+                           "cabinClass": null,
+                           "slabType": "NumberOfSegments",
+                           "slabTypeValue": 2500000,
+                           "isCompleted": true
+                        },
+                                                {
+                           "cabinClass": null,
+                           "slabType": "TotalRevenue",
+                           "slabTypeValue": 5500000,
+                           "isCompleted": true
+                        }
+                     ]
+                  },
+                  "remittanceFee":                   {
+                     "contractType": "Final",
+                     "totalSettlementAmount": 21000,
+                     "totalSettlementCurrency": "INR",
+                     "commercialAmount": 1050,
+                     "commercialCurrency": "INR",
+                     "commercialType": "Payable",
+                     "isApplicable": true
+                  },
+                  "lookToBook":                   {
+                     "contractType": "Final",
+                     "numberofLooks": 6600,
+                     "numberofBooks": 4,
+                     "commercialAmount": 1350,
+                     "currency": "INR",
+                     "commercialType": "Payable",
+                     "isCumulative": true,
+                     "isApplicable": true,
+                     "refreshCounter": false,
+                     "cumulativeSequence": -1,
+                     "numberofExcessLooks": 600
+                  },
+                  "freeofCosts":                   {
+                     "contractType": "Final",
+                     "commercialType": "Payable",
+                     "isApplicable": true,
+                     "slabDetails": [                     {
+                        "cabinClass": "Business",
+                        "slabType": "TotalPassengers",
+                        "slabTypeValue": 1500,
+                        "isCompleted": true
+                     }],
+                     "focUtilisation":                      {
+                        "productCategory": "Transportation",
+                        "productCategorySubType": "Flights",
+                        "productName": "ALL"
+                     },
+                     "focTickets":                      {
+                        "cabinClass": "Business",
+                        "numberOfTickets": 2,
+                        "focPercentage": 100,
+                        "fareComponent": "Base",
+                        "rbd": "S"
+                     },
+                     "focUpgrades": null,
+                     "plbapplicable": true
+                  },
+                  "ruleFlowName": "Indigo_India,PreferenceBenefitCalculation_8,RemittanceFeeCalculation_10,IncentiveOnTopUpCalculation_8,SignUpBonusCalculation_8,SignUpBonusCalculation_10,MaintenanceFeeCalculation_8,SignUpFeeCalculation_8,TrainingFeeCalculation_8,ListingFeeCalculation_8,WebServiceFeeCalculation_8,TerminationFeeCalculation_8,PenaltyFeeCalculation_9,PenaltyFeeCalculation_10,RetainerFeeCalculation_8,FreeofCostsCalculation_8,LoyaltyBonusCalculation_8,MSFFeeCalculation_8,IntegrationFeeCalculation_8,LookToBookCumulativeCalculation_8,LookToBookCumulativeCalculation_9,LookToBookCumulativeCalculation_10,LicenceFeeCalculation_8,ContentAccessFeeCalculation_8",
+                  "selectedRow": "Indigo_India",
+                  "commonElements":                   {
+                     "supplier": "Indigo",
+                     "supplierMarket": "India",
+                     "segment": "Active",
+                     "contractValidity": 1486665000000,
+                     "productName": "Flights",
+                     "clientType": "B2B",
+                     "clientGroup": "TravelAgent",
+                     "clientName": "AkbarTravels",
+                     "rateType": null,
+                     "rateCode": null,
+                     "iatanumber": "123455"
+                  },
+                  "slabDetails":                   [
+                                          {
+                        "cabinClass": null,
+                        "slabType": "TotalRevenue",
+                        "slabTypeValue": 1500,
+                        "isCompleted": false
+                     },
+                                          {
+                        "cabinClass": null,
+                        "slabType": "TotalPassengers",
+                        "slabTypeValue": 4500,
+                        "isCompleted": false
+                     }
+                  ]
+               },
+                              {
+                  "advancedDefinition":                   {
+                     "isAdvanceDefinition": false,
+                     "ticketingDate": 1489084200000,
+                     "travelDate": null,
+                     "travelType": null,
+                     "journeyType": null,
+                     "flightType": null,
+                     "flightLineType": null,
+                     "codeShareFlightIncluded": false,
+                     "travelProductName": null,
+                     "fromContinent": null,
+                     "fromCountry": null,
+                     "fromCity": null,
+                     "viaContinent": null,
+                     "viaCountry": null,
+                     "viaCity": null,
+                     "toContinent": null,
+                     "toCountry": null,
+                     "toCity": null,
+                     "connectivitySupplier": null,
+                     "connectivitySupplierType": null,
+                     "cabinClass": null,
+                     "fareBasisValue": null,
+                     "dealCode": null,
+                     "credentialsName": null,
+                     "bookingType": null,
+                     "rbd": null
+                  },
+                  "incentiveOnTopUp":                   {
+                     "contractType": "Final",
+                     "modeofPayment": "CreditCard",
+                     "bankName": "ICICI Bank",
+                     "incentiveCurrency": "INR",
+                     "incentiveAmount": 100000,
+                     "incentivePercentage": 10,
+                     "topUpDateTime": 1506336000000,
+                     "incentiveRateType": "RT1",
+                     "incentiveRateCode": "RC1",
+                     "commercialAmount": 10000,
+                     "commercialType": "Payable",
+                     "isApplicable": true
+                  },
+                  "penaltyFee":                   {
+                     "contractType": "Final",
+                     "slabDetails":                      [
+                                                {
+                           "cabinClass": null,
+                           "slabType": "TotalTurnOver",
+                           "slabTypeValue": 200,
+                           "isCompleted": true
+                        },
+                                                {
+                           "cabinClass": null,
+                           "slabType": "NumberOfBookings",
+                           "slabTypeValue": 700,
+                           "isCompleted": false
+                        }
+                     ],
+                     "minimumtoAchieve": 0,
+                     "commercialAmount": 1100,
+                     "commercialCurrency": "INR",
+                     "commercialType": "Payable",
+                     "isApplicable": true,
+                     "percentageValue": 0
+                  },
+                  "terminationFee":                   {
+                     "contractType": "Final",
+                     "commercialAmount": 170,
+                     "commercialCurrency": null,
+                     "commercialType": "Payable",
+                     "isApplicable": true,
+                     "returnableCommercialHead":                      [
+                                                {
+                           "commercialName": "SegmentFees",
+                           "commercialAmount": 700
+                        },
+                                                {
+                           "commercialName": "ServiceCharge",
+                           "commercialAmount": 1000
+                        }
+                     ]
+                  },
+                  "msfFee":                   {
+                     "contractType": "Final",
+                     "transactionType": "Online",
+                     "paymentType": "CreditCard",
+                     "cardType": "Visa",
+                     "totalFare": 4000,
+                     "commercialAmount": 480,
+                     "commercialCurrency": null,
+                     "commercialType": "Payable",
+                     "isApplicable": true,
+                     "msfchargeType": "OnUs"
+                  },
+                  "maintenanceFee": {"otherFees":                   {
+                     "contractType": "Final",
+                     "commercialAmount": 100,
+                     "commercialCurrency": "INR",
+                     "commercialType": "Payable",
+                     "isApplicable": true,
+                     "feeDetails": null
+                  }},
+                  "integrationFee": {"otherFees":                   {
+                     "contractType": "Final",
+                     "commercialAmount": 100,
+                     "commercialCurrency": "INR",
+                     "commercialType": "Payable",
+                     "isApplicable": true,
+                     "feeDetails":                      [
+                                                {
+                           "commercialName": "IntegrationFee",
+                           "commercialAmount": 500
+                        },
+                                                {
+                           "commercialName": "LicenceFee",
+                           "commercialAmount": 1200
+                        }
+                     ]
+                  }},
+                  "licenceFee": {"otherFees":                   {
+                     "contractType": "Final",
+                     "commercialAmount": 100,
+                     "commercialCurrency": "INR",
+                     "commercialType": "Payable",
+                     "isApplicable": true,
+                     "feeDetails":                      [
+                                                {
+                           "commercialName": "IntegrationFee",
+                           "commercialAmount": 500
+                        },
+                                                {
+                           "commercialName": "LicenceFee",
+                           "commercialAmount": 1200
+                        }
+                     ]
+                  }},
+                  "webServiceFee": {"otherFees":                   {
+                     "contractType": "Final",
+                     "commercialAmount": 100,
+                     "commercialCurrency": "INR",
+                     "commercialType": "Payable",
+                     "isApplicable": true,
+                     "feeDetails":                      [
+                                                {
+                           "commercialName": "IntegrationFee",
+                           "commercialAmount": 500
+                        },
+                                                {
+                           "commercialName": "LicenceFee",
+                           "commercialAmount": 1200
+                        }
+                     ]
+                  }},
+                  "loyaltyBonus": {"otherFees":                   {
+                     "contractType": "Final",
+                     "commercialAmount": 100,
+                     "commercialCurrency": "INR",
+                     "commercialType": "Payable",
+                     "isApplicable": true,
+                     "feeDetails":                      [
+                                                {
+                           "commercialName": "IntegrationFee",
+                           "commercialAmount": 500
+                        },
+                                                {
+                           "commercialName": "LicenceFee",
+                           "commercialAmount": 1200
+                        }
+                     ]
+                  }},
+                  "preferenceBenefit": {"otherFees":                   {
+                     "contractType": "Final",
+                     "commercialAmount": 100,
+                     "commercialCurrency": "INR",
+                     "commercialType": "Payable",
+                     "isApplicable": true,
+                     "feeDetails":                      [
+                                                {
+                           "commercialName": "IntegrationFee",
+                           "commercialAmount": 500
+                        },
+                                                {
+                           "commercialName": "LicenceFee",
+                           "commercialAmount": 1200
+                        }
+                     ]
+                  }},
+                  "retainerFee": {"otherFees":                   {
+                     "contractType": "Final",
+                     "commercialAmount": 100,
+                     "commercialCurrency": "INR",
+                     "commercialType": "Payable",
+                     "isApplicable": true,
+                     "feeDetails":                      [
+                                                {
+                           "commercialName": "IntegrationFee",
+                           "commercialAmount": 500
+                        },
+                                                {
+                           "commercialName": "LicenceFee",
+                           "commercialAmount": 1200
+                        }
+                     ]
+                  }},
+                  "listingFee": {"otherFees":                   {
+                     "contractType": "Final",
+                     "commercialAmount": 100,
+                     "commercialCurrency": "INR",
+                     "commercialType": "Payable",
+                     "isApplicable": true,
+                     "feeDetails":                      [
+                                                {
+                           "commercialName": "IntegrationFee",
+                           "commercialAmount": 500
+                        },
+                                                {
+                           "commercialName": "LicenceFee",
+                           "commercialAmount": 1200
+                        }
+                     ]
+                  }},
+                  "signUpFee": {"otherFees":                   {
+                     "contractType": "Final",
+                     "commercialAmount": 100,
+                     "commercialCurrency": "INR",
+                     "commercialType": "Payable",
+                     "isApplicable": true,
+                     "feeDetails":                      [
+                                                {
+                           "commercialName": "IntegrationFee",
+                           "commercialAmount": 500
+                        },
+                                                {
+                           "commercialName": "LicenceFee",
+                           "commercialAmount": 1200
+                        }
+                     ]
+                  }},
+                  "contentAccessFee": {"otherFees":                   {
+                     "contractType": "Final",
+                     "commercialAmount": 100,
+                     "commercialCurrency": "INR",
+                     "commercialType": "Payable",
+                     "isApplicable": true,
+                     "feeDetails":                      [
+                                                {
+                           "commercialName": "IntegrationFee",
+                           "commercialAmount": 500
+                        },
+                                                {
+                           "commercialName": "LicenceFee",
+                           "commercialAmount": 1200
+                        }
+                     ]
+                  }},
+                  "trainingFee": {"otherFees":                   {
+                     "contractType": "Final",
+                     "commercialAmount": 100,
+                     "commercialCurrency": "INR",
+                     "commercialType": "Payable",
+                     "isApplicable": true,
+                     "feeDetails":                      [
+                                                {
+                           "commercialName": "IntegrationFee",
+                           "commercialAmount": 500
+                        },
+                                                {
+                           "commercialName": "LicenceFee",
+                           "commercialAmount": 1200
+                        }
+                     ]
+                  }},
+                  "signUpBonus":                   {
+                     "contractType": "Final",
+                     "commercialAmount": 500,
+                     "commercialCurrency": "INR",
+                     "commercialType": "Payable",
+                     "isApplicable": true,
+                     "slabDetails": [                     {
+                        "cabinClass": null,
+                        "slabType": "TotalRevenue",
+                        "slabTypeValue": 2500000,
+                        "isCompleted": true
+                     }]
+                  },
+                  "remittanceFee":                   {
+                     "contractType": "Final",
+                     "totalSettlementAmount": 1200,
+                     "totalSettlementCurrency": "INR",
+                     "commercialAmount": 120,
+                     "commercialCurrency": "INR",
+                     "commercialType": "Payable",
+                     "isApplicable": true
+                  },
+                  "lookToBook":                   {
+                     "contractType": "Final",
+                     "numberofLooks": 6600,
+                     "numberofBooks": 4,
+                     "commercialAmount": 580,
+                     "currency": "INR",
+                     "commercialType": "Payable",
+                     "isCumulative": true,
+                     "isApplicable": true,
+                     "refreshCounter": false,
+                     "cumulativeSequence": -1,
+                     "numberofExcessLooks": 5800
+                  },
+                  "freeofCosts":                   {
+                     "contractType": "Final",
+                     "commercialType": "Payable",
+                     "isApplicable": true,
+                     "slabDetails": [                     {
+                        "cabinClass": "Economy",
+                        "slabType": "NumberOfBookings",
+                        "slabTypeValue": 1500,
+                        "isCompleted": true
+                     }],
+                     "focUtilisation":                      {
+                        "productCategory": "Transportation",
+                        "productCategorySubType": "Flights",
+                        "productName": "ALL"
+                     },
+                     "focTickets":                      {
+                        "cabinClass": "Economy",
+                        "numberOfTickets": 2,
+                        "focPercentage": 75,
+                        "fareComponent": "Base",
+                        "rbd": null
+                     },
+                     "focUpgrades": null,
+                     "plbapplicable": false
+                  },
+                  "ruleFlowName": "SpiceJet_India_China,PreferenceBenefitCalculation_9,RemittanceFeeCalculation_11,IncentiveOnTopUpCalculation_9,SignUpBonusCalculation_11,MaintenanceFeeCalculation_9,SignUpFeeCalculation_9,TrainingFeeCalculation_9,ListingFeeCalculation_9,WebServiceFeeCalculation_9,TerminationFeeCalculation_9,PenaltyFeeCalculation_11,RetainerFeeCalculation_9,FreeofCostsCalculation_10,LoyaltyBonusCalculation_9,MSFFeeCalculation_9,IntegrationFeeCalculation_9,LookToBookCumulativeCalculation_11,LicenceFeeCalculation_9,ContentAccessFeeCalculation_9",
+                  "selectedRow": "SpiceJet_India_China",
+                  "commonElements":                   {
+                     "supplier": "SpiceJet",
+                     "supplierMarket": "China",
+                     "segment": "Active",
+                     "contractValidity": 1486665000000,
+                     "productName": "Flights",
+                     "clientType": "B2B",
+                     "clientGroup": "TravelAgent",
+                     "clientName": "AkbarTravels",
+                     "rateType": null,
+                     "rateCode": null,
+                     "iatanumber": null
+                  },
+                  "slabDetails":                   [
+                                          {
+                        "cabinClass": null,
+                        "slabType": "TotalRevenue",
+                        "slabTypeValue": 1500,
+                        "isCompleted": false
+                     },
+                                          {
+                        "cabinClass": null,
+                        "slabType": "TotalPassengers",
+                        "slabTypeValue": 4500,
+                        "isCompleted": false
+                     }
+                  ]
+               }
+            ]
+         }}]
+      }],
+      "facts": [      {
+         "key": "BusinessRuleIntake",
+         "value": {"org.drools.core.common.DefaultFactHandle": {"external-form": "0:1:189105348:189105348:161:DEFAULT:NON_TRAIT:cnk.air_commercialscalculationengine.settlementrules.Root"}}
+      }]
+   }}
+}

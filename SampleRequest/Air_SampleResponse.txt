@@ -1,0 +1,599 @@
+<env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+   <env:Header>
+      <wsa:MessageID>urn:aefd0997-7051-11e7-971e-00dbdf906a04</wsa:MessageID>
+      <wsa:ReplyTo>
+         <wsa:Address>http://www.w3.org/2005/08/addressing/anonymous</wsa:Address>
+         <wsa:ReferenceParameters>
+            <instra:tracking.ecid xmlns:instra="http://xmlns.oracle.com/sca/tracking/1.0">eede42d1-5b10-4a55-a57e-0de67a4fdfe8-00000152</instra:tracking.ecid>
+            <instra:tracking.FlowEventId xmlns:instra="http://xmlns.oracle.com/sca/tracking/1.0">410014</instra:tracking.FlowEventId>
+            <instra:tracking.FlowId xmlns:instra="http://xmlns.oracle.com/sca/tracking/1.0">240003</instra:tracking.FlowId>
+            <instra:tracking.CorrelationFlowId xmlns:instra="http://xmlns.oracle.com/sca/tracking/1.0">0000Lpnu1Ac8hoYjLpyGOA1PTQPT000004</instra:tracking.CorrelationFlowId>
+            <instra:tracking.quiescing.SCAEntityId xmlns:instra="http://xmlns.oracle.com/sca/tracking/1.0">100005</instra:tracking.quiescing.SCAEntityId>
+         </wsa:ReferenceParameters>
+      </wsa:ReplyTo>
+      <wsa:FaultTo>
+         <wsa:Address>http://www.w3.org/2005/08/addressing/anonymous</wsa:Address>
+      </wsa:FaultTo>
+   </env:Header>
+   <env:Body>
+      <root xmlns:ns0="http://www.coxandkings.com/integ/suppl/businessruleintake_header" xmlns="http://www.coxandkings.com/integ/air/businessruleintake">
+         <ns0:MessageHeader>
+            <ns0:UserID>ABCD</ns0:UserID>
+            <ns0:TransactionID>123456</ns0:TransactionID>
+            <ns0:SessionID>Session</ns0:SessionID>
+            <ns0:OperationName>Search</ns0:OperationName>
+            <ns0:Status>SUCESS</ns0:Status>
+         </ns0:MessageHeader>
+         <BusinessRuleIntake>
+            <CommercialHeadDetails>
+               <CommercialHead>
+                  <CommercialHeadName>Standard</CommercialHeadName>
+                  <CommercialType>Receivable</CommercialType>
+                  <SettlementTransactionWise>false</SettlementTransactionWise>
+                  <ContractType>Final</ContractType>
+                  <Commissionable>true</Commissionable>
+                  <MarkDownApplicable>true</MarkDownApplicable>
+                  <MarkDownClientType>B2B</MarkDownClientType>
+               </CommercialHead>
+               <CommercialHead>
+                  <CommercialHeadName>Overriding</CommercialHeadName>
+                  <CommercialType>Receivable</CommercialType>
+                  <SettlementTransactionWise>false</SettlementTransactionWise>
+                  <ContractType>Final</ContractType>
+                  <Commissionable>false</Commissionable>
+                  <MarkDownApplicable>false</MarkDownApplicable>
+               </CommercialHead>
+               <CommercialHead>
+                  <CommercialHeadName>PLB</CommercialHeadName>
+                  <NettOffCommercialHeadName>Standard</NettOffCommercialHeadName>
+                  <CommercialType>Receivable</CommercialType>
+                  <SettlementTransactionWise>false</SettlementTransactionWise>
+                  <ContractType>Final</ContractType>
+                  <Commissionable>false</Commissionable>
+                  <MarkDownApplicable>false</MarkDownApplicable>
+               </CommercialHead>
+               <CommercialHead>
+                  <CommercialHeadName>SectorWiseIncentives</CommercialHeadName>
+                  <NettOffCommercialHeadName>Overriding</NettOffCommercialHeadName>
+                  <CommercialType>Receivable</CommercialType>
+                  <SettlementTransactionWise>false</SettlementTransactionWise>
+                  <ContractType>Final</ContractType>
+                  <Commissionable>false</Commissionable>
+                  <MarkDownApplicable>false</MarkDownApplicable>
+               </CommercialHead>
+               <CommercialHead>
+                  <CommercialHeadName>SegmentFees</CommercialHeadName>
+                  <CommercialType>Receivable</CommercialType>
+                  <SettlementTransactionWise>false</SettlementTransactionWise>
+                  <ContractType>Final</ContractType>
+                  <Commissionable>false</Commissionable>
+                  <MarkDownApplicable>false</MarkDownApplicable>
+               </CommercialHead>
+               <CommercialHead>
+                  <CommercialHeadName>IssuanceFees</CommercialHeadName>
+                  <CommercialType>Payable</CommercialType>
+                  <SettlementTransactionWise>true</SettlementTransactionWise>
+                  <ContractType>Final</ContractType>
+                  <Commissionable>false</Commissionable>
+                  <MarkDownApplicable>false</MarkDownApplicable>
+               </CommercialHead>
+               <CommercialHead>
+                  <CommercialHeadName>ServiceCharge</CommercialHeadName>
+                  <CommercialType>Payable</CommercialType>
+                  <SettlementTransactionWise>false</SettlementTransactionWise>
+                  <ContractType>Final</ContractType>
+                  <Commissionable>false</Commissionable>
+                  <MarkDownApplicable>false</MarkDownApplicable>
+               </CommercialHead>
+               <CommercialHead>
+                  <CommercialHeadName>Commission</CommercialHeadName>
+                  <CommercialType>Receivable</CommercialType>
+                  <SettlementTransactionWise>false</SettlementTransactionWise>
+                  <ContractType>Provisional</ContractType>
+                  <Commissionable>false</Commissionable>
+                  <MarkDownApplicable>false</MarkDownApplicable>
+               </CommercialHead>
+               <CommercialHead>
+                  <CommercialHeadName>ManagementFees</CommercialHeadName>
+                  <CommercialType>Payable</CommercialType>
+                  <SettlementTransactionWise>false</SettlementTransactionWise>
+                  <ContractType>Final</ContractType>
+                  <Commissionable>false</Commissionable>
+                  <MarkDownApplicable>false</MarkDownApplicable>
+               </CommercialHead>
+            </CommercialHeadDetails>
+            <RuleFlowName>SupplierCommercialDefinitionRuleSet.CommercialDefinitionDTRule1,SupplierCommercialRuleSet.LookToBookRule2</RuleFlowName>
+            <AdditionalElements>
+               <BaseElement attrName="FLIGHT_NUMBER" attrValue=" 402" isAdvanced="false">
+                  <PassengerType attrValue="ADT" commercialsApplied="">
+                     <BaseElementValue>1900.0</BaseElementValue>
+                     <FareBreakUp BaseFare="1600.0">
+                        <TaxDetails>
+                           <Tax TaxName="YQ" TaxValue="150.0"/>
+                           <Tax TaxName="RT" TaxValue="50.0"/>
+                           <Tax TaxName="ABC" TaxValue="100.0"/>
+                        </TaxDetails>
+                     </FareBreakUp>
+                     <BaseElementModTotalValue>1900.0</BaseElementModTotalValue>
+                  </PassengerType>
+                  <PassengerType attrValue="CHD" commercialsApplied="">
+                     <BaseElementValue>1500.0</BaseElementValue>
+                     <FareBreakUp BaseFare="1450.0">
+                        <TaxDetails>
+                           <Tax TaxName="YQ" TaxValue="30.0"/>
+                           <Tax TaxName="RT" TaxValue="20.0"/>
+                        </TaxDetails>
+                     </FareBreakUp>
+                     <BaseElementModTotalValue>1500.0</BaseElementModTotalValue>
+                  </PassengerType>
+               </BaseElement>
+               <BaseElement attrName="FLIGHT_NUMBER" attrValue=" 303" isAdvanced="false">
+                  <PassengerType attrValue="ADT" commercialsApplied="">
+                     <BaseElementValue>1800.0</BaseElementValue>
+                     <FareBreakUp BaseFare="1300.0">
+                        <TaxDetails>
+                           <Tax TaxName="YQ" TaxValue="200.0"/>
+                           <Tax TaxName="RT" TaxValue="300.0"/>
+                        </TaxDetails>
+                     </FareBreakUp>
+                     <BaseElementModTotalValue>1800.0</BaseElementModTotalValue>
+                  </PassengerType>
+                  <PassengerType attrValue="CHD" commercialsApplied="">
+                     <BaseElementValue>1500.0</BaseElementValue>
+                     <BaseElementModTotalValue>1500.0</BaseElementModTotalValue>
+                  </PassengerType>
+               </BaseElement>
+            </AdditionalElements>
+            <LoyaltyBonus>
+               <ContractType>Final</ContractType>
+               <FeeDetails>
+                  <ApplicableCommercialHead>LicenceFees</ApplicableCommercialHead>
+                  <ApplicableCommercialAmount>1100.0</ApplicableCommercialAmount>
+               </FeeDetails>
+               <FeeDetails>
+                  <ApplicableCommercialHead>WebServiceFees</ApplicableCommercialHead>
+                  <ApplicableCommercialAmount>1700.0</ApplicableCommercialAmount>
+               </FeeDetails>
+               <CommercialAmount>0.0</CommercialAmount>
+               <CommercialType>Receivable</CommercialType>
+               <isApplicable>true</isApplicable>
+               <isAdultPassenger>false</isAdultPassenger>
+               <isChildPassenger>false</isChildPassenger>
+               <isInfantPassenger>false</isInfantPassenger>
+            </LoyaltyBonus>
+            <LookToBook>
+               <ContractType>Final</ContractType>
+               <NumberofLooks>1200.0</NumberofLooks>
+               <NumberofBooks>1.0</NumberofBooks>
+               <CommercialAmount>0.5</CommercialAmount>
+               <Currency>INR</Currency>
+               <CommercialType>Payable</CommercialType>
+               <isApplicable>true</isApplicable>
+               <refreshCounter>false</refreshCounter>
+            </LookToBook>
+         </BusinessRuleIntake>
+         <BusinessRuleIntake>
+            <CommercialHeadDetails>
+               <CommercialHead>
+                  <CommercialHeadName>Standard</CommercialHeadName>
+                  <CommercialType>Receivable</CommercialType>
+                  <SettlementTransactionWise>false</SettlementTransactionWise>
+                  <ContractType>Final</ContractType>
+                  <Commissionable>true</Commissionable>
+                  <MarkDownApplicable>false</MarkDownApplicable>
+                  <MinimumMarkUpPercentage>2.0</MinimumMarkUpPercentage>
+                  <MaximumMarkUpPercentage>20.0</MaximumMarkUpPercentage>
+                  <MarkUpClientType>B2B,B2C</MarkUpClientType>
+                  <Status>COMPLETED</Status>
+               </CommercialHead>
+               <CommercialHead>
+                  <CommercialHeadName>Overriding</CommercialHeadName>
+                  <NettOffCommercialHeadName>Standard</NettOffCommercialHeadName>
+                  <CommercialType>Receivable</CommercialType>
+                  <SettlementTransactionWise>false</SettlementTransactionWise>
+                  <ContractType>Final</ContractType>
+                  <Commissionable>false</Commissionable>
+                  <MarkDownApplicable>false</MarkDownApplicable>
+                  <Status>COMPLETED</Status>
+               </CommercialHead>
+               <CommercialHead>
+                  <CommercialHeadName>PLB</CommercialHeadName>
+                  <NettOffCommercialHeadName>Overriding</NettOffCommercialHeadName>
+                  <CommercialType>Receivable</CommercialType>
+                  <SettlementTransactionWise>false</SettlementTransactionWise>
+                  <ContractType>Final</ContractType>
+                  <Commissionable>false</Commissionable>
+                  <MarkDownApplicable>false</MarkDownApplicable>
+                  <Status>COMPLETED</Status>
+               </CommercialHead>
+               <CommercialHead>
+                  <CommercialHeadName>SectorWiseIncentives</CommercialHeadName>
+                  <CommercialType>Receivable</CommercialType>
+                  <SettlementTransactionWise>false</SettlementTransactionWise>
+                  <ContractType>Final</ContractType>
+                  <Commissionable>false</Commissionable>
+                  <MarkDownApplicable>false</MarkDownApplicable>
+                  <Status>COMPLETED</Status>
+               </CommercialHead>
+               <CommercialHead>
+                  <CommercialHeadName>SegmentFees</CommercialHeadName>
+                  <NettOffCommercialHeadName>Standard</NettOffCommercialHeadName>
+                  <CommercialType>Receivable</CommercialType>
+                  <SettlementTransactionWise>false</SettlementTransactionWise>
+                  <ContractType>Final</ContractType>
+                  <Commissionable>false</Commissionable>
+                  <MarkDownApplicable>false</MarkDownApplicable>
+                  <Status>COMPLETED</Status>
+               </CommercialHead>
+               <CommercialHead>
+                  <CommercialHeadName>IssuanceFees</CommercialHeadName>
+                  <CommercialType>Payable</CommercialType>
+                  <SettlementTransactionWise>true</SettlementTransactionWise>
+                  <ContractType>Final</ContractType>
+                  <Commissionable>false</Commissionable>
+                  <MarkDownApplicable>false</MarkDownApplicable>
+                  <Status>COMPLETED</Status>
+               </CommercialHead>
+               <CommercialHead>
+                  <CommercialHeadName>ServiceCharge</CommercialHeadName>
+                  <CommercialType>Payable</CommercialType>
+                  <SettlementTransactionWise>false</SettlementTransactionWise>
+                  <ContractType>Final</ContractType>
+                  <Commissionable>false</Commissionable>
+                  <MarkDownApplicable>false</MarkDownApplicable>
+                  <Status>COMPLETED</Status>
+               </CommercialHead>
+               <CommercialHead>
+                  <CommercialHeadName>Commission</CommercialHeadName>
+                  <CommercialType>Receivable</CommercialType>
+                  <SettlementTransactionWise>false</SettlementTransactionWise>
+                  <ContractType>Final</ContractType>
+                  <Commissionable>false</Commissionable>
+                  <MarkDownApplicable>false</MarkDownApplicable>
+                  <Status>COMPLETED</Status>
+               </CommercialHead>
+               <CommercialHead>
+                  <CommercialHeadName>ManagementFees</CommercialHeadName>
+                  <CommercialType>Payable</CommercialType>
+                  <SettlementTransactionWise>false</SettlementTransactionWise>
+                  <ContractType>Final</ContractType>
+                  <Commissionable>false</Commissionable>
+                  <MarkDownApplicable>false</MarkDownApplicable>
+                  <Status>COMPLETED</Status>
+               </CommercialHead>
+            </CommercialHeadDetails>
+            <RuleFlowName>SupplierCommercialDefinitionRuleSet.CommercialDefinitionDTRule2,SupplierCommercialRuleSet.StandardCommercialBaseDTRule2,SupplierCommercialRuleSet.StandardCommercialCalculationDTRule6,SupplierCommercialRuleSet.StandardCommercialCalculationDTRule6,SupplierCommercialRuleSet.OverridingCommercialBaseDTRule2,SupplierCommercialRuleSet.OverridingCommercialCalculationDTRule7,SupplierCommercialRuleSet.OverridingCommercialCalculationDTRule7,SupplierCommercialRuleSet.PLBCommercialBaseDTRule2,SupplierCommercialRuleSet.PLBCommercialCalculationDTRule7,SupplierCommercialRuleSet.PLBCommercialCalculationDTRule7,SupplierCommercialRuleSet.SectorWiseIncentivesBaseDTRule2,SupplierCommercialRuleSet.SectorWiseIncentivesCalculationDTRule7,SupplierCommercialRuleSet.SectorWiseIncentivesCalculationDTRule7,SupplierCommercialRuleSet.SegmentFeesBaseDTRule2,SupplierCommercialRuleSet.SegmentFeesCalculationDTRule7,SupplierCommercialRuleSet.SegmentFeesCalculationDTRule7,SupplierCommercialRuleSet.IssuanceFeesBaseDTRule2,SupplierCommercialRuleSet.IssuanceFeesCalculationDTRule6,SupplierCommercialRuleSet.IssuanceFeesCalculationDTRule6,SupplierCommercialRuleSet.ServiceChargeBaseDTRule2,SupplierCommercialRuleSet.ServiceChargeCalculationDTRule6,SupplierCommercialRuleSet.ServiceChargeCalculationDTRule6,SupplierCommercialRuleSet.CommissionBaseDTRule2,SupplierCommercialRuleSet.CommissionCalculationDTRule6,SupplierCommercialRuleSet.CommissionCalculationDTRule6,SupplierCommercialRuleSet.ManagementFeesBaseDTRule2,SupplierCommercialRuleSet.ManagementFeesCalculationDTRule6,SupplierCommercialRuleSet.ManagementFeesCalculationDTRule6,SupplierCommercialRuleSet.LookToBookRule5,SupplierCommercialRuleSet.LoyaltyBonusRule2</RuleFlowName>
+            <AdditionalElements>
+               <BaseElement attrName="FLIGHT_NUMBER" attrValue=" 402" isAdvanced="false">
+                  <PassengerType attrValue="ADT" commercialsApplied="StandardOverridingPLBSectorWiseIncentivesSegmentFeesIssuanceFeesServiceChargeCommissionManagementFees">
+                     <BaseElementValue>1900.0</BaseElementValue>
+                     <FareBreakUp BaseFare="1600.0">
+                        <TaxDetails>
+                           <Tax TaxName="YQ" TaxValue="150.0"/>
+                           <Tax TaxName="RT" TaxValue="50.0"/>
+                           <Tax TaxName="ABC" TaxValue="100.0"/>
+                        </TaxDetails>
+                     </FareBreakUp>
+                     <BaseElementModTotalValue>1976.0</BaseElementModTotalValue>
+                     <CommericalDetailsSet>
+                        <CommericalDetails>
+                           <CommercialName>Standard</CommercialName>
+                           <CommercialInitialAmount>1650.0</CommercialInitialAmount>
+                           <CommercialCalculationPercentage>5.0</CommercialCalculationPercentage>
+                           <CommercialAmount>82.5</CommercialAmount>
+                           <CommercialTotalAmount>1567.5</CommercialTotalAmount>
+                           <CommercialFareComponent>Basic,RT</CommercialFareComponent>
+                           <FareBreakUp BaseFare="1520.0">
+                              <TaxDetails>
+                                 <Tax TaxName="YQ" TaxValue="150.0"/>
+                                 <Tax TaxName="RT" TaxValue="47.5"/>
+                                 <Tax TaxName="ABC" TaxValue="100.0"/>
+                              </TaxDetails>
+                           </FareBreakUp>
+                        </CommericalDetails>
+                        <CommericalDetails>
+                           <CommercialName>Overriding</CommercialName>
+                           <CommercialInitialAmount>1567.5</CommercialInitialAmount>
+                           <CommercialCalculationPercentage>10.0</CommercialCalculationPercentage>
+                           <CommercialAmount>156.75</CommercialAmount>
+                           <CommercialTotalAmount>1410.75</CommercialTotalAmount>
+                           <CommercialFareComponent>Total</CommercialFareComponent>
+                           <FareBreakUp BaseFare="1368.0">
+                              <TaxDetails>
+                                 <Tax TaxName="YQ" TaxValue="135.0"/>
+                                 <Tax TaxName="RT" TaxValue="42.75"/>
+                                 <Tax TaxName="ABC" TaxValue="90.0"/>
+                              </TaxDetails>
+                           </FareBreakUp>
+                        </CommericalDetails>
+                        <CommericalDetails>
+                           <CommercialName>PLB</CommercialName>
+                           <CommercialInitialAmount>1503.0</CommercialInitialAmount>
+                           <CommercialCalculationPercentage>5.0</CommercialCalculationPercentage>
+                           <CommercialCalculationAmount>120.0</CommercialCalculationAmount>
+                           <CommercialAmount>195.15</CommercialAmount>
+                           <CommercialTotalAmount>1307.85</CommercialTotalAmount>
+                           <CommercialCurrency>INR</CommercialCurrency>
+                           <CommercialFareComponent>Basic,YQ</CommercialFareComponent>
+                           <FareBreakUp BaseFare="1179.6">
+                              <TaxDetails>
+                                 <Tax TaxName="YQ" TaxValue="128.25"/>
+                                 <Tax TaxName="RT" TaxValue="42.75"/>
+                                 <Tax TaxName="ABC" TaxValue="90.0"/>
+                              </TaxDetails>
+                           </FareBreakUp>
+                        </CommericalDetails>
+                        <CommericalDetails>
+                           <CommercialName>SectorWiseIncentives</CommercialName>
+                           <CommercialInitialAmount>1600.0</CommercialInitialAmount>
+                           <CommercialCalculationAmount>200.0</CommercialCalculationAmount>
+                           <CommercialAmount>200.0</CommercialAmount>
+                           <CommercialTotalAmount>1400.0</CommercialTotalAmount>
+                           <CommercialCurrency>INR</CommercialCurrency>
+                           <FareBreakUp BaseFare="1400.0">
+                              <TaxDetails>
+                                 <Tax TaxName="YQ" TaxValue="150.0"/>
+                                 <Tax TaxName="RT" TaxValue="50.0"/>
+                                 <Tax TaxName="ABC" TaxValue="100.0"/>
+                              </TaxDetails>
+                           </FareBreakUp>
+                        </CommericalDetails>
+                        <CommericalDetails>
+                           <CommercialName>SegmentFees</CommercialName>
+                           <CommercialInitialAmount>1567.5</CommercialInitialAmount>
+                           <CommercialCalculationPercentage>10.0</CommercialCalculationPercentage>
+                           <CommercialAmount>156.75</CommercialAmount>
+                           <CommercialTotalAmount>1410.75</CommercialTotalAmount>
+                           <CommercialFareComponent>Total</CommercialFareComponent>
+                           <FareBreakUp BaseFare="1368.0">
+                              <TaxDetails>
+                                 <Tax TaxName="YQ" TaxValue="135.0"/>
+                                 <Tax TaxName="RT" TaxValue="42.75"/>
+                                 <Tax TaxName="ABC" TaxValue="90.0"/>
+                              </TaxDetails>
+                           </FareBreakUp>
+                        </CommericalDetails>
+                        <CommericalDetails>
+                           <CommercialName>IssuanceFees</CommercialName>
+                           <CommercialInitialAmount>150.0</CommercialInitialAmount>
+                           <CommercialCalculationPercentage>12.0</CommercialCalculationPercentage>
+                           <CommercialAmount>18.0</CommercialAmount>
+                           <CommercialTotalAmount>168.0</CommercialTotalAmount>
+                           <CommercialFareComponent>YQ</CommercialFareComponent>
+                           <FareBreakUp BaseFare="1600.0">
+                              <TaxDetails>
+                                 <Tax TaxName="YQ" TaxValue="168.0"/>
+                                 <Tax TaxName="RT" TaxValue="50.0"/>
+                                 <Tax TaxName="ABC" TaxValue="100.0"/>
+                              </TaxDetails>
+                           </FareBreakUp>
+                        </CommericalDetails>
+                        <CommericalDetails>
+                           <CommercialName>ServiceCharge</CommercialName>
+                           <CommercialInitialAmount>1600.0</CommercialInitialAmount>
+                           <CommercialCalculationPercentage>2.0</CommercialCalculationPercentage>
+                           <CommercialCalculationAmount>120.0</CommercialCalculationAmount>
+                           <CommercialAmount>152.0</CommercialAmount>
+                           <CommercialTotalAmount>1752.0</CommercialTotalAmount>
+                           <CommercialCurrency>INR</CommercialCurrency>
+                           <CommercialFareComponent>Basic</CommercialFareComponent>
+                           <FareBreakUp BaseFare="1752.0">
+                              <TaxDetails>
+                                 <Tax TaxName="YQ" TaxValue="150.0"/>
+                                 <Tax TaxName="RT" TaxValue="50.0"/>
+                                 <Tax TaxName="ABC" TaxValue="100.0"/>
+                              </TaxDetails>
+                           </FareBreakUp>
+                        </CommericalDetails>
+                        <CommericalDetails>
+                           <CommercialName>Commission</CommercialName>
+                           <CommercialInitialAmount>1600.0</CommercialInitialAmount>
+                           <CommercialCalculationAmount>100.0</CommercialCalculationAmount>
+                           <CommercialAmount>100.0</CommercialAmount>
+                           <CommercialTotalAmount>1500.0</CommercialTotalAmount>
+                           <CommercialCurrency>INR</CommercialCurrency>
+                           <FareBreakUp BaseFare="1500.0">
+                              <TaxDetails>
+                                 <Tax TaxName="YQ" TaxValue="150.0"/>
+                                 <Tax TaxName="RT" TaxValue="50.0"/>
+                                 <Tax TaxName="ABC" TaxValue="100.0"/>
+                              </TaxDetails>
+                           </FareBreakUp>
+                        </CommericalDetails>
+                        <CommericalDetails>
+                           <CommercialName>ManagementFees</CommercialName>
+                           <CommercialInitialAmount>1900.0</CommercialInitialAmount>
+                           <CommercialCalculationPercentage>4.0</CommercialCalculationPercentage>
+                           <CommercialAmount>76.0</CommercialAmount>
+                           <CommercialTotalAmount>1976.0</CommercialTotalAmount>
+                           <CommercialFareComponent>Total</CommercialFareComponent>
+                           <FareBreakUp BaseFare="1664.0">
+                              <TaxDetails>
+                                 <Tax TaxName="YQ" TaxValue="156.0"/>
+                                 <Tax TaxName="RT" TaxValue="52.0"/>
+                                 <Tax TaxName="ABC" TaxValue="104.0"/>
+                              </TaxDetails>
+                           </FareBreakUp>
+                        </CommericalDetails>
+                     </CommericalDetailsSet>
+                     <TotalReceivables>891.15</TotalReceivables>
+                     <TotalPayables>246.0</TotalPayables>
+                  </PassengerType>
+                  <PassengerType attrValue="CHD" commercialsApplied="StandardOverridingPLBSectorWiseIncentivesSegmentFeesIssuanceFeesServiceChargeCommissionManagementFees">
+                     <BaseElementValue>1500.0</BaseElementValue>
+                     <FareBreakUp BaseFare="1450.0">
+                        <TaxDetails>
+                           <Tax TaxName="YQ" TaxValue="30.0"/>
+                           <Tax TaxName="RT" TaxValue="20.0"/>
+                        </TaxDetails>
+                     </FareBreakUp>
+                     <BaseElementModTotalValue>1560.0</BaseElementModTotalValue>
+                     <CommericalDetailsSet>
+                        <CommericalDetails>
+                           <CommercialName>Standard</CommercialName>
+                           <CommercialInitialAmount>1470.0</CommercialInitialAmount>
+                           <CommercialCalculationPercentage>5.0</CommercialCalculationPercentage>
+                           <CommercialAmount>73.5</CommercialAmount>
+                           <CommercialTotalAmount>1396.5</CommercialTotalAmount>
+                           <CommercialFareComponent>Basic,RT</CommercialFareComponent>
+                           <FareBreakUp BaseFare="1377.5">
+                              <TaxDetails>
+                                 <Tax TaxName="YQ" TaxValue="30.0"/>
+                                 <Tax TaxName="RT" TaxValue="19.0"/>
+                              </TaxDetails>
+                           </FareBreakUp>
+                        </CommericalDetails>
+                        <CommericalDetails>
+                           <CommercialName>Overriding</CommercialName>
+                           <CommercialInitialAmount>1396.5</CommercialInitialAmount>
+                           <CommercialCalculationPercentage>10.0</CommercialCalculationPercentage>
+                           <CommercialAmount>139.65</CommercialAmount>
+                           <CommercialTotalAmount>1256.85</CommercialTotalAmount>
+                           <CommercialFareComponent>Total</CommercialFareComponent>
+                           <FareBreakUp BaseFare="1239.75">
+                              <TaxDetails>
+                                 <Tax TaxName="YQ" TaxValue="27.0"/>
+                                 <Tax TaxName="RT" TaxValue="17.1"/>
+                              </TaxDetails>
+                           </FareBreakUp>
+                        </CommericalDetails>
+                        <CommericalDetails>
+                           <CommercialName>PLB</CommercialName>
+                           <CommercialInitialAmount>1266.75</CommercialInitialAmount>
+                           <CommercialCalculationPercentage>5.0</CommercialCalculationPercentage>
+                           <CommercialCalculationAmount>120.0</CommercialCalculationAmount>
+                           <CommercialAmount>183.3375</CommercialAmount>
+                           <CommercialTotalAmount>1083.4125</CommercialTotalAmount>
+                           <CommercialCurrency>INR</CommercialCurrency>
+                           <CommercialFareComponent>Basic,YQ</CommercialFareComponent>
+                           <FareBreakUp BaseFare="1057.7625">
+                              <TaxDetails>
+                                 <Tax TaxName="YQ" TaxValue="25.65"/>
+                                 <Tax TaxName="RT" TaxValue="17.1"/>
+                              </TaxDetails>
+                           </FareBreakUp>
+                        </CommericalDetails>
+                        <CommericalDetails>
+                           <CommercialName>SectorWiseIncentives</CommercialName>
+                           <CommercialInitialAmount>1450.0</CommercialInitialAmount>
+                           <CommercialCalculationAmount>200.0</CommercialCalculationAmount>
+                           <CommercialAmount>200.0</CommercialAmount>
+                           <CommercialTotalAmount>1250.0</CommercialTotalAmount>
+                           <CommercialCurrency>INR</CommercialCurrency>
+                           <FareBreakUp BaseFare="1250.0">
+                              <TaxDetails>
+                                 <Tax TaxName="YQ" TaxValue="30.0"/>
+                                 <Tax TaxName="RT" TaxValue="20.0"/>
+                              </TaxDetails>
+                           </FareBreakUp>
+                        </CommericalDetails>
+                        <CommericalDetails>
+                           <CommercialName>SegmentFees</CommercialName>
+                           <CommercialInitialAmount>1396.5</CommercialInitialAmount>
+                           <CommercialCalculationPercentage>10.0</CommercialCalculationPercentage>
+                           <CommercialAmount>139.65</CommercialAmount>
+                           <CommercialTotalAmount>1256.85</CommercialTotalAmount>
+                           <CommercialFareComponent>Total</CommercialFareComponent>
+                           <FareBreakUp BaseFare="1239.75">
+                              <TaxDetails>
+                                 <Tax TaxName="YQ" TaxValue="27.0"/>
+                                 <Tax TaxName="RT" TaxValue="17.1"/>
+                              </TaxDetails>
+                           </FareBreakUp>
+                        </CommericalDetails>
+                        <CommericalDetails>
+                           <CommercialName>IssuanceFees</CommercialName>
+                           <CommercialInitialAmount>30.0</CommercialInitialAmount>
+                           <CommercialCalculationPercentage>12.0</CommercialCalculationPercentage>
+                           <CommercialAmount>3.5999999999999996</CommercialAmount>
+                           <CommercialTotalAmount>33.6</CommercialTotalAmount>
+                           <CommercialFareComponent>YQ</CommercialFareComponent>
+                           <FareBreakUp BaseFare="1450.0">
+                              <TaxDetails>
+                                 <Tax TaxName="YQ" TaxValue="33.6"/>
+                                 <Tax TaxName="RT" TaxValue="20.0"/>
+                              </TaxDetails>
+                           </FareBreakUp>
+                        </CommericalDetails>
+                        <CommericalDetails>
+                           <CommercialName>ServiceCharge</CommercialName>
+                           <CommercialInitialAmount>1450.0</CommercialInitialAmount>
+                           <CommercialCalculationPercentage>2.0</CommercialCalculationPercentage>
+                           <CommercialCalculationAmount>120.0</CommercialCalculationAmount>
+                           <CommercialAmount>149.0</CommercialAmount>
+                           <CommercialTotalAmount>1599.0</CommercialTotalAmount>
+                           <CommercialCurrency>INR</CommercialCurrency>
+                           <CommercialFareComponent>Basic</CommercialFareComponent>
+                           <FareBreakUp BaseFare="1599.0">
+                              <TaxDetails>
+                                 <Tax TaxName="YQ" TaxValue="30.0"/>
+                                 <Tax TaxName="RT" TaxValue="20.0"/>
+                              </TaxDetails>
+                           </FareBreakUp>
+                        </CommericalDetails>
+                        <CommericalDetails>
+                           <CommercialName>Commission</CommercialName>
+                           <CommercialInitialAmount>1450.0</CommercialInitialAmount>
+                           <CommercialCalculationAmount>100.0</CommercialCalculationAmount>
+                           <CommercialAmount>100.0</CommercialAmount>
+                           <CommercialTotalAmount>1350.0</CommercialTotalAmount>
+                           <CommercialCurrency>INR</CommercialCurrency>
+                           <FareBreakUp BaseFare="1350.0">
+                              <TaxDetails>
+                                 <Tax TaxName="YQ" TaxValue="30.0"/>
+                                 <Tax TaxName="RT" TaxValue="20.0"/>
+                              </TaxDetails>
+                           </FareBreakUp>
+                        </CommericalDetails>
+                        <CommericalDetails>
+                           <CommercialName>ManagementFees</CommercialName>
+                           <CommercialInitialAmount>1500.0</CommercialInitialAmount>
+                           <CommercialCalculationPercentage>4.0</CommercialCalculationPercentage>
+                           <CommercialAmount>60.0</CommercialAmount>
+                           <CommercialTotalAmount>1560.0</CommercialTotalAmount>
+                           <CommercialFareComponent>Total</CommercialFareComponent>
+                           <FareBreakUp BaseFare="1508.0">
+                              <TaxDetails>
+                                 <Tax TaxName="YQ" TaxValue="31.2"/>
+                                 <Tax TaxName="RT" TaxValue="20.8"/>
+                              </TaxDetails>
+                           </FareBreakUp>
+                        </CommericalDetails>
+                     </CommericalDetailsSet>
+                     <TotalReceivables>836.1374999999999</TotalReceivables>
+                     <TotalPayables>212.6</TotalPayables>
+                  </PassengerType>
+               </BaseElement>
+            </AdditionalElements>
+            <CommercialStatus>ManagementFeesBaseCompleted</CommercialStatus>
+            <LoyaltyBonus>
+               <ContractType>Final</ContractType>
+               <FeeDetails>
+                  <ApplicableCommercialHead>LicenceFees</ApplicableCommercialHead>
+                  <ApplicableCommercialAmount>1100.0</ApplicableCommercialAmount>
+               </FeeDetails>
+               <FeeDetails>
+                  <ApplicableCommercialHead>WebServiceFees</ApplicableCommercialHead>
+                  <ApplicableCommercialAmount>1700.0</ApplicableCommercialAmount>
+               </FeeDetails>
+               <CommercialAmount>110.0</CommercialAmount>
+               <CommercialType>Receivable</CommercialType>
+               <isApplicable>true</isApplicable>
+               <isAdultPassenger>true</isAdultPassenger>
+               <isChildPassenger>false</isChildPassenger>
+               <isInfantPassenger>false</isInfantPassenger>
+            </LoyaltyBonus>
+            <LookToBook>
+               <ContractType>Final</ContractType>
+               <NumberofLooks>2001.0</NumberofLooks>
+               <NumberofBooks>1.0</NumberofBooks>
+               <CommercialAmount>0.5</CommercialAmount>
+               <Currency>INR</Currency>
+               <CommercialType>Payable</CommercialType>
+               <isApplicable>true</isApplicable>
+               <refreshCounter>false</refreshCounter>
+            </LookToBook>
+         </BusinessRuleIntake>
+      </root>
+   </env:Body>
+</env:Envelope>

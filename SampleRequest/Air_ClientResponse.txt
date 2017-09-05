@@ -1,0 +1,346 @@
+<env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+   <env:Header>
+      <wsa:MessageID>urn:5278c436-706a-11e7-971e-00dbdf906a04</wsa:MessageID>
+      <wsa:ReplyTo>
+         <wsa:Address>http://www.w3.org/2005/08/addressing/anonymous</wsa:Address>
+         <wsa:ReferenceParameters>
+            <instra:tracking.ecid xmlns:instra="http://xmlns.oracle.com/sca/tracking/1.0">eede42d1-5b10-4a55-a57e-0de67a4fdfe8-000001c4</instra:tracking.ecid>
+            <instra:tracking.FlowEventId xmlns:instra="http://xmlns.oracle.com/sca/tracking/1.0">410059</instra:tracking.FlowEventId>
+            <instra:tracking.FlowId xmlns:instra="http://xmlns.oracle.com/sca/tracking/1.0">240012</instra:tracking.FlowId>
+            <instra:tracking.CorrelationFlowId xmlns:instra="http://xmlns.oracle.com/sca/tracking/1.0">0000LpoYPPg8hoYjLpyGOA1PTQPT00000J</instra:tracking.CorrelationFlowId>
+            <instra:tracking.quiescing.SCAEntityId xmlns:instra="http://xmlns.oracle.com/sca/tracking/1.0">110004</instra:tracking.quiescing.SCAEntityId>
+         </wsa:ReferenceParameters>
+      </wsa:ReplyTo>
+      <wsa:FaultTo>
+         <wsa:Address>http://www.w3.org/2005/08/addressing/anonymous</wsa:Address>
+      </wsa:FaultTo>
+   </env:Header>
+   <env:Body>
+      <callFunctionStatelessDecision xmlns="http://xmlns.oracle.com/ClientTransactionalRules/ClientTransactionalRules" xmlns:ns0="http://xmlns.oracle.com/bpel">
+         <resultList>
+            <root xmlns="http://www.coxandkings.com/integ/air/businessruleintake_client" xmlns:ns0="http://www.coxandkings.com/integ/suppl/businessruleintake_header">
+               <ns0:MessageHeader>
+                  <ns0:UserID>ABCD</ns0:UserID>
+                  <ns0:TransactionID>123456</ns0:TransactionID>
+                  <ns0:SessionID>Session</ns0:SessionID>
+                  <ns0:OperationName>Search</ns0:OperationName>
+                  <ns0:Status>SUCESS</ns0:Status>
+               </ns0:MessageHeader>
+               <BusinessRuleIntake>
+                  <EntityDetails>
+                     <EntityType>ClientType</EntityType>
+                     <EntityName>CnKB2BIndEng</EntityName>
+                     <EntityMarket>India</EntityMarket>
+                     <EntityStatus>DefinitionCompleted</EntityStatus>
+                     <EntityStatus>StandardAdvancedCompleted</EntityStatus>
+                     <EntityStatus>OverridingAdvancedCompleted</EntityStatus>
+                     <SelectedRow>CnKB2BIndEng_India_ClientType_Indigo</SelectedRow>
+                     <CommercialHeadDetails>
+                        <CommercialHead>
+                           <CommercialHeadName>Standard</CommercialHeadName>
+                           <CommercialProperty>Retention</CommercialProperty>
+                           <CommercialType>Payable</CommercialType>
+                           <SettlementTransactionWise>false</SettlementTransactionWise>
+                           <Commissionable>false</Commissionable>
+                           <MarkDownApplicable>false</MarkDownApplicable>
+                           <Status>COMPLETED</Status>
+                           <AdvancedDefinitionApplicable>true</AdvancedDefinitionApplicable>
+                        </CommercialHead>
+                        <CommercialHead>
+                           <CommercialHeadName>Overriding</CommercialHeadName>
+                           <CommercialProperty>Retention</CommercialProperty>
+                           <CommercialType>Payable</CommercialType>
+                           <SettlementTransactionWise>false</SettlementTransactionWise>
+                           <Commissionable>false</Commissionable>
+                           <MarkDownApplicable>false</MarkDownApplicable>
+                           <Status>COMPLETED</Status>
+                           <AdvancedDefinitionApplicable>true</AdvancedDefinitionApplicable>
+                        </CommercialHead>
+                     </CommercialHeadDetails>
+                  </EntityDetails>
+                  <EntityDetails>
+                     <EntityType>ClientSpecific</EntityType>
+                     <EntityName>AkbarTravels</EntityName>
+                     <EntityMarket>India</EntityMarket>
+                     <ParentEntityName>CnKB2BIndEng</ParentEntityName>
+                     <EntityStatus>DefinitionCompleted</EntityStatus>
+                     <SelectedRow>AkbarTravels_India_ClientSpecific</SelectedRow>
+                     <CommercialHeadDetails>
+                        <CommercialHead>
+                           <CommercialHeadName>Standard</CommercialHeadName>
+                           <CommercialProperty>Retention</CommercialProperty>
+                           <CommercialType>Payable</CommercialType>
+                           <SettlementTransactionWise>false</SettlementTransactionWise>
+                           <Commissionable>false</Commissionable>
+                           <MarkDownApplicable>false</MarkDownApplicable>
+                           <Status>COMPLETED</Status>
+                           <AdvancedDefinitionApplicable>false</AdvancedDefinitionApplicable>
+                        </CommercialHead>
+                        <CommercialHead>
+                           <CommercialHeadName>Overriding</CommercialHeadName>
+                           <CommercialProperty>Retention</CommercialProperty>
+                           <CommercialType>Payable</CommercialType>
+                           <SettlementTransactionWise>false</SettlementTransactionWise>
+                           <Commissionable>false</Commissionable>
+                           <MarkDownApplicable>false</MarkDownApplicable>
+                           <Status>COMPLETED</Status>
+                           <AdvancedDefinitionApplicable>false</AdvancedDefinitionApplicable>
+                        </CommercialHead>
+                     </CommercialHeadDetails>
+                  </EntityDetails>
+                  <CommonElements>
+                     <Supplier>Indigo</Supplier>
+                     <SupplierMarket>India</SupplierMarket>
+                     <IATANumber>123456</IATANumber>
+                     <Segment>Active</Segment>
+                     <ContractValidity>2017-05-10T00:00:00</ContractValidity>
+                     <ProductName>Flights</ProductName>
+                     <ClientType>B2B</ClientType>
+                     <ClientGroup>CG1</ClientGroup>
+                     <Clien;tName>AkbarTravels</ClientName>
+                     <RateType>RT1</RateType>
+                     <RateCode>RC1</RateCode>
+                     <SlabDetails>
+                        <SlabType>TotalRevenue</SlabType>
+                        <SlabTypeValue>1500.0</SlabTypeValue>
+                     </SlabDetails>
+                     <SlabDetails>
+                        <SlabType>TotalPassengers</SlabType>
+                        <SlabTypeValue>4500.0</SlabTypeValue>
+                     </SlabDetails>
+                  </CommonElements>
+                  <AdvancedDefinition>
+                     <isAdvanceDefinition>true</isAdvanceDefinition>
+                     <TicketingDate>2017-02-10T00:00:00</TicketingDate>
+                     <TravelDate>2017-04-10T00:00:00</TravelDate>
+                     <SalesDate>2017-02-12T00:00:00</SalesDate>
+                     <TravelType>SITI</TravelType>
+                     <JourneyType>OneWay</JourneyType>
+                     <FlightType>Via</FlightType>
+                     <FlightLineType>Online</FlightLineType>
+                     <CodeShareFlightIncluded>true</CodeShareFlightIncluded>
+                     <TravelProductName>Flights</TravelProductName>
+                     <ConnectivitySupplier>Indigo</ConnectivitySupplier>
+                     <ConnectivitySupplierType>LCC</ConnectivitySupplierType>
+                     <CabinClass>Economy</CabinClass>
+                     <RBD>S</RBD>
+                     <FareBasisValue>YEEYEE</FareBasisValue>
+                     <DealCode>DC01</DealCode>
+                     <CredentialsName>Indigo</CredentialsName>
+                     <BookingType>Online</BookingType>
+                  </AdvancedDefinition>
+                  <RuleFlowName>ClientCommercialDefinitionRuleSet.ClientCommercialDefinitionDTRule3,ClientCommercialDefinitionRuleSet.ClientCommercialDefinitionDTRule1,ClientCommercialRuleSet.StandardCommercialAdvancedDefinitionDTRule2,ClientCommercialRuleSet.StandardCommerciaRetentionDTRule2,ClientCommercialRuleSet.StandardCommerciaRetentionDTRule1,ClientCommercialRuleSet.StandardCommerciaRetentionDTRule3,ClientCommercialRuleSet.StandardCommerciaRetentionDTRule7,ClientCommercialRuleSet.OverridingCommercialAdvancedDefinitionDTRule2,ClientCommercialRuleSet.OverridingCommerciaRetentionDTRule3,ClientCommercialRuleSet.OverridingCommerciaRetentionDTRule7,ClientCommercialRuleSet.OverridingCommerciaRetentionDTRule1,ClientCommercialRuleSet.OverridingCommerciaRetentionDTRule2</RuleFlowName>
+                  <AdditionalElements>
+                     <BaseElement attrName="FLIGHT_NUMBER" attrValue="402" isAdvanced="false">
+                        <PassengerType attrName="PASSENGER_TYPE" attrValue="ADT">
+                           <BaseElementValue>1900.0</BaseElementValue>
+                           <FareBreakUp BaseFare="1600.0">
+                              <TaxDetails>
+                                 <Tax TaxName="YQ" TaxValue="150.0"/>
+                                 <Tax TaxName="RT" TaxValue="50.0"/>
+                                 <Tax TaxName="ABC" TaxValue="100.0"/>
+                              </TaxDetails>
+                           </FareBreakUp>
+                           <BaseElementModTotalValue>1900.0</BaseElementModTotalValue>
+                           <CommericalDetailsSet>
+                              <CommericalDetails>
+                                 <CommercialName>Standard</CommercialName>
+                                 <CommercialCalculationPercentage>20.0</CommercialCalculationPercentage>
+                                 <CommercialCalculationAmount>200.0</CommercialCalculationAmount>
+                                 <CommercialAmount>560.0</CommercialAmount>
+                                 <CommercialTotalAmount>1240.0</CommercialTotalAmount>
+                                 <CommercialCurrency>INR</CommercialCurrency>
+                                 <CommercialFareComponent>Basic,YQ,RT</CommercialFareComponent>
+                                 <FareBreakUp BaseFare="1080.0">
+                                    <TaxDetails>
+                                       <Tax TaxName="YQ" TaxValue="120.0"/>
+                                       <Tax TaxName="RT" TaxValue="40.0"/>
+                                       <Tax TaxName="ABC" TaxValue="100.0"/>
+                                    </TaxDetails>
+                                 </FareBreakUp>
+                              </CommericalDetails>
+                              <CommericalDetails>
+                                 <CommercialName>Overriding</CommercialName>
+                                 <CommercialInitialAmount>1600.0</CommercialInitialAmount>
+                                 <CommercialCalculationAmount>200.0</CommercialCalculationAmount>
+                                 <CommercialAmount>200.0</CommercialAmount>
+                                 <CommercialTotalAmount>1400.0</CommercialTotalAmount>
+                                 <FareBreakUp BaseFare="1400.0">
+                                    <TaxDetails>
+                                       <Tax TaxName="YQ" TaxValue="150.0"/>
+                                       <Tax TaxName="RT" TaxValue="50.0"/>
+                                       <Tax TaxName="ABC" TaxValue="100.0"/>
+                                    </TaxDetails>
+                                 </FareBreakUp>
+                              </CommericalDetails>
+                           </CommericalDetailsSet>
+                           <EntityDetailSet>
+                              <Entities EntityName="CnKB2BIndEng">
+                                 <EntityCommercialDetailsSet>
+                                    <EntityCommercialDetails>
+                                       <CommercialName>Standard</CommercialName>
+                                       <RetentionPercentage>20.0</RetentionPercentage>
+                                       <RetentionAmountPercentage>10.0</RetentionAmountPercentage>
+                                       <CommercialAmount>92.0</CommercialAmount>
+                                       <RemainingPercentageAmount>288.0</RemainingPercentageAmount>
+                                       <RemainingAmount>180.0</RemainingAmount>
+                                    </EntityCommercialDetails>
+                                    <EntityCommercialDetails>
+                                       <CommercialName>Overriding</CommercialName>
+                                       <RetentionAmountPercentage>15.0</RetentionAmountPercentage>
+                                       <CommercialAmount>30.0</CommercialAmount>
+                                       <RemainingAmount>170.0</RemainingAmount>
+                                    </EntityCommercialDetails>
+                                 </EntityCommercialDetailsSet>
+                              </Entities>
+                              <Entities EntityName="AkbarTravels">
+                                 <EntityCommercialDetailsSet>
+                                    <EntityCommercialDetails>
+                                       <CommercialName>Standard</CommercialName>
+                                       <RetentionPercentage>10.0</RetentionPercentage>
+                                       <RetentionAmountPercentage>20.0</RetentionAmountPercentage>
+                                       <CommercialAmount>64.8</CommercialAmount>
+                                       <RemainingPercentageAmount>259.2</RemainingPercentageAmount>
+                                       <RemainingAmount>144.0</RemainingAmount>
+                                    </EntityCommercialDetails>
+                                    <EntityCommercialDetails>
+                                       <CommercialName>Overriding</CommercialName>
+                                       <RetentionAmountPercentage>20.0</RetentionAmountPercentage>
+                                       <CommercialAmount>34.0</CommercialAmount>
+                                       <RemainingAmount>136.0</RemainingAmount>
+                                    </EntityCommercialDetails>
+                                 </EntityCommercialDetailsSet>
+                              </Entities>
+                           </EntityDetailSet>
+                           <CommercialsApplied>CnKB2BIndEng_Standard</CommercialsApplied>
+                           <CommercialsApplied>AkbarTravels_Standard</CommercialsApplied>
+                           <CommercialsApplied>CnKB2BIndEng_Overriding</CommercialsApplied>
+                           <CommercialsApplied>AkbarTravels_Overriding</CommercialsApplied>
+                        </PassengerType>
+                        <PassengerType attrName="PASSENGER_TYPE" attrValue="CHD">
+                           <BaseElementValue>1500.0</BaseElementValue>
+                           <FareBreakUp BaseFare="1450.0">
+                              <TaxDetails>
+                                 <Tax TaxName="YQ" TaxValue="30.0"/>
+                                 <Tax TaxName="RT" TaxValue="20.0"/>
+                              </TaxDetails>
+                           </FareBreakUp>
+                           <BaseElementModTotalValue>1500.0</BaseElementModTotalValue>
+                        </PassengerType>
+                     </BaseElement>
+                     <BaseElement attrName="FLIGHT_NUMBER" attrValue="303" isAdvanced="false">
+                        <PassengerType attrName="PASSENGER_TYPE" attrValue="ADT">
+                           <BaseElementValue>1800.0</BaseElementValue>
+                           <FareBreakUp BaseFare="1300.0">
+                              <TaxDetails>
+                                 <Tax TaxName="YQ" TaxValue="200.0"/>
+                                 <Tax TaxName="RT" TaxValue="300.0"/>
+                              </TaxDetails>
+                           </FareBreakUp>
+                           <BaseElementModTotalValue>1800.0</BaseElementModTotalValue>
+                           <CommericalDetailsSet>
+                              <CommericalDetails>
+                                 <CommercialName>Standard</CommercialName>
+                                 <CommercialInitialAmount>1500.0</CommercialInitialAmount>
+                                 <CommercialCalculationPercentage>4.0</CommercialCalculationPercentage>
+                                 <CommercialAmount>60.0</CommercialAmount>
+                                 <CommercialTotalAmount>1440.0</CommercialTotalAmount>
+                                 <CommercialFareComponent>Basic,YQ</CommercialFareComponent>
+                                 <FareBreakUp BaseFare="1248.0">
+                                    <TaxDetails>
+                                       <Tax TaxName="YQ" TaxValue="192.0"/>
+                                       <Tax TaxName="RT" TaxValue="300.0"/>
+                                    </TaxDetails>
+                                 </FareBreakUp>
+                              </CommericalDetails>
+                              <CommericalDetails>
+                                 <CommercialName>Overriding</CommercialName>
+                                 <CommercialInitialAmount>1800.0</CommercialInitialAmount>
+                                 <CommercialCalculationPercentage>15.0</CommercialCalculationPercentage>
+                                 <CommercialCalculationAmount>110.0</CommercialCalculationAmount>
+                                 <CommercialAmount>380.0</CommercialAmount>
+                                 <CommercialTotalAmount>1420.0</CommercialTotalAmount>
+                                 <CommercialFareComponent>Total</CommercialFareComponent>
+                                 <FareBreakUp BaseFare="995.0">
+                                    <TaxDetails>
+                                       <Tax TaxName="YQ" TaxValue="170.0"/>
+                                       <Tax TaxName="RT" TaxValue="255.0"/>
+                                    </TaxDetails>
+                                 </FareBreakUp>
+                              </CommericalDetails>
+                           </CommericalDetailsSet>
+                           <EntityDetailSet>
+                              <Entities EntityName="CnKB2BIndEng">
+                                 <EntityCommercialDetailsSet>
+                                    <EntityCommercialDetails>
+                                       <CommercialName>Standard</CommercialName>
+                                       <RetentionPercentage>10.0</RetentionPercentage>
+                                       <CommercialAmount>6.0</CommercialAmount>
+                                       <RemainingPercentageAmount>54.0</RemainingPercentageAmount>
+                                    </EntityCommercialDetails>
+                                    <EntityCommercialDetails>
+                                       <CommercialName>Overriding</CommercialName>
+                                       <RetentionPercentage>10.0</RetentionPercentage>
+                                       <CommercialAmount>27.0</CommercialAmount>
+                                       <RemainingPercentageAmount>243.0</RemainingPercentageAmount>
+                                    </EntityCommercialDetails>
+                                 </EntityCommercialDetailsSet>
+                              </Entities>
+                           </EntityDetailSet>
+                           <CommercialsApplied>CnKB2BIndEng_Standard</CommercialsApplied>
+                           <CommercialsApplied>CnKB2BIndEng_Overriding</CommercialsApplied>
+                        </PassengerType>
+                        <PassengerType attrName="PASSENGER_TYPE" attrValue="CHD">
+                           <BaseElementValue>1500.0</BaseElementValue>
+                           <BaseElementModTotalValue>1500.0</BaseElementModTotalValue>
+                           <CommericalDetailsSet>
+                              <CommericalDetails>
+                                 <CommercialName>Standard</CommercialName>
+                                 <CommercialInitialAmount>1500.0</CommercialInitialAmount>
+                                 <CommercialCalculationPercentage>10.0</CommercialCalculationPercentage>
+                                 <CommercialCalculationAmount>120.0</CommercialCalculationAmount>
+                                 <CommercialAmount>270.0</CommercialAmount>
+                                 <CommercialTotalAmount>1230.0</CommercialTotalAmount>
+                                 <CommercialCurrency>INR</CommercialCurrency>
+                                 <CommercialFareComponent>Total</CommercialFareComponent>
+                              </CommericalDetails>
+                              <CommericalDetails>
+                                 <CommercialName>Overriding</CommercialName>
+                                 <CommercialInitialAmount>1500.0</CommercialInitialAmount>
+                                 <CommercialCalculationPercentage>15.0</CommercialCalculationPercentage>
+                                 <CommercialCalculationAmount>110.0</CommercialCalculationAmount>
+                                 <CommercialAmount>335.0</CommercialAmount>
+                                 <CommercialTotalAmount>1165.0</CommercialTotalAmount>
+                                 <CommercialFareComponent>Total</CommercialFareComponent>
+                              </CommericalDetails>
+                           </CommericalDetailsSet>
+                           <EntityDetailSet>
+                              <Entities EntityName="CnKB2BIndEng">
+                                 <EntityCommercialDetailsSet>
+                                    <EntityCommercialDetails>
+                                       <CommercialName>Standard</CommercialName>
+                                       <RetentionAmountPercentage>10.0</RetentionAmountPercentage>
+                                       <CommercialAmount>12.0</CommercialAmount>
+                                       <RemainingAmount>108.0</RemainingAmount>
+                                    </EntityCommercialDetails>
+                                    <EntityCommercialDetails>
+                                       <CommercialName>Overriding</CommercialName>
+                                       <RetentionPercentage>5.0</RetentionPercentage>
+                                       <CommercialAmount>11.25</CommercialAmount>
+                                       <RemainingPercentageAmount>213.75</RemainingPercentageAmount>
+                                    </EntityCommercialDetails>
+                                 </EntityCommercialDetailsSet>
+                              </Entities>
+                           </EntityDetailSet>
+                           <CommercialsApplied>CnKB2BIndEng_Standard</CommercialsApplied>
+                           <CommercialsApplied>CnKB2BIndEng_Overriding</CommercialsApplied>
+                        </PassengerType>
+                     </BaseElement>
+                  </AdditionalElements>
+                  <CommercialStatus>OverridingAdvancedCompleted</CommercialStatus>
+               </BusinessRuleIntake>
+            </root>
+         </resultList>
+      </callFunctionStatelessDecision>
+   </env:Body>
+</env:Envelope>

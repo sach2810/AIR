@@ -1,0 +1,558 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:set="http://xmlns.oracle.com/SettlementRules/SettlementRules_DecisionService_1" xmlns:bpel="http://xmlns.oracle.com/bpel" xmlns:bus="http://www.coxandkings.com/integ/air/businessruleintake_settlement" xmlns:bus1="http://www.coxandkings.com/integ/suppl/businessruleintake_header">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <set:callFunctionStateless name="SettlementRules_DecisionService_1">
+         <set:parameterList>
+            <bus:root>
+               <bus1:MessageHeader>
+                  <bus1:UserID>ABCD</bus1:UserID>
+                  <bus1:TransactionID>123456</bus1:TransactionID>
+                  <bus1:SessionID>123456</bus1:SessionID>
+                  <bus1:Status>SUCESS</bus1:Status>
+               </bus1:MessageHeader>
+               <bus:BusinessRuleIntake>
+                  <bus:CommonElements>
+                     <bus:Supplier>Indigo</bus:Supplier>
+                     <bus:SupplierMarket>India</bus:SupplierMarket>
+                     <bus:ProductCategory>Transportation</bus:ProductCategory>
+                     <bus:ProductCategorySubType>Flights</bus:ProductCategorySubType>
+                     <bus:ContractValidity>2017-05-10T00:00:00</bus:ContractValidity>
+                     <bus:IATANumber>IATA1</bus:IATANumber>
+                     <bus:Segment>Active</bus:Segment>
+                     <bus:CommercialType/>
+                     <!--<bus:Default>?</bus:Default>-->
+                     <bus:Product>
+                        <bus:Chain>Chain1</bus:Chain>
+                        <bus:Brand>Brand1</bus:Brand>
+                        <bus:ProductName>PN1</bus:ProductName>
+                     </bus:Product>
+                     <!--<bus:Client>
+            
+                  <bus:ClientType>B2B</bus:ClientType>
+                  
+                  <bus:ClientGroup>CG1</bus:ClientGroup>
+                  
+                  <bus:ClientName>AkbarTravels</bus:ClientName>
+               </bus:Client>
+               
+               <bus:Rate>
+                  
+                  <bus:RateType>RT1</bus:RateType>
+                  
+                  <bus:RateCode>RC1</bus:RateCode>
+               </bus:Rate>-->
+                     <bus:SlabDetails>
+                        <bus:SlabType>TotalRevenue</bus:SlabType>
+                        <bus:SlabTypeValue>1500</bus:SlabTypeValue>
+                     </bus:SlabDetails>
+                     <bus:SlabDetails>
+                        <bus:SlabType>TotalPassengers</bus:SlabType>
+                        <bus:SlabTypeValue>4200</bus:SlabTypeValue>
+                     </bus:SlabDetails>
+                     <!--<bus:SettlementTransactionwise>?</bus:SettlementTransactionwise>-->
+                  </bus:CommonElements>
+                  <bus:AdvancedDefinition>
+                     <bus:TicketingDate>2017-02-10T00:00:00</bus:TicketingDate>
+                     <bus:TravelDate>2017-04-10T00:00:00</bus:TravelDate>
+                     <!--<bus:TravelType>SITI</bus:TravelType>
+               <bus:JourneyType>OneWay</bus:JourneyType>
+               <bus:FlightType>Via</bus:FlightType>
+               <bus:CodeShareFlightIncluded>true</bus:CodeShareFlightIncluded>
+              <bus:TravelProductName>Flights</bus:TravelProductName>-->
+                     <bus:FromContinent>Asia</bus:FromContinent>
+                     <bus:FromCountry>India</bus:FromCountry>
+                     <bus:FromCity>Mumbai</bus:FromCity>
+                     <!--<bus:ViaContinent>Asia</bus:ViaContinent>
+                      
+                     <bus:ViaCountry>India</bus:ViaCountry>
+                      
+                     <bus:ViaCity>Chennai</bus:ViaCity>
+                   
+                      
+                     <bus:ToContinent>Asia</bus:ToContinent>
+                      
+                     <bus:ToCountry>India</bus:ToCountry>
+                      
+                     <bus:ToCity>Delhi</bus:ToCity>
+                  </bus:To>
+                
+
+                   
+                  <bus:ConnectivitySupplier>Indigo</bus:Supplier>
+                   
+                  <bus:ConnectivitySupplierType>LCC</bus:SupplierType>
+
+                   
+                  <bus:CabinClass>Economy</bus:CabinClass>
+                   
+                  <bus:RBD>S</bus:RBD>
+                   
+                  <bus:FareBasis>StartsWith</bus:FareBasis>-->
+                   
+                  <bus:FareBasisValue>YEE</bus:FareBasisValue>
+                  <!--<bus:DealCode>DC01</bus:DealCode>
+                
+               <bus:CredentialsName>Indigo</bus:CredentialsName>
+                
+               <bus:BookingType>Online</bus:BookingType>
+               <bus:isAdvanceDefinition>true</bus:isAdvanceDefinition>-->
+                  </bus:AdvancedDefinition>
+                  <!--<bus:AdditionalElements>
+               
+               <bus:BaseElement attrName="FLIGHT_NUMBER" attrValue=" 402" isAdvanced="false">
+                  
+                  <bus:PassengerType attrName="PASSENGER_TYPE" attrValue="ADT" isAdvanced="false">
+                      
+                     <bus:BaseElementValue>1900</bus:BaseElementValue>
+                     <bus:BaseElementModTotalValue>1900</bus:BaseElementModTotalValue>
+                     <bus:FareBreakUp BaseFare="1600">
+                     <bus:TaxDetails>
+                     <bus:Tax TaxName="YQ" TaxValue="150"/>
+                     <bus:Tax TaxName="RT" TaxValue="50"/>
+                     <bus:Tax TaxName="ABC" TaxValue="100"/>
+                     </bus:TaxDetails>
+                     </bus:FareBreakUp>
+                     <bus:CommericalDetailsSet/>
+                      
+                  </bus:PassengerType>
+                  <bus:PassengerType attrName="PASSENGER_TYPE" attrValue="CHD" isAdvanced="false">
+                     
+                     <bus:BaseElementValue>1500</bus:BaseElementValue>
+                     <bus:BaseElementModTotalValue>1500</bus:BaseElementModTotalValue>
+                     <bus:FareBreakUp BaseFare="1450">
+                     <bus:TaxDetails>
+                     <bus:Tax TaxName="YQ" TaxValue="30"/>
+                     <bus:Tax TaxName="RT" TaxValue="20"/>
+                     </bus:TaxDetails>
+                     </bus:FareBreakUp>
+                     <bus:CommericalDetailsSet/>
+                     
+                  </bus:PassengerType>              
+
+               </bus:BaseElement>
+
+      <bus:BaseElement attrName="FLIGHT_NUMBER" attrValue=" 303" isAdvanced="false">
+                 
+                  <bus:PassengerType attrName="PASSENGER_TYPE" attrValue="ADT" isAdvanced="false">
+                     <bus:BaseElementValue>1800</bus:BaseElementValue>
+                     <bus:BaseElementModTotalValue>1800</bus:BaseElementModTotalValue>
+                     <bus:CommericalDetailsSet/>
+                     
+                  </bus:PassengerType>
+                  <bus:PassengerType attrName="PASSENGER_TYPE" attrValue="CHD" isAdvanced="false">
+                     
+                     <bus:BaseElementValue>1500</bus:BaseElementValue>
+                     <bus:BaseElementModTotalValue>1500</bus:BaseElementModTotalValue>
+                     
+                     <bus:CommericalDetailsSet/>
+                     
+                  </bus:PassengerType>                 
+                  
+
+               </bus:BaseElement>                
+            </bus:AdditionalElements>-->
+                  <bus:IncentiveOnTopUp>
+                     <bus:ModeofPayment>CreditCard</bus:ModeofPayment>
+                     <bus:BankName>ICICI Bank</bus:BankName>
+                     <bus:IncentiveCurrency>INR</bus:IncentiveCurrency>
+                     <bus:IncentiveAmount>100000</bus:IncentiveAmount>
+                     <bus:TopUpDateTime>2017-06-25T16:10:00</bus:TopUpDateTime>
+                     <bus:IncentiveRateType>RT1</bus:IncentiveRateType>
+                     <bus:IncentiveRateCode>RC1</bus:IncentiveRateCode>
+                  </bus:IncentiveOnTopUp>
+                  <bus:LookToBook>
+                     <bus:NumberofLooks>6600</bus:NumberofLooks>
+                     <bus:NumberofBooks>4</bus:NumberofBooks>
+                     <bus:isCumulative>true</bus:isCumulative>
+                  </bus:LookToBook>
+                  <bus:PenaltyFee>
+                      <bus:SlabDetails>
+                        <bus:SlabType>TotalTurnOver</bus:SlabType>
+                        <bus:SlabTypeValue>200</bus:SlabTypeValue>
+                     </bus:SlabDetails>
+                      <bus:SlabDetails>
+                        <bus:SlabType>NumberOfBookings</bus:SlabType>
+                        <bus:SlabTypeValue>700</bus:SlabTypeValue>
+                     </bus:SlabDetails>                     
+                  </bus:PenaltyFee>                  
+                  <bus:TerminationFees>
+                     <bus:ReturnableCommercialHeadDetails>
+                     <bus:CommercialName>SegmentFees</bus:CommercialName>
+                     <bus:ReturnableCommercialAmount>700</bus:ReturnableCommercialAmount>
+                     </bus:ReturnableCommercialHeadDetails>
+                     <bus:ReturnableCommercialHeadDetails>
+                     <bus:CommercialName>ServiceCharge</bus:CommercialName>
+                     <bus:ReturnableCommercialAmount>1000</bus:ReturnableCommercialAmount>
+                     </bus:ReturnableCommercialHeadDetails>
+                  </bus:TerminationFees>
+				<bus:SignUpBonus>
+                      <bus:SlabDetails>
+                        <bus:SlabType>TotalRevenue</bus:SlabType>
+                        <bus:SlabTypeValue>750000</bus:SlabTypeValue>
+                     </bus:SlabDetails>
+                     <bus:SlabDetails>
+                        <bus:SlabType>NumberOfSegments</bus:SlabType>
+                        <bus:SlabTypeValue>650000</bus:SlabTypeValue>
+                     </bus:SlabDetails>
+                  </bus:SignUpBonus>
+                  <bus:MSFFees>
+                     <bus:TransactionType>Online</bus:TransactionType>
+                     <bus:MSFChargeType>OnUs</bus:MSFChargeType>
+                     <bus:PaymentType>CreditCard</bus:PaymentType>
+                     <bus:CardType>Visa</bus:CardType>
+                     <bus:TotalFare>2400</bus:TotalFare>
+                  </bus:MSFFees>
+                  <bus:MaintenanceFees>
+                     <bus:FeeDetails>
+                        <bus:ApplicableCommercialHead>IntegrationFees</bus:ApplicableCommercialHead>
+                        <bus:ApplicableCommercialAmount>1400</bus:ApplicableCommercialAmount>
+                     </bus:FeeDetails>
+                     <bus:FeeDetails>
+                        <bus:ApplicableCommercialHead>LicenceFees</bus:ApplicableCommercialHead>
+                        <bus:ApplicableCommercialAmount>1200</bus:ApplicableCommercialAmount>
+                     </bus:FeeDetails>
+                  </bus:MaintenanceFees>
+                  <bus:IntegrationFees>
+                     <bus:FeeDetails>
+                        <bus:ApplicableCommercialHead>LicenceFees</bus:ApplicableCommercialHead>
+                        <bus:ApplicableCommercialAmount>1100</bus:ApplicableCommercialAmount>
+                     </bus:FeeDetails>
+                  </bus:IntegrationFees>
+                  <bus:LicenceFees></bus:LicenceFees>
+                  <bus:WebServiceFees>
+                     <bus:FeeDetails>
+                        <bus:ApplicableCommercialHead>MaintenanceFees</bus:ApplicableCommercialHead>
+                        <bus:ApplicableCommercialAmount>1700</bus:ApplicableCommercialAmount>
+                     </bus:FeeDetails>
+                  </bus:WebServiceFees>
+                  <bus:LoyaltyBonus>
+                     <bus:FeeDetails>
+                        <bus:ApplicableCommercialHead>LicenceFees</bus:ApplicableCommercialHead>
+                        <bus:ApplicableCommercialAmount>1100</bus:ApplicableCommercialAmount>
+                     </bus:FeeDetails>
+                     <bus:FeeDetails>
+                        <bus:ApplicableCommercialHead>WebServiceFees</bus:ApplicableCommercialHead>
+                        <bus:ApplicableCommercialAmount>1700</bus:ApplicableCommercialAmount>
+                     </bus:FeeDetails>
+                  </bus:LoyaltyBonus>
+                  <bus:PreferenceBenefit>
+                     <bus:FeeDetails>
+                        <bus:ApplicableCommercialHead>ListingFee</bus:ApplicableCommercialHead>
+                        <bus:ApplicableCommercialAmount>3000</bus:ApplicableCommercialAmount>
+                     </bus:FeeDetails>
+                  </bus:PreferenceBenefit>
+                  <bus:RetainerFees>
+                     <bus:FeeDetails>
+                        <bus:ApplicableCommercialHead>LicenceFees</bus:ApplicableCommercialHead>
+                        <bus:ApplicableCommercialAmount>10000</bus:ApplicableCommercialAmount>
+                     </bus:FeeDetails>
+                  </bus:RetainerFees>
+                  <bus:ListingFees></bus:ListingFees>
+                  <bus:SignUpFees>
+                     <bus:FeeDetails>
+                        <bus:ApplicableCommercialHead>MaintenanceFees</bus:ApplicableCommercialHead>
+                        <bus:ApplicableCommercialAmount>700</bus:ApplicableCommercialAmount>
+                     </bus:FeeDetails>
+                  </bus:SignUpFees>
+                  <bus:ContentAccessFees>
+                     <bus:FeeDetails>
+                        <bus:ApplicableCommercialHead>MaintenanceFees</bus:ApplicableCommercialHead>
+                        <bus:ApplicableCommercialAmount>1400</bus:ApplicableCommercialAmount>
+                     </bus:FeeDetails>
+                     <bus:FeeDetails>
+                        <bus:ApplicableCommercialHead>LicenceFees</bus:ApplicableCommercialHead>
+                        <bus:ApplicableCommercialAmount>1200</bus:ApplicableCommercialAmount>
+                     </bus:FeeDetails>
+                     <bus:FeeDetails>
+                        <bus:ApplicableCommercialHead>LoyaltyBonus</bus:ApplicableCommercialHead>
+                        <bus:ApplicableCommercialAmount>900</bus:ApplicableCommercialAmount>
+                     </bus:FeeDetails>
+                  </bus:ContentAccessFees>
+                  <bus:TrainingFees>
+                     <bus:FeeDetails>
+                        <bus:ApplicableCommercialHead>LoyaltyBonus</bus:ApplicableCommercialHead>
+                        <bus:ApplicableCommercialAmount>700</bus:ApplicableCommercialAmount>
+                     </bus:FeeDetails>
+                  </bus:TrainingFees>                  
+                  <bus:RemittanceFees>
+                        <bus:TotalSettlementAmount>21000</bus:TotalSettlementAmount>
+                        <bus:TotalSettlementCurrency>INR</bus:TotalSettlementCurrency>
+                  </bus:RemittanceFees>
+               </bus:BusinessRuleIntake>
+ <bus:BusinessRuleIntake>
+                  <bus:CommonElements>
+                     <bus:Supplier>SpiceJet</bus:Supplier>
+                     <bus:SupplierMarket>India</bus:SupplierMarket>
+                     <bus:ProductCategory>Transportation</bus:ProductCategory>
+                     <bus:ProductCategorySubType>Flights</bus:ProductCategorySubType>
+                     <bus:ContractValidity>2017-05-10T00:00:00</bus:ContractValidity>
+                     <bus:IATANumber>IATA1</bus:IATANumber>
+                     <bus:Segment>Active</bus:Segment>
+                     <bus:CommercialType/>
+                     <!--<bus:Default>?</bus:Default>-->
+                     <bus:Product>
+                        <bus:Chain>Chain1</bus:Chain>
+                        <bus:Brand>Brand1</bus:Brand>
+                        <bus:ProductName>PN1</bus:ProductName>
+                     </bus:Product>
+                     <!--<bus:Client>
+            
+                  <bus:ClientType>B2B</bus:ClientType>
+                  
+                  <bus:ClientGroup>CG1</bus:ClientGroup>
+                  
+                  <bus:ClientName>AkbarTravels</bus:ClientName>
+               </bus:Client>
+               
+               <bus:Rate>
+                  
+                  <bus:RateType>RT1</bus:RateType>
+                  
+                  <bus:RateCode>RC1</bus:RateCode>
+               </bus:Rate>-->
+                     <bus:SlabDetails>
+                        <bus:SlabType>TotalRevenue</bus:SlabType>
+                        <bus:SlabTypeValue>1500</bus:SlabTypeValue>
+                     </bus:SlabDetails>
+                     <bus:SlabDetails>
+                        <bus:SlabType>TotalPassengers</bus:SlabType>
+                        <bus:SlabTypeValue>4200</bus:SlabTypeValue>
+                     </bus:SlabDetails>
+                     <!--<bus:SettlementTransactionwise>?</bus:SettlementTransactionwise>-->
+                  </bus:CommonElements>
+                  <bus:AdvancedDefinition>
+                     <bus:TicketingDate>2017-02-10T00:00:00</bus:TicketingDate>
+                     <bus:TravelDate>2017-04-10T00:00:00</bus:TravelDate>
+                     <!--<bus:TravelType>SITI</bus:TravelType>
+               <bus:JourneyType>OneWay</bus:JourneyType>
+               <bus:FlightType>Via</bus:FlightType>
+               <bus:CodeShareFlightIncluded>true</bus:CodeShareFlightIncluded>
+              <bus:TravelProductName>Flights</bus:TravelProductName>-->
+                     <bus:FromContinent>Asia</bus:FromContinent>
+                     <bus:FromCountry>India</bus:FromCountry>
+                     <bus:FromCity>Mumbai</bus:FromCity>
+                     <!--<bus:ViaContinent>Asia</bus:ViaContinent>
+                      
+                     <bus:ViaCountry>India</bus:ViaCountry>
+                      
+                     <bus:ViaCity>Chennai</bus:ViaCity>
+                   
+                      
+                     <bus:ToContinent>Asia</bus:ToContinent>
+                      
+                     <bus:ToCountry>India</bus:ToCountry>
+                      
+                     <bus:ToCity>Delhi</bus:ToCity>
+                  </bus:To>
+                
+
+                   
+                  <bus:ConnectivitySupplier>Indigo</bus:Supplier>
+                   
+                  <bus:ConnectivitySupplierType>LCC</bus:SupplierType>
+
+                   
+                  <bus:CabinClass>Economy</bus:CabinClass>
+                   
+                  <bus:RBD>S</bus:RBD>
+                   
+                  <bus:FareBasis>StartsWith</bus:FareBasis>-->
+                   
+                  <bus:FareBasisValue>YEE</bus:FareBasisValue>
+                  <!--<bus:DealCode>DC01</bus:DealCode>
+                
+               <bus:CredentialsName>Indigo</bus:CredentialsName>
+                
+               <bus:BookingType>Online</bus:BookingType>
+               <bus:isAdvanceDefinition>true</bus:isAdvanceDefinition>-->
+                  </bus:AdvancedDefinition>
+                  <!--<bus:AdditionalElements>
+               
+               <bus:BaseElement attrName="FLIGHT_NUMBER" attrValue=" 402" isAdvanced="false">
+                  
+                  <bus:PassengerType attrName="PASSENGER_TYPE" attrValue="ADT" isAdvanced="false">
+                      
+                     <bus:BaseElementValue>1900</bus:BaseElementValue>
+                     <bus:BaseElementModTotalValue>1900</bus:BaseElementModTotalValue>
+                     <bus:FareBreakUp BaseFare="1600">
+                     <bus:TaxDetails>
+                     <bus:Tax TaxName="YQ" TaxValue="150"/>
+                     <bus:Tax TaxName="RT" TaxValue="50"/>
+                     <bus:Tax TaxName="ABC" TaxValue="100"/>
+                     </bus:TaxDetails>
+                     </bus:FareBreakUp>
+                     <bus:CommericalDetailsSet/>
+                      
+                  </bus:PassengerType>
+                  <bus:PassengerType attrName="PASSENGER_TYPE" attrValue="CHD" isAdvanced="false">
+                     
+                     <bus:BaseElementValue>1500</bus:BaseElementValue>
+                     <bus:BaseElementModTotalValue>1500</bus:BaseElementModTotalValue>
+                     <bus:FareBreakUp BaseFare="1450">
+                     <bus:TaxDetails>
+                     <bus:Tax TaxName="YQ" TaxValue="30"/>
+                     <bus:Tax TaxName="RT" TaxValue="20"/>
+                     </bus:TaxDetails>
+                     </bus:FareBreakUp>
+                     <bus:CommericalDetailsSet/>
+                     
+                  </bus:PassengerType>              
+
+               </bus:BaseElement>
+
+      <bus:BaseElement attrName="FLIGHT_NUMBER" attrValue=" 303" isAdvanced="false">
+                 
+                  <bus:PassengerType attrName="PASSENGER_TYPE" attrValue="ADT" isAdvanced="false">
+                     <bus:BaseElementValue>1800</bus:BaseElementValue>
+                     <bus:BaseElementModTotalValue>1800</bus:BaseElementModTotalValue>
+                     <bus:CommericalDetailsSet/>
+                     
+                  </bus:PassengerType>
+                  <bus:PassengerType attrName="PASSENGER_TYPE" attrValue="CHD" isAdvanced="false">
+                     
+                     <bus:BaseElementValue>1500</bus:BaseElementValue>
+                     <bus:BaseElementModTotalValue>1500</bus:BaseElementModTotalValue>
+                     
+                     <bus:CommericalDetailsSet/>
+                     
+                  </bus:PassengerType>                 
+                  
+
+               </bus:BaseElement>                
+            </bus:AdditionalElements>-->
+                  <bus:IncentiveOnTopUp>
+                     <bus:ModeofPayment>CreditCard</bus:ModeofPayment>
+                     <bus:BankName>ICICI Bank</bus:BankName>
+                     <bus:IncentiveCurrency>INR</bus:IncentiveCurrency>
+                     <bus:IncentiveAmount>100000</bus:IncentiveAmount>
+                     <bus:TopUpDateTime>2017-06-25T16:10:00</bus:TopUpDateTime>
+                     <bus:IncentiveRateType>RT1</bus:IncentiveRateType>
+                     <bus:IncentiveRateCode>RC1</bus:IncentiveRateCode>
+                  </bus:IncentiveOnTopUp>
+                  <bus:LookToBook>
+                     <bus:NumberofLooks>6600</bus:NumberofLooks>
+                     <bus:NumberofBooks>4</bus:NumberofBooks>
+                     <bus:isCumulative>true</bus:isCumulative>
+                  </bus:LookToBook>
+                  <bus:PenaltyFee>
+                      <bus:SlabDetails>
+                        <bus:SlabType>TotalTurnOver</bus:SlabType>
+                        <bus:SlabTypeValue>200</bus:SlabTypeValue>
+                     </bus:SlabDetails>
+                      <bus:SlabDetails>
+                        <bus:SlabType>NumberOfBookings</bus:SlabType>
+                        <bus:SlabTypeValue>700</bus:SlabTypeValue>
+                     </bus:SlabDetails>                     
+                  </bus:PenaltyFee>                  
+                  <bus:TerminationFees>
+                     <bus:ReturnableCommercialHeadDetails>
+                     <bus:CommercialName>SegmentFees</bus:CommercialName>
+                     <bus:ReturnableCommercialAmount>700</bus:ReturnableCommercialAmount>
+                     </bus:ReturnableCommercialHeadDetails>
+                     <bus:ReturnableCommercialHeadDetails>
+                     <bus:CommercialName>ServiceCharge</bus:CommercialName>
+                     <bus:ReturnableCommercialAmount>1000</bus:ReturnableCommercialAmount>
+                     </bus:ReturnableCommercialHeadDetails>
+                  </bus:TerminationFees>
+				<bus:SignUpBonus>
+                      <bus:SlabDetails>
+                        <bus:SlabType>TotalRevenue</bus:SlabType>
+                        <bus:SlabTypeValue>150000</bus:SlabTypeValue>
+                     </bus:SlabDetails>
+                     <bus:SlabDetails>
+                        <bus:SlabType>NumberOfSegments</bus:SlabType>
+                        <bus:SlabTypeValue>650000</bus:SlabTypeValue>
+                     </bus:SlabDetails>
+                  </bus:SignUpBonus>
+                  <bus:MSFFees>
+                     <bus:TransactionType>Online</bus:TransactionType>
+                     <bus:MSFChargeType>OnUs</bus:MSFChargeType>
+                     <bus:PaymentType>CreditCard</bus:PaymentType>
+                     <bus:CardType>Visa</bus:CardType>
+                     <bus:TotalFare>2400</bus:TotalFare>
+                  </bus:MSFFees>
+                  <bus:MaintenanceFees>
+                     <bus:FeeDetails>
+                        <bus:ApplicableCommercialHead>IntegrationFees</bus:ApplicableCommercialHead>
+                        <bus:ApplicableCommercialAmount>1400</bus:ApplicableCommercialAmount>
+                     </bus:FeeDetails>
+                     <bus:FeeDetails>
+                        <bus:ApplicableCommercialHead>LicenceFees</bus:ApplicableCommercialHead>
+                        <bus:ApplicableCommercialAmount>1200</bus:ApplicableCommercialAmount>
+                     </bus:FeeDetails>
+                  </bus:MaintenanceFees>
+                  <bus:IntegrationFees>
+                     <bus:FeeDetails>
+                        <bus:ApplicableCommercialHead>LicenceFees</bus:ApplicableCommercialHead>
+                        <bus:ApplicableCommercialAmount>1100</bus:ApplicableCommercialAmount>
+                     </bus:FeeDetails>
+                  </bus:IntegrationFees>
+                  <bus:LicenceFees></bus:LicenceFees>
+                  <bus:WebServiceFees>
+                     <bus:FeeDetails>
+                        <bus:ApplicableCommercialHead>LoyaltyBonus</bus:ApplicableCommercialHead>
+                        <bus:ApplicableCommercialAmount>1700</bus:ApplicableCommercialAmount>
+                     </bus:FeeDetails>
+                  </bus:WebServiceFees>
+                  <bus:LoyaltyBonus>
+                     <bus:FeeDetails>
+                        <bus:ApplicableCommercialHead>LicenceFees</bus:ApplicableCommercialHead>
+                        <bus:ApplicableCommercialAmount>1100</bus:ApplicableCommercialAmount>
+                     </bus:FeeDetails>
+                     <bus:FeeDetails>
+                        <bus:ApplicableCommercialHead>WebServiceFees</bus:ApplicableCommercialHead>
+                        <bus:ApplicableCommercialAmount>1700</bus:ApplicableCommercialAmount>
+                     </bus:FeeDetails>
+                  </bus:LoyaltyBonus>
+                  <bus:PreferenceBenefit>
+                     <bus:FeeDetails>
+                        <bus:ApplicableCommercialHead>ListingFee</bus:ApplicableCommercialHead>
+                        <bus:ApplicableCommercialAmount>3000</bus:ApplicableCommercialAmount>
+                     </bus:FeeDetails>
+                  </bus:PreferenceBenefit>
+                  <bus:RetainerFees>
+                     <bus:FeeDetails>
+                        <bus:ApplicableCommercialHead>ListingFees</bus:ApplicableCommercialHead>
+                        <bus:ApplicableCommercialAmount>10000</bus:ApplicableCommercialAmount>
+                     </bus:FeeDetails>
+                  </bus:RetainerFees>
+                  <bus:ListingFees></bus:ListingFees>
+                  <bus:SignUpFees>
+                     <bus:FeeDetails>
+                        <bus:ApplicableCommercialHead>ListingFees</bus:ApplicableCommercialHead>
+                        <bus:ApplicableCommercialAmount>700</bus:ApplicableCommercialAmount>
+                     </bus:FeeDetails>
+                  </bus:SignUpFees>
+                  <bus:ContentAccessFees>
+                     <bus:FeeDetails>
+                        <bus:ApplicableCommercialHead>MaintenanceFees</bus:ApplicableCommercialHead>
+                        <bus:ApplicableCommercialAmount>1400</bus:ApplicableCommercialAmount>
+                     </bus:FeeDetails>
+                     <bus:FeeDetails>
+                        <bus:ApplicableCommercialHead>LicenceFees</bus:ApplicableCommercialHead>
+                        <bus:ApplicableCommercialAmount>1200</bus:ApplicableCommercialAmount>
+                     </bus:FeeDetails>
+                     <bus:FeeDetails>
+                        <bus:ApplicableCommercialHead>LoyaltyBonus</bus:ApplicableCommercialHead>
+                        <bus:ApplicableCommercialAmount>900</bus:ApplicableCommercialAmount>
+                     </bus:FeeDetails>
+                  </bus:ContentAccessFees>
+                  <bus:TrainingFees>
+                     <bus:FeeDetails>
+                        <bus:ApplicableCommercialHead>LoyaltyBonus</bus:ApplicableCommercialHead>
+                        <bus:ApplicableCommercialAmount>700</bus:ApplicableCommercialAmount>
+                     </bus:FeeDetails>
+                  </bus:TrainingFees>                  
+                  <bus:RemittanceFees>
+                        <bus:TotalSettlementAmount>21000</bus:TotalSettlementAmount>
+                        <bus:TotalSettlementCurrency>INR</bus:TotalSettlementCurrency>
+                  </bus:RemittanceFees>
+               </bus:BusinessRuleIntake>
+            
+
+            
+            </bus:root>
+         </set:parameterList>
+      </set:callFunctionStateless>
+   </soapenv:Body>
+</soapenv:Envelope>

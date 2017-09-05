@@ -1,0 +1,563 @@
+{ "lookup" : "ksession",
+  "commands" : [ 
+    
+    { "insert" : {"out-identifier":"BusinessRuleIntake","return-object":false,"entry-point":"DEFAULT",
+    "object":{"cnk.air_commercialscalculationengine.settlementrules.Root":{
+      
+        "header":{
+    		"transactionID":"12345",
+    		"sessionID":"abc@123",
+    		"operationName":"Search",
+    		"userID":"Sachin"
+    		},
+    	
+      "businessRuleIntake": [
+        {
+          "commonElements": {
+            "supplier": "Indigo",
+            "supplierMarket": "India",
+            "contractValidity": "2017-02-10T00:00:00+05:30",
+            "productName": "Flights",
+            "segment":"Active",
+            "clientType":"B2B",
+            "clientGroup":"TravelAgent",
+            "clientName":"AkbarTravels",
+            "iatanumber":"123455"	
+          },
+          "slabDetails" : [
+          {
+            "slabType": "TotalRevenue",
+            "slabTypeValue": "1500"
+          },
+          {
+            "slabType": "TotalPassengers",
+            "slabTypeValue": "4500"
+          }
+        ],
+          "advancedDefinition": {
+        "ticketingDate": "2017-02-10T00:00:00+05:30",
+        "travelDate": "2017-04-10T00:00:00+05:30",
+        "travelType": "SITI",
+        "journeyType": "OneWay",
+        "flightType": "Via",
+        "flightLineType": "Online",
+        "codeShareFlightIncluded": "true",
+        "travelProductName": "Flights",
+        "fromContinent": "Asia",
+        "fromCountry": "India",
+        "fromCity": "Mumbai",
+        "viaContinent": "Asia",
+        "viaCountry": "India",
+        "viaCity": "Chennai",
+        "toContinent": "Asia",
+        "toCountry": "India",
+        "toCity": "Delhi",
+        "connectivitySupplierType": "LCC",        
+        "connectivitySupplier": "Indigo",
+        "cabinClass": "Economy",
+        "rbd": "S",
+        "fareBasisValue": "YEEYEE",
+        "dealCode": "DC01",
+        "credentialsName": "Indigo",
+        "bookingType": "Online"
+      },
+      	"incentiveOnTopUp": {
+            "modeofPayment": "CreditCard",
+            "bankName": "ICICI Bank",
+            "incentiveCurrency": "INR",
+            "incentiveAmount": "100000",
+            "topUpDateTime": "2017-09-25T16:10:00+05:30",
+            "incentiveRateType": "RT1",
+            "incentiveRateCode": "RC1"
+         },
+        "penaltyFee": {
+            "slabDetails" :[
+            {
+               "slabType": "TotalTurnOver",
+               "slabTypeValue": "800"
+            },
+            {
+               "slabType": "NumberOfBookings",
+               "slabTypeValue": "700"
+            }
+           ]
+        },
+        "terminationFee":{
+        	"returnableCommercialHead" :
+        [
+            {
+               "commercialName": "SegmentFees",
+               "commercialAmount": "700"
+            },
+            {
+               "commercialName": "ServiceCharge",
+               "commercialAmount": "1000"
+            }
+         ]
+        },
+         "msfFee": {
+            "transactionType": "Online",
+            "msfchargeType": "OnUs",
+            "paymentType": "CreditCard",
+            "cardType": "Visa",
+            "totalFare": "3800"
+         },
+         "lookToBook": {
+            "numberofLooks": "6600",
+            "numberofBooks": "4",
+			"isCumulative" : "true"
+         },			 
+		"maintenanceFee":{
+		"otherFees" : {
+        	"feeDetails" :
+        [
+            {
+               "commercialName": "IntegrationFee",
+               "commercialAmount": "500"
+            },
+            {
+               "commercialName": "LicenceFee",
+               "commercialAmount": "1200"
+            }
+         ]
+		 }
+        },
+		"integrationFee":{
+		"otherFees" : {
+        	"feeDetails" :
+        [
+            {
+               "commercialName": "IntegrationFee",
+               "commercialAmount": "500"
+            },
+            {
+               "commercialName": "LicenceFee",
+               "commercialAmount": "1200"
+            }
+         ]
+		 }
+        },
+		"licenceFee":{
+		"otherFees" : {
+        	"feeDetails" :
+        [
+            {
+               "commercialName": "IntegrationFee",
+               "commercialAmount": "500"
+            },
+            {
+               "commercialName": "LicenceFee",
+               "commercialAmount": "1200"
+            }
+         ]
+		 }
+        },
+		"webServiceFee":{
+		"otherFees" : {
+        	"feeDetails" :
+        [
+            {
+               "commercialName": "IntegrationFee",
+               "commercialAmount": "500"
+            },
+            {
+               "commercialName": "LicenceFee",
+               "commercialAmount": "1200"
+            }
+         ]
+		 }
+        },
+		"loyaltyBonus":{
+		"otherFees" : {
+        	"feeDetails" :
+        [
+            {
+               "commercialName": "IntegrationFee",
+               "commercialAmount": "500"
+            },
+            {
+               "commercialName": "LicenceFee",
+               "commercialAmount": "1200"
+            }
+         ]
+		 }
+        },
+		"preferenceBenefit":{
+		"otherFees" : {
+        	"feeDetails" :
+        [
+            {
+               "commercialName": "IntegrationFee",
+               "commercialAmount": "500"
+            },
+            {
+               "commercialName": "LicenceFee",
+               "commercialAmount": "1200"
+            }
+         ]
+		 }
+        },
+		"retainerFee":{
+		"otherFees" : {
+        	"feeDetails" :
+        [
+            {
+               "commercialName": "IntegrationFee",
+               "commercialAmount": "500"
+            },
+            {
+               "commercialName": "LicenceFee",
+               "commercialAmount": "1200"
+            }
+         ]
+		 }
+        },
+		"listingFee":{
+		"otherFees" : {
+        	"feeDetails" :
+        [
+            {
+               "commercialName": "IntegrationFee",
+               "commercialAmount": "500"
+            },
+            {
+               "commercialName": "LicenceFee",
+               "commercialAmount": "1200"
+            }
+         ]
+		 }
+        },
+
+		"signUpFee":{
+		"otherFees" : {
+        	"feeDetails" :
+        [
+            {
+               "commercialName": "IntegrationFee",
+               "commercialAmount": "500"
+            },
+            {
+               "commercialName": "LicenceFee",
+               "commercialAmount": "1200"
+            }
+         ]
+		 }
+        },
+		"contentAccessFee":{
+		"otherFees" : {
+        	"feeDetails" :
+        [
+            {
+               "commercialName": "IntegrationFee",
+               "commercialAmount": "500"
+            },
+            {
+               "commercialName": "LicenceFee",
+               "commercialAmount": "1200"
+            }
+         ]
+		 }
+        },
+		"trainingFee":{
+		"otherFees" : {
+        	"feeDetails" :
+        [
+            {
+               "commercialName": "IntegrationFee",
+               "commercialAmount": "500"
+            },
+            {
+               "commercialName": "LicenceFee",
+               "commercialAmount": "1200"
+            }
+         ]
+		 }
+        },
+        "signUpBonus": {
+            "slabDetails" :[
+            {
+               "slabType": "NumberOfSegments",
+               "slabTypeValue": "2500000"
+            },
+            {
+               "slabType": "TotalRevenue",
+               "slabTypeValue": "5500000"
+            }
+           ]
+        },
+        "remittanceFee": {
+               "totalSettlementAmount": "21000",
+               "totalSettlementCurrency": "INR"
+        },
+         "freeofCosts": {
+            "slabDetails" :[
+            {
+               "slabType": "TotalPassengers",
+			   "cabinClass" : "Business",
+               "slabTypeValue": "1500"
+            }
+           ]
+        }		
+        },        
+        {
+        "commonElements": {
+            "supplier": "SpiceJet",
+            "supplierMarket": "China",
+            "contractValidity": "2017-02-10T00:00:00+05:30",
+            "productName": "Flights",
+            "segment":"Active",
+            "clientType":"B2B",
+            "clientGroup":"TravelAgent",
+            "clientName":"AkbarTravels",
+            "IATAANumber":"123455"	
+          },
+          "slabDetails" : [
+          {
+            "slabType": "TotalRevenue",
+            "slabTypeValue": "1500"
+          },
+          {
+            "slabType": "TotalPassengers",
+            "slabTypeValue": "4500"
+          }
+        ],
+          "advancedDefinition":{
+          	"ticketingDate": "2017-03-10T00:00:00+05:30"
+          },
+          "incentiveOnTopUp": {
+            "modeofPayment": "CreditCard",
+            "bankName": "ICICI Bank",
+            "incentiveCurrency": "INR",
+            "incentiveAmount": "100000",
+            "topUpDateTime": "2017-09-25T16:10:00+05:30",
+            "incentiveRateType": "RT1",
+            "incentiveRateCode": "RC1"
+         },
+         "penaltyFee": {
+            "slabDetails" :[
+            {
+               "slabType": "TotalTurnOver",
+               "slabTypeValue": "200"
+            },
+            {
+               "slabType": "NumberOfBookings",
+               "slabTypeValue": "700"
+            }
+           ]
+        },	
+	"terminationFee":{
+        	"returnableCommercialHead" :
+        [
+            {
+               "commercialName": "SegmentFees",
+               "commercialAmount": "700"
+            },
+            {
+               "commercialName": "ServiceCharge",
+               "commercialAmount": "1000"
+            }
+         ]
+        },
+         "msfFee": {
+            "transactionType": "Online",
+            "msfchargeType": "OnUs",
+            "paymentType": "CreditCard",
+            "cardType": "Visa",
+            "totalFare": "4000"
+         },
+         "lookToBook": {
+            "numberofLooks": "6600",
+            "numberofBooks": "4",
+			"isCumulative" : "true"		
+         },		 
+         "maintenanceFee":{
+		"otherFees" : {
+		 }
+        },
+		"integrationFee":{
+		"otherFees" : {
+        	"feeDetails" :
+        [
+            {
+               "commercialName": "IntegrationFee",
+               "commercialAmount": "500"
+            },
+            {
+               "commercialName": "LicenceFee",
+               "commercialAmount": "1200"
+            }
+         ]
+		 }
+        },
+		"licenceFee":{
+		"otherFees" : {
+        	"feeDetails" :
+        [
+            {
+               "commercialName": "IntegrationFee",
+               "commercialAmount": "500"
+            },
+            {
+               "commercialName": "LicenceFee",
+               "commercialAmount": "1200"
+            }
+         ]
+		 }
+        },
+		"webServiceFee":{
+		"otherFees" : {
+        	"feeDetails" :
+        [
+            {
+               "commercialName": "IntegrationFee",
+               "commercialAmount": "500"
+            },
+            {
+               "commercialName": "LicenceFee",
+               "commercialAmount": "1200"
+            }
+         ]
+		 }
+        },
+		"loyaltyBonus":{
+		"otherFees" : {
+        	"feeDetails" :
+        [
+            {
+               "commercialName": "IntegrationFee",
+               "commercialAmount": "500"
+            },
+            {
+               "commercialName": "LicenceFee",
+               "commercialAmount": "1200"
+            }
+         ]
+		 }
+        },
+		"preferenceBenefit":{
+		"otherFees" : {
+        	"feeDetails" :
+        [
+            {
+               "commercialName": "IntegrationFee",
+               "commercialAmount": "500"
+            },
+            {
+               "commercialName": "LicenceFee",
+               "commercialAmount": "1200"
+            }
+         ]
+		 }
+        },
+		"retainerFee":{
+		"otherFees" : {
+        	"feeDetails" :
+        [
+            {
+               "commercialName": "IntegrationFee",
+               "commercialAmount": "500"
+            },
+            {
+               "commercialName": "LicenceFee",
+               "commercialAmount": "1200"
+            }
+         ]
+		 }
+        },
+		"listingFee":{
+		"otherFees" : {
+        	"feeDetails" :
+        [
+            {
+               "commercialName": "IntegrationFee",
+               "commercialAmount": "500"
+            },
+            {
+               "commercialName": "LicenceFee",
+               "commercialAmount": "1200"
+            }
+         ]
+		 }
+        },
+
+		"signUpFee":{
+		"otherFees" : {
+        	"feeDetails" :
+        [
+            {
+               "commercialName": "IntegrationFee",
+               "commercialAmount": "500"
+            },
+            {
+               "commercialName": "LicenceFee",
+               "commercialAmount": "1200"
+            }
+         ]
+		 }
+        },
+		"contentAccessFee":{
+		"otherFees" : {
+        	"feeDetails" :
+        [
+            {
+               "commercialName": "IntegrationFee",
+               "commercialAmount": "500"
+            },
+            {
+               "commercialName": "LicenceFee",
+               "commercialAmount": "1200"
+            }
+         ]
+		 }
+        },
+		"trainingFee":{
+		"otherFees" : {
+        	"feeDetails" :
+        [
+            {
+               "commercialName": "IntegrationFee",
+               "commercialAmount": "500"
+            },
+            {
+               "commercialName": "LicenceFee",
+               "commercialAmount": "1200"
+            }
+         ]
+		 }
+        },
+        "signUpBonus": {
+            "slabDetails" :[
+            {
+               "slabType": "TotalRevenue",
+               "slabTypeValue": "2500000"
+            }
+           ]
+        },
+        "remittanceFee": {
+               "totalSettlementAmount": "1200",
+               "totalSettlementCurrency": "INR"
+        },
+         "freeofCosts": {
+            "slabDetails" :[
+            {
+               "slabType": "NumberOfBookings",
+			   "cabinClass" : "Economy",
+               "slabTypeValue": "1500"
+            }
+           ]
+        }		
+        }
+        ]
+        
+      
+      
+      	
+        }}}},
+         
+        
+   
+	    
+		 
+    { "fire-all-rules" : {} },{"get-objects": {"out-identifier":"Response"}}
+  ]
+}

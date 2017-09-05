@@ -1,0 +1,1782 @@
+{
+   "type": "SUCCESS",
+   "msg": "Container AirCommercialsCalculationSettlementEngine successfully called.",
+   "result": {"execution-results":    {
+      "results": [      {
+         "key": "Response",
+         "value": [{"cnk.air_commercialscalculationengine.Root":          {
+            "header":             {
+               "userID": "Sachin",
+               "transactionID": "12345",
+               "sessionID": null,
+               "operationName": "Search",
+               "status": null
+            },
+            "businessRuleIntake":             [
+                              {
+                  "advancedDefinition":                   {
+                     "isAdvanceDefinition": false,
+                     "ticketingDate": 1486665000000,
+                     "travelDate": 1491762600000,
+                     "travelType": "SITI",
+                     "journeyType": "OneWay",
+                     "flightType": "Via",
+                     "flightLineType": "Online",
+                     "codeShareFlightIncluded": true,
+                     "travelProductName": "Flights",
+                     "fromContinent": "Asia",
+                     "fromCountry": "India",
+                     "fromCity": "Mumbai",
+                     "viaContinent": "Asia",
+                     "viaCountry": "India",
+                     "viaCity": "Chennai",
+                     "toContinent": "Asia",
+                     "toCountry": "India",
+                     "toCity": "Delhi",
+                     "connectivitySupplier": "Indigo",
+                     "connectivitySupplierType": "LCC",
+                     "cabinClass": "Economy",
+                     "fareBasisValue": "YEEYEE",
+                     "dealCode": "DC01",
+                     "credentialsName": "Indigo",
+                     "bookingType": "Online",
+                     "rbd": "S"
+                  },
+                  "commercialStatus":                   [
+                     "IssuanceFeeBaseCompleted",
+                     "SegmentFeeBaseCompleted",
+                     "ManagementFeeBaseCompleted",
+                     "StandardBaseCompleted",
+                     "ServiceChargeBaseCompleted",
+                     "CommissionBaseCompleted",
+                     "OverridingBaseCompleted",
+                     "PLBBaseCompleted",
+                     "SectorWiseIncentiveBaseCompleted"
+                  ],
+                  "flightDetails":                   [
+                                          {
+                        "flightTiming": 1491784200000,
+                        "flightNumber": 402,
+                        "passengerDetails":                         [
+                                                      {
+                              "passengerType": "ADT",
+                              "commercialsApplied":                               [
+                                 "Standard",
+                                 "Commission",
+                                 "IssuanceFee",
+                                 "ServiceCharge",
+                                 "ManagementFee",
+                                 "SegmentFee",
+                                 "PLB",
+                                 "Overriding",
+                                 "SectorWiseIncentive"
+                              ],
+                              "totalFare": 1900,
+                              "totalReceivables": 2236.875,
+                              "totalPayables": 1072.5,
+                              "fareBreakUp":                               {
+                                 "baseFare": 1600,
+                                 "taxDetails":                                  [
+                                                                        {
+                                       "taxName": "YQ",
+                                       "taxValue": 150
+                                    },
+                                                                        {
+                                       "taxName": "RT",
+                                       "taxValue": 50
+                                    },
+                                                                        {
+                                       "taxName": "ABC",
+                                       "taxValue": 100
+                                    }
+                                 ]
+                              },
+                              "commercialDetails":                               [
+                                                                  {
+                                    "commercialName": "Standard",
+                                    "commercialInitialAmount": 1800,
+                                    "commercialCalculationPercentage": 20,
+                                    "commercialCalculationAmount": 200,
+                                    "commercialAmount": 560,
+                                    "commercialTotalAmount": 1240,
+                                    "commercialCurrency": "INR",
+                                    "commercialFareComponent": "Basic,YQ,RT",
+                                    "fareBreakUp":                                     {
+                                       "baseFare": 1080,
+                                       "taxDetails":                                        [
+                                                                                    {
+                                             "taxName": "YQ",
+                                             "taxValue": 120
+                                          },
+                                                                                    {
+                                             "taxName": "RT",
+                                             "taxValue": 40
+                                          },
+                                                                                    {
+                                             "taxName": "ABC",
+                                             "taxValue": 100
+                                          }
+                                       ]
+                                    }
+                                 },
+                                                                  {
+                                    "commercialName": "Commission",
+                                    "commercialInitialAmount": 1650,
+                                    "commercialCalculationPercentage": 15,
+                                    "commercialCalculationAmount": 110,
+                                    "commercialAmount": 357.5,
+                                    "commercialTotalAmount": 1292.5,
+                                    "commercialCurrency": "INR",
+                                    "commercialFareComponent": "Basic,RT",
+                                    "fareBreakUp":                                     {
+                                       "baseFare": 1250,
+                                       "taxDetails":                                        [
+                                                                                    {
+                                             "taxName": "YQ",
+                                             "taxValue": 150
+                                          },
+                                                                                    {
+                                             "taxName": "RT",
+                                             "taxValue": 42.5
+                                          },
+                                                                                    {
+                                             "taxName": "ABC",
+                                             "taxValue": 100
+                                          }
+                                       ]
+                                    }
+                                 },
+                                                                  {
+                                    "commercialName": "IssuanceFee",
+                                    "commercialInitialAmount": 1650,
+                                    "commercialCalculationPercentage": 15,
+                                    "commercialCalculationAmount": 110,
+                                    "commercialAmount": 357.5,
+                                    "commercialTotalAmount": 2007.5,
+                                    "commercialCurrency": "INR",
+                                    "commercialFareComponent": "Basic,RT",
+                                    "fareBreakUp":                                     {
+                                       "baseFare": 1950,
+                                       "taxDetails":                                        [
+                                                                                    {
+                                             "taxName": "YQ",
+                                             "taxValue": 150
+                                          },
+                                                                                    {
+                                             "taxName": "RT",
+                                             "taxValue": 57.5
+                                          },
+                                                                                    {
+                                             "taxName": "ABC",
+                                             "taxValue": 100
+                                          }
+                                       ]
+                                    }
+                                 },
+                                                                  {
+                                    "commercialName": "ServiceCharge",
+                                    "commercialInitialAmount": 1650,
+                                    "commercialCalculationPercentage": 15,
+                                    "commercialCalculationAmount": 110,
+                                    "commercialAmount": 357.5,
+                                    "commercialTotalAmount": 2007.5,
+                                    "commercialCurrency": "INR",
+                                    "commercialFareComponent": "Basic,RT",
+                                    "fareBreakUp":                                     {
+                                       "baseFare": 1950,
+                                       "taxDetails":                                        [
+                                                                                    {
+                                             "taxName": "YQ",
+                                             "taxValue": 150
+                                          },
+                                                                                    {
+                                             "taxName": "RT",
+                                             "taxValue": 57.5
+                                          },
+                                                                                    {
+                                             "taxName": "ABC",
+                                             "taxValue": 100
+                                          }
+                                       ]
+                                    }
+                                 },
+                                                                  {
+                                    "commercialName": "ManagementFee",
+                                    "commercialInitialAmount": 1650,
+                                    "commercialCalculationPercentage": 15,
+                                    "commercialCalculationAmount": 110,
+                                    "commercialAmount": 357.5,
+                                    "commercialTotalAmount": 2007.5,
+                                    "commercialCurrency": "INR",
+                                    "commercialFareComponent": "Basic,RT",
+                                    "fareBreakUp":                                     {
+                                       "baseFare": 1950,
+                                       "taxDetails":                                        [
+                                                                                    {
+                                             "taxName": "YQ",
+                                             "taxValue": 150
+                                          },
+                                                                                    {
+                                             "taxName": "RT",
+                                             "taxValue": 57.5
+                                          },
+                                                                                    {
+                                             "taxName": "ABC",
+                                             "taxValue": 100
+                                          }
+                                       ]
+                                    }
+                                 },
+                                                                  {
+                                    "commercialName": "SegmentFee",
+                                    "commercialInitialAmount": 1650,
+                                    "commercialCalculationPercentage": 15,
+                                    "commercialCalculationAmount": 110,
+                                    "commercialAmount": 357.5,
+                                    "commercialTotalAmount": 1292.5,
+                                    "commercialCurrency": "INR",
+                                    "commercialFareComponent": "Basic,RT",
+                                    "fareBreakUp":                                     {
+                                       "baseFare": 1250,
+                                       "taxDetails":                                        [
+                                                                                    {
+                                             "taxName": "YQ",
+                                             "taxValue": 150
+                                          },
+                                                                                    {
+                                             "taxName": "RT",
+                                             "taxValue": 42.5
+                                          },
+                                                                                    {
+                                             "taxName": "ABC",
+                                             "taxValue": 100
+                                          }
+                                       ]
+                                    }
+                                 },
+                                                                  {
+                                    "commercialName": "PLB",
+                                    "commercialInitialAmount": 1120,
+                                    "commercialCalculationPercentage": 15,
+                                    "commercialCalculationAmount": 110,
+                                    "commercialAmount": 278,
+                                    "commercialTotalAmount": 842,
+                                    "commercialCurrency": "INR",
+                                    "commercialFareComponent": "Basic,RT",
+                                    "fareBreakUp":                                     {
+                                       "baseFare": 808,
+                                       "taxDetails":                                        [
+                                                                                    {
+                                             "taxName": "YQ",
+                                             "taxValue": 120
+                                          },
+                                                                                    {
+                                             "taxName": "RT",
+                                             "taxValue": 34
+                                          },
+                                                                                    {
+                                             "taxName": "ABC",
+                                             "taxValue": 100
+                                          }
+                                       ]
+                                    }
+                                 },
+                                                                  {
+                                    "commercialName": "Overriding",
+                                    "commercialInitialAmount": 1800,
+                                    "commercialCalculationPercentage": 15,
+                                    "commercialCalculationAmount": 110,
+                                    "commercialAmount": 380,
+                                    "commercialTotalAmount": 1420,
+                                    "commercialCurrency": "INR",
+                                    "commercialFareComponent": "Basic,YQ,RT",
+                                    "fareBreakUp":                                     {
+                                       "baseFare": 1250,
+                                       "taxDetails":                                        [
+                                                                                    {
+                                             "taxName": "YQ",
+                                             "taxValue": 127.5
+                                          },
+                                                                                    {
+                                             "taxName": "RT",
+                                             "taxValue": 42.5
+                                          },
+                                                                                    {
+                                             "taxName": "ABC",
+                                             "taxValue": 100
+                                          }
+                                       ]
+                                    }
+                                 },
+                                                                  {
+                                    "commercialName": "SectorWiseIncentive",
+                                    "commercialInitialAmount": 1292.5,
+                                    "commercialCalculationPercentage": 15,
+                                    "commercialCalculationAmount": 110,
+                                    "commercialAmount": 303.875,
+                                    "commercialTotalAmount": 988.625,
+                                    "commercialCurrency": "INR",
+                                    "commercialFareComponent": "Basic,RT",
+                                    "fareBreakUp":                                     {
+                                       "baseFare": 952.5,
+                                       "taxDetails":                                        [
+                                                                                    {
+                                             "taxName": "YQ",
+                                             "taxValue": 127.5
+                                          },
+                                                                                    {
+                                             "taxName": "RT",
+                                             "taxValue": 36.125
+                                          },
+                                                                                    {
+                                             "taxName": "ABC",
+                                             "taxValue": 100
+                                          }
+                                       ]
+                                    }
+                                 }
+                              ]
+                           },
+                                                      {
+                              "passengerType": "CHD",
+                              "commercialsApplied":                               [
+                                 "Commission",
+                                 "IssuanceFee",
+                                 "ServiceCharge",
+                                 "ManagementFee",
+                                 "SegmentFee",
+                                 "Overriding",
+                                 "SectorWiseIncentive"
+                              ],
+                              "totalFare": 1500,
+                              "totalReceivables": 1276.925,
+                              "totalPayables": 991.5,
+                              "fareBreakUp":                               {
+                                 "baseFare": 1450,
+                                 "taxDetails":                                  [
+                                                                        {
+                                       "taxName": "YQ",
+                                       "taxValue": 30
+                                    },
+                                                                        {
+                                       "taxName": "RT",
+                                       "taxValue": 20
+                                    }
+                                 ]
+                              },
+                              "commercialDetails":                               [
+                                                                  {
+                                    "commercialName": "Commission",
+                                    "commercialInitialAmount": 1470,
+                                    "commercialCalculationPercentage": 15,
+                                    "commercialCalculationAmount": 110,
+                                    "commercialAmount": 330.5,
+                                    "commercialTotalAmount": 1139.5,
+                                    "commercialCurrency": "INR",
+                                    "commercialFareComponent": "Basic,RT",
+                                    "fareBreakUp":                                     {
+                                       "baseFare": 1122.5,
+                                       "taxDetails":                                        [
+                                                                                    {
+                                             "taxName": "YQ",
+                                             "taxValue": 30
+                                          },
+                                                                                    {
+                                             "taxName": "RT",
+                                             "taxValue": 17
+                                          }
+                                       ]
+                                    }
+                                 },
+                                                                  {
+                                    "commercialName": "IssuanceFee",
+                                    "commercialInitialAmount": 1470,
+                                    "commercialCalculationPercentage": 15,
+                                    "commercialCalculationAmount": 110,
+                                    "commercialAmount": 330.5,
+                                    "commercialTotalAmount": 1800.5,
+                                    "commercialCurrency": "INR",
+                                    "commercialFareComponent": "Basic,RT",
+                                    "fareBreakUp":                                     {
+                                       "baseFare": 1777.5,
+                                       "taxDetails":                                        [
+                                                                                    {
+                                             "taxName": "YQ",
+                                             "taxValue": 30
+                                          },
+                                                                                    {
+                                             "taxName": "RT",
+                                             "taxValue": 23
+                                          }
+                                       ]
+                                    }
+                                 },
+                                                                  {
+                                    "commercialName": "ServiceCharge",
+                                    "commercialInitialAmount": 1470,
+                                    "commercialCalculationPercentage": 15,
+                                    "commercialCalculationAmount": 110,
+                                    "commercialAmount": 330.5,
+                                    "commercialTotalAmount": 1800.5,
+                                    "commercialCurrency": "INR",
+                                    "commercialFareComponent": "Basic,RT",
+                                    "fareBreakUp":                                     {
+                                       "baseFare": 1777.5,
+                                       "taxDetails":                                        [
+                                                                                    {
+                                             "taxName": "YQ",
+                                             "taxValue": 30
+                                          },
+                                                                                    {
+                                             "taxName": "RT",
+                                             "taxValue": 23
+                                          }
+                                       ]
+                                    }
+                                 },
+                                                                  {
+                                    "commercialName": "ManagementFee",
+                                    "commercialInitialAmount": 1470,
+                                    "commercialCalculationPercentage": 15,
+                                    "commercialCalculationAmount": 110,
+                                    "commercialAmount": 330.5,
+                                    "commercialTotalAmount": 1800.5,
+                                    "commercialCurrency": "INR",
+                                    "commercialFareComponent": "Basic,RT",
+                                    "fareBreakUp":                                     {
+                                       "baseFare": 1777.5,
+                                       "taxDetails":                                        [
+                                                                                    {
+                                             "taxName": "YQ",
+                                             "taxValue": 30
+                                          },
+                                                                                    {
+                                             "taxName": "RT",
+                                             "taxValue": 23
+                                          }
+                                       ]
+                                    }
+                                 },
+                                                                  {
+                                    "commercialName": "SegmentFee",
+                                    "commercialInitialAmount": 1470,
+                                    "commercialCalculationPercentage": 15,
+                                    "commercialCalculationAmount": 110,
+                                    "commercialAmount": 330.5,
+                                    "commercialTotalAmount": 1139.5,
+                                    "commercialCurrency": "INR",
+                                    "commercialFareComponent": "Basic,RT",
+                                    "fareBreakUp":                                     {
+                                       "baseFare": 1122.5,
+                                       "taxDetails":                                        [
+                                                                                    {
+                                             "taxName": "YQ",
+                                             "taxValue": 30
+                                          },
+                                                                                    {
+                                             "taxName": "RT",
+                                             "taxValue": 17
+                                          }
+                                       ]
+                                    }
+                                 },
+                                                                  {
+                                    "commercialName": "Overriding",
+                                    "commercialInitialAmount": 1500,
+                                    "commercialCalculationPercentage": 15,
+                                    "commercialCalculationAmount": 110,
+                                    "commercialAmount": 335,
+                                    "commercialTotalAmount": 1165,
+                                    "commercialCurrency": "INR",
+                                    "commercialFareComponent": "Basic,YQ,RT",
+                                    "fareBreakUp":                                     {
+                                       "baseFare": 1122.5,
+                                       "taxDetails":                                        [
+                                                                                    {
+                                             "taxName": "YQ",
+                                             "taxValue": 25.5
+                                          },
+                                                                                    {
+                                             "taxName": "RT",
+                                             "taxValue": 17
+                                          }
+                                       ]
+                                    }
+                                 },
+                                                                  {
+                                    "commercialName": "SectorWiseIncentive",
+                                    "commercialInitialAmount": 1139.5,
+                                    "commercialCalculationPercentage": 15,
+                                    "commercialCalculationAmount": 110,
+                                    "commercialAmount": 280.92499999999995,
+                                    "commercialTotalAmount": 858.575,
+                                    "commercialCurrency": "INR",
+                                    "commercialFareComponent": "Basic,RT",
+                                    "fareBreakUp":                                     {
+                                       "baseFare": 844.125,
+                                       "taxDetails":                                        [
+                                                                                    {
+                                             "taxName": "YQ",
+                                             "taxValue": 25.5
+                                          },
+                                                                                    {
+                                             "taxName": "RT",
+                                             "taxValue": 14.45
+                                          }
+                                       ]
+                                    }
+                                 }
+                              ]
+                           }
+                        ]
+                     },
+                                          {
+                        "flightTiming": 1491784200000,
+                        "flightNumber": 303,
+                        "passengerDetails":                         [
+                                                      {
+                              "passengerType": "ADT",
+                              "commercialsApplied":                               [
+                                 "IssuanceFee",
+                                 "ServiceCharge",
+                                 "SegmentFee",
+                                 "Commission",
+                                 "ManagementFee",
+                                 "Standard",
+                                 "PLB",
+                                 "Overriding",
+                                 "SectorWiseIncentive"
+                              ],
+                              "totalFare": 1800,
+                              "totalReceivables": 899.2,
+                              "totalPayables": 480,
+                              "fareBreakUp":                               {
+                                 "baseFare": 1300,
+                                 "taxDetails":                                  [
+                                                                        {
+                                       "taxName": "YQ",
+                                       "taxValue": 200
+                                    },
+                                                                        {
+                                       "taxName": "RT",
+                                       "taxValue": 300
+                                    }
+                                 ]
+                              },
+                              "commercialDetails":                               [
+                                                                  {
+                                    "commercialName": "IssuanceFee",
+                                    "commercialInitialAmount": 500,
+                                    "commercialCalculationPercentage": 10,
+                                    "commercialCalculationAmount": 110,
+                                    "commercialAmount": 160,
+                                    "commercialTotalAmount": 660,
+                                    "commercialCurrency": "INR",
+                                    "commercialFareComponent": "YQ,RT",
+                                    "fareBreakUp":                                     {
+                                       "baseFare": 1300,
+                                       "taxDetails":                                        [
+                                                                                    {
+                                             "taxName": "YQ",
+                                             "taxValue": 330
+                                          },
+                                                                                    {
+                                             "taxName": "RT",
+                                             "taxValue": 440
+                                          }
+                                       ]
+                                    }
+                                 },
+                                                                  {
+                                    "commercialName": "ServiceCharge",
+                                    "commercialInitialAmount": 500,
+                                    "commercialCalculationPercentage": 10,
+                                    "commercialCalculationAmount": 110,
+                                    "commercialAmount": 160,
+                                    "commercialTotalAmount": 660,
+                                    "commercialCurrency": "INR",
+                                    "commercialFareComponent": "YQ,RT",
+                                    "fareBreakUp":                                     {
+                                       "baseFare": 1300,
+                                       "taxDetails":                                        [
+                                                                                    {
+                                             "taxName": "YQ",
+                                             "taxValue": 330
+                                          },
+                                                                                    {
+                                             "taxName": "RT",
+                                             "taxValue": 440
+                                          }
+                                       ]
+                                    }
+                                 },
+                                                                  {
+                                    "commercialName": "SegmentFee",
+                                    "commercialInitialAmount": 500,
+                                    "commercialCalculationPercentage": 10,
+                                    "commercialCalculationAmount": 110,
+                                    "commercialAmount": 160,
+                                    "commercialTotalAmount": 340,
+                                    "commercialCurrency": "INR",
+                                    "commercialFareComponent": "YQ,RT",
+                                    "fareBreakUp":                                     {
+                                       "baseFare": 1300,
+                                       "taxDetails":                                        [
+                                                                                    {
+                                             "taxName": "YQ",
+                                             "taxValue": 70
+                                          },
+                                                                                    {
+                                             "taxName": "RT",
+                                             "taxValue": 160
+                                          }
+                                       ]
+                                    }
+                                 },
+                                                                  {
+                                    "commercialName": "Commission",
+                                    "commercialInitialAmount": 500,
+                                    "commercialCalculationPercentage": 10,
+                                    "commercialCalculationAmount": 110,
+                                    "commercialAmount": 160,
+                                    "commercialTotalAmount": 340,
+                                    "commercialCurrency": "INR",
+                                    "commercialFareComponent": "YQ,RT",
+                                    "fareBreakUp":                                     {
+                                       "baseFare": 1300,
+                                       "taxDetails":                                        [
+                                                                                    {
+                                             "taxName": "YQ",
+                                             "taxValue": 70
+                                          },
+                                                                                    {
+                                             "taxName": "RT",
+                                             "taxValue": 160
+                                          }
+                                       ]
+                                    }
+                                 },
+                                                                  {
+                                    "commercialName": "ManagementFee",
+                                    "commercialInitialAmount": 500,
+                                    "commercialCalculationPercentage": 10,
+                                    "commercialCalculationAmount": 110,
+                                    "commercialAmount": 160,
+                                    "commercialTotalAmount": 660,
+                                    "commercialCurrency": "INR",
+                                    "commercialFareComponent": "YQ,RT",
+                                    "fareBreakUp":                                     {
+                                       "baseFare": 1300,
+                                       "taxDetails":                                        [
+                                                                                    {
+                                             "taxName": "YQ",
+                                             "taxValue": 330
+                                          },
+                                                                                    {
+                                             "taxName": "RT",
+                                             "taxValue": 440
+                                          }
+                                       ]
+                                    }
+                                 },
+                                                                  {
+                                    "commercialName": "Standard",
+                                    "commercialInitialAmount": 1500,
+                                    "commercialCalculationPercentage": 4,
+                                    "commercialCalculationAmount": 0,
+                                    "commercialAmount": 60,
+                                    "commercialTotalAmount": 1440,
+                                    "commercialCurrency": null,
+                                    "commercialFareComponent": "Basic,YQ",
+                                    "fareBreakUp":                                     {
+                                       "baseFare": 1248,
+                                       "taxDetails":                                        [
+                                                                                    {
+                                             "taxName": "YQ",
+                                             "taxValue": 192
+                                          },
+                                                                                    {
+                                             "taxName": "RT",
+                                             "taxValue": 300
+                                          }
+                                       ]
+                                    }
+                                 },
+                                                                  {
+                                    "commercialName": "PLB",
+                                    "commercialInitialAmount": 492,
+                                    "commercialCalculationPercentage": 10,
+                                    "commercialCalculationAmount": 110,
+                                    "commercialAmount": 159.2,
+                                    "commercialTotalAmount": 332.8,
+                                    "commercialCurrency": "INR",
+                                    "commercialFareComponent": "YQ,RT",
+                                    "fareBreakUp":                                     {
+                                       "baseFare": 1248,
+                                       "taxDetails":                                        [
+                                                                                    {
+                                             "taxName": "YQ",
+                                             "taxValue": 62.80000000000001
+                                          },
+                                                                                    {
+                                             "taxName": "RT",
+                                             "taxValue": 160
+                                          }
+                                       ]
+                                    }
+                                 },
+                                                                  {
+                                    "commercialName": "Overriding",
+                                    "commercialInitialAmount": 1300,
+                                    "commercialCalculationPercentage": 0,
+                                    "commercialCalculationAmount": 200,
+                                    "commercialAmount": 200,
+                                    "commercialTotalAmount": 1100,
+                                    "commercialCurrency": "INR",
+                                    "commercialFareComponent": "Total",
+                                    "fareBreakUp":                                     {
+                                       "baseFare": 1100,
+                                       "taxDetails":                                        [
+                                                                                    {
+                                             "taxName": "YQ",
+                                             "taxValue": 200
+                                          },
+                                                                                    {
+                                             "taxName": "RT",
+                                             "taxValue": 300
+                                          }
+                                       ]
+                                    }
+                                 },
+                                                                  {
+                                    "commercialName": "SectorWiseIncentive",
+                                    "commercialInitialAmount": 500,
+                                    "commercialCalculationPercentage": 10,
+                                    "commercialCalculationAmount": 110,
+                                    "commercialAmount": 160,
+                                    "commercialTotalAmount": 340,
+                                    "commercialCurrency": "INR",
+                                    "commercialFareComponent": "YQ,RT",
+                                    "fareBreakUp":                                     {
+                                       "baseFare": 1100,
+                                       "taxDetails":                                        [
+                                                                                    {
+                                             "taxName": "YQ",
+                                             "taxValue": 70
+                                          },
+                                                                                    {
+                                             "taxName": "RT",
+                                             "taxValue": 160
+                                          }
+                                       ]
+                                    }
+                                 }
+                              ]
+                           },
+                                                      {
+                              "passengerType": "CHD",
+                              "commercialsApplied":                               [
+                                 "IssuanceFee",
+                                 "Standard",
+                                 "ServiceCharge",
+                                 "SegmentFee",
+                                 "ManagementFee",
+                                 "Commission",
+                                 "PLB",
+                                 "Overriding",
+                                 "SectorWiseIncentive"
+                              ],
+                              "totalFare": 1500,
+                              "totalReceivables": 870,
+                              "totalPayables": 300,
+                              "fareBreakUp": null,
+                              "commercialDetails":                               [
+                                                                  {
+                                    "commercialName": "IssuanceFee",
+                                    "commercialInitialAmount": 1500,
+                                    "commercialCalculationPercentage": 0,
+                                    "commercialCalculationAmount": 100,
+                                    "commercialAmount": 100,
+                                    "commercialTotalAmount": 1600,
+                                    "commercialCurrency": "INR",
+                                    "commercialFareComponent": "Total",
+                                    "fareBreakUp": null
+                                 },
+                                                                  {
+                                    "commercialName": "Standard",
+                                    "commercialInitialAmount": 1500,
+                                    "commercialCalculationPercentage": 10,
+                                    "commercialCalculationAmount": 120,
+                                    "commercialAmount": 270,
+                                    "commercialTotalAmount": 1230,
+                                    "commercialCurrency": "INR",
+                                    "commercialFareComponent": "Total",
+                                    "fareBreakUp": null
+                                 },
+                                                                  {
+                                    "commercialName": "ServiceCharge",
+                                    "commercialInitialAmount": 1500,
+                                    "commercialCalculationPercentage": 0,
+                                    "commercialCalculationAmount": 100,
+                                    "commercialAmount": 100,
+                                    "commercialTotalAmount": 1600,
+                                    "commercialCurrency": "INR",
+                                    "commercialFareComponent": "Total",
+                                    "fareBreakUp": null
+                                 },
+                                                                  {
+                                    "commercialName": "SegmentFee",
+                                    "commercialInitialAmount": 1500,
+                                    "commercialCalculationPercentage": 0,
+                                    "commercialCalculationAmount": 100,
+                                    "commercialAmount": 100,
+                                    "commercialTotalAmount": 1400,
+                                    "commercialCurrency": "INR",
+                                    "commercialFareComponent": "Total",
+                                    "fareBreakUp": null
+                                 },
+                                                                  {
+                                    "commercialName": "ManagementFee",
+                                    "commercialInitialAmount": 1500,
+                                    "commercialCalculationPercentage": 0,
+                                    "commercialCalculationAmount": 100,
+                                    "commercialAmount": 100,
+                                    "commercialTotalAmount": 1600,
+                                    "commercialCurrency": "INR",
+                                    "commercialFareComponent": "Total",
+                                    "fareBreakUp": null
+                                 },
+                                                                  {
+                                    "commercialName": "Commission",
+                                    "commercialInitialAmount": 1500,
+                                    "commercialCalculationPercentage": 0,
+                                    "commercialCalculationAmount": 100,
+                                    "commercialAmount": 100,
+                                    "commercialTotalAmount": 1400,
+                                    "commercialCurrency": "INR",
+                                    "commercialFareComponent": "Total",
+                                    "fareBreakUp": null
+                                 },
+                                                                  {
+                                    "commercialName": "PLB",
+                                    "commercialInitialAmount": 1230,
+                                    "commercialCalculationPercentage": 0,
+                                    "commercialCalculationAmount": 100,
+                                    "commercialAmount": 100,
+                                    "commercialTotalAmount": 1130,
+                                    "commercialCurrency": "INR",
+                                    "commercialFareComponent": "Total",
+                                    "fareBreakUp": null
+                                 },
+                                                                  {
+                                    "commercialName": "Overriding",
+                                    "commercialInitialAmount": 1500,
+                                    "commercialCalculationPercentage": 0,
+                                    "commercialCalculationAmount": 200,
+                                    "commercialAmount": 200,
+                                    "commercialTotalAmount": 1300,
+                                    "commercialCurrency": "INR",
+                                    "commercialFareComponent": "Total",
+                                    "fareBreakUp": null
+                                 },
+                                                                  {
+                                    "commercialName": "SectorWiseIncentive",
+                                    "commercialInitialAmount": 1300,
+                                    "commercialCalculationPercentage": 0,
+                                    "commercialCalculationAmount": 100,
+                                    "commercialAmount": 100,
+                                    "commercialTotalAmount": 1200,
+                                    "commercialCurrency": "INR",
+                                    "commercialFareComponent": "Total",
+                                    "fareBreakUp": null
+                                 }
+                              ]
+                           }
+                        ]
+                     }
+                  ],
+                  "ruleFlowName": "Indigo_India,IssuanceFeeCommercialBase_8,SegmentFeeCommercialBase_8,ManagementFeeCommercialBase_8,IssuanceFeeCommercialCalculation_8,StandardCommercialBase_8,ServiceChargeCommercialBase_8,ServiceChargeCommercialCalculation_8,SegmentFeeCommercialCalculation_8,CommissionCommercialBase_8,CommissionCommercialCalculation_8,ManagementFeeCommercialCalculation_8,StandardCommercialCalculation_8,IssuanceFeeCommercialCalculation_9,StandardCommercialCalculation_9,ServiceChargeCommercialCalculation_9,SegmentFeeCommercialCalculation_9,ManagementFeeCommercialCalculation_9,CommissionCommercialCalculation_9,OverridingCommercialBase_8,StandardCommercialCalculation_10,CommissionCommercialCalculation_10,CommissionCommercialCalculation_10,IssuanceFeeCommercialCalculation_10,IssuanceFeeCommercialCalculation_10,ServiceChargeCommercialCalculation_10,ServiceChargeCommercialCalculation_10,ManagementFeeCommercialCalculation_10,ManagementFeeCommercialCalculation_10,SegmentFeeCommercialCalculation_10,SegmentFeeCommercialCalculation_10,PLBCommercialBase_8,PLBCommercialCalculation_8,PLBCommercialCalculation_9,PLBCommercialCalculation_10,OverridingCommercialCalculation_9,SectorWiseIncentiveCommercialBase_8,SectorWiseIncentiveCommercialCalculation_8,OverridingCommercialCalculation_9,SectorWiseIncentiveCommercialCalculation_9,OverridingCommercialCalculation_10,SectorWiseIncentiveCommercialCalculation_10,OverridingCommercialCalculation_10,SectorWiseIncentiveCommercialCalculation_10",
+                  "selectedRow": "Indigo_India",
+                  "commonElements":                   {
+                     "supplier": "Indigo",
+                     "supplierMarket": "India",
+                     "segment": "Active",
+                     "contractValidity": 1486665000000,
+                     "productName": "Flights",
+                     "clientType": "B2B",
+                     "clientGroup": "TravelAgent",
+                     "clientName": "AkbarTravels",
+                     "rateType": null,
+                     "rateCode": null,
+                     "iatanumber": "123455"
+                  },
+                  "commercialHead":                   [
+                                          {
+                        "commercialHeadName": "Standard",
+                        "nettOffCommercialHeadName": null,
+                        "commercialType": "Receivable",
+                        "settlementTransactionWise": false,
+                        "contractType": "Final",
+                        "commissionable": true,
+                        "markDownApplicable": true,
+                        "markDownClientType": "B2B",
+                        "minimumMarkUpPercentage": 0,
+                        "maximumMarkUpPercentage": 0,
+                        "markUpClientType": null,
+                        "status": "COMPLETED"
+                     },
+                                          {
+                        "commercialHeadName": "Overriding",
+                        "nettOffCommercialHeadName": null,
+                        "commercialType": "Receivable",
+                        "settlementTransactionWise": false,
+                        "contractType": "Final",
+                        "commissionable": false,
+                        "markDownApplicable": false,
+                        "markDownClientType": null,
+                        "minimumMarkUpPercentage": 0,
+                        "maximumMarkUpPercentage": 0,
+                        "markUpClientType": null,
+                        "status": "COMPLETED"
+                     },
+                                          {
+                        "commercialHeadName": "PLB",
+                        "nettOffCommercialHeadName": "Standard",
+                        "commercialType": "Receivable",
+                        "settlementTransactionWise": false,
+                        "contractType": "Final",
+                        "commissionable": false,
+                        "markDownApplicable": false,
+                        "markDownClientType": null,
+                        "minimumMarkUpPercentage": 0,
+                        "maximumMarkUpPercentage": 0,
+                        "markUpClientType": null,
+                        "status": "COMPLETED"
+                     },
+                                          {
+                        "commercialHeadName": "SectorWiseIncentive",
+                        "nettOffCommercialHeadName": "Overriding",
+                        "commercialType": "Receivable",
+                        "settlementTransactionWise": false,
+                        "contractType": "Final",
+                        "commissionable": false,
+                        "markDownApplicable": false,
+                        "markDownClientType": null,
+                        "minimumMarkUpPercentage": 0,
+                        "maximumMarkUpPercentage": 0,
+                        "markUpClientType": null,
+                        "status": "COMPLETED"
+                     },
+                                          {
+                        "commercialHeadName": "SegmentFee",
+                        "nettOffCommercialHeadName": null,
+                        "commercialType": "Receivable",
+                        "settlementTransactionWise": false,
+                        "contractType": "Final",
+                        "commissionable": false,
+                        "markDownApplicable": false,
+                        "markDownClientType": null,
+                        "minimumMarkUpPercentage": 0,
+                        "maximumMarkUpPercentage": 0,
+                        "markUpClientType": null,
+                        "status": "COMPLETED"
+                     },
+                                          {
+                        "commercialHeadName": "IssuanceFee",
+                        "nettOffCommercialHeadName": null,
+                        "commercialType": "Payable",
+                        "settlementTransactionWise": true,
+                        "contractType": "Final",
+                        "commissionable": false,
+                        "markDownApplicable": false,
+                        "markDownClientType": null,
+                        "minimumMarkUpPercentage": 0,
+                        "maximumMarkUpPercentage": 0,
+                        "markUpClientType": null,
+                        "status": "COMPLETED"
+                     },
+                                          {
+                        "commercialHeadName": "ServiceCharge",
+                        "nettOffCommercialHeadName": null,
+                        "commercialType": "Payable",
+                        "settlementTransactionWise": false,
+                        "contractType": "Final",
+                        "commissionable": false,
+                        "markDownApplicable": false,
+                        "markDownClientType": null,
+                        "minimumMarkUpPercentage": 0,
+                        "maximumMarkUpPercentage": 0,
+                        "markUpClientType": null,
+                        "status": "COMPLETED"
+                     },
+                                          {
+                        "commercialHeadName": "Commission",
+                        "nettOffCommercialHeadName": null,
+                        "commercialType": "Receivable",
+                        "settlementTransactionWise": false,
+                        "contractType": "Provisional",
+                        "commissionable": false,
+                        "markDownApplicable": false,
+                        "markDownClientType": null,
+                        "minimumMarkUpPercentage": 0,
+                        "maximumMarkUpPercentage": 0,
+                        "markUpClientType": null,
+                        "status": "COMPLETED"
+                     },
+                                          {
+                        "commercialHeadName": "ManagementFee",
+                        "nettOffCommercialHeadName": null,
+                        "commercialType": "Payable",
+                        "settlementTransactionWise": false,
+                        "contractType": "Final",
+                        "commissionable": false,
+                        "markDownApplicable": false,
+                        "markDownClientType": null,
+                        "minimumMarkUpPercentage": 0,
+                        "maximumMarkUpPercentage": 0,
+                        "markUpClientType": null,
+                        "status": "COMPLETED"
+                     }
+                  ],
+                  "slabDetails":                   [
+                                          {
+                        "slabType": "TotalRevenue",
+                        "slabTypeValue": 1500,
+                        "isCompleted": false
+                     },
+                                          {
+                        "slabType": "TotalPassengers",
+                        "slabTypeValue": 4500,
+                        "isCompleted": false
+                     }
+                  ]
+               },
+                              {
+                  "advancedDefinition":                   {
+                     "isAdvanceDefinition": false,
+                     "ticketingDate": 1489084200000,
+                     "travelDate": null,
+                     "travelType": null,
+                     "journeyType": null,
+                     "flightType": null,
+                     "flightLineType": null,
+                     "codeShareFlightIncluded": false,
+                     "travelProductName": null,
+                     "fromContinent": null,
+                     "fromCountry": null,
+                     "fromCity": null,
+                     "viaContinent": null,
+                     "viaCountry": null,
+                     "viaCity": null,
+                     "toContinent": null,
+                     "toCountry": null,
+                     "toCity": null,
+                     "connectivitySupplier": null,
+                     "connectivitySupplierType": null,
+                     "cabinClass": null,
+                     "fareBasisValue": null,
+                     "dealCode": null,
+                     "credentialsName": null,
+                     "bookingType": null,
+                     "rbd": null
+                  },
+                  "commercialStatus":                   [
+                     "StandardBaseCompleted",
+                     "ServiceChargeBaseCompleted",
+                     "IssuanceFeeBaseCompleted",
+                     "ManagementFeeBaseCompleted",
+                     "SectorWiseIncentiveBaseCompleted",
+                     "CommissionBaseCompleted",
+                     "SegmentFeeBaseCompleted",
+                     "OverridingBaseCompleted",
+                     "PLBBaseCompleted"
+                  ],
+                  "flightDetails": [                  {
+                     "flightTiming": 1491784200000,
+                     "flightNumber": 402,
+                     "passengerDetails":                      [
+                                                {
+                           "passengerType": "ADT",
+                           "commercialsApplied":                            [
+                              "Commission",
+                              "ManagementFee",
+                              "SectorWiseIncentive",
+                              "ServiceCharge",
+                              "Standard",
+                              "IssuanceFee",
+                              "SegmentFee",
+                              "Overriding",
+                              "PLB"
+                           ],
+                           "totalFare": 1900,
+                           "totalReceivables": 572.9,
+                           "totalPayables": 262.5,
+                           "fareBreakUp":                            {
+                              "baseFare": 1600,
+                              "taxDetails":                               [
+                                                                  {
+                                    "taxName": "YQ",
+                                    "taxValue": 150
+                                 },
+                                                                  {
+                                    "taxName": "RT",
+                                    "taxValue": 50
+                                 },
+                                                                  {
+                                    "taxName": "ABC",
+                                    "taxValue": 100
+                                 }
+                              ]
+                           },
+                           "commercialDetails":                            [
+                                                            {
+                                 "commercialName": "Commission",
+                                 "commercialInitialAmount": 1750,
+                                 "commercialCalculationPercentage": 5,
+                                 "commercialCalculationAmount": 0,
+                                 "commercialAmount": 87.5,
+                                 "commercialTotalAmount": 1662.5,
+                                 "commercialCurrency": null,
+                                 "commercialFareComponent": "Basic,YQ",
+                                 "fareBreakUp":                                  {
+                                    "baseFare": 1520,
+                                    "taxDetails":                                     [
+                                                                              {
+                                          "taxName": "YQ",
+                                          "taxValue": 142.5
+                                       },
+                                                                              {
+                                          "taxName": "RT",
+                                          "taxValue": 50
+                                       },
+                                                                              {
+                                          "taxName": "ABC",
+                                          "taxValue": 100
+                                       }
+                                    ]
+                                 }
+                              },
+                                                            {
+                                 "commercialName": "ManagementFee",
+                                 "commercialInitialAmount": 1750,
+                                 "commercialCalculationPercentage": 5,
+                                 "commercialCalculationAmount": 0,
+                                 "commercialAmount": 87.5,
+                                 "commercialTotalAmount": 1837.5,
+                                 "commercialCurrency": null,
+                                 "commercialFareComponent": "Basic,YQ",
+                                 "fareBreakUp":                                  {
+                                    "baseFare": 1680,
+                                    "taxDetails":                                     [
+                                                                              {
+                                          "taxName": "YQ",
+                                          "taxValue": 157.5
+                                       },
+                                                                              {
+                                          "taxName": "RT",
+                                          "taxValue": 50
+                                       },
+                                                                              {
+                                          "taxName": "ABC",
+                                          "taxValue": 100
+                                       }
+                                    ]
+                                 }
+                              },
+                                                            {
+                                 "commercialName": "SectorWiseIncentive",
+                                 "commercialInitialAmount": 1750,
+                                 "commercialCalculationPercentage": 5,
+                                 "commercialCalculationAmount": 0,
+                                 "commercialAmount": 87.5,
+                                 "commercialTotalAmount": 1662.5,
+                                 "commercialCurrency": null,
+                                 "commercialFareComponent": "Basic,YQ",
+                                 "fareBreakUp":                                  {
+                                    "baseFare": 1520,
+                                    "taxDetails":                                     [
+                                                                              {
+                                          "taxName": "YQ",
+                                          "taxValue": 142.5
+                                       },
+                                                                              {
+                                          "taxName": "RT",
+                                          "taxValue": 50
+                                       },
+                                                                              {
+                                          "taxName": "ABC",
+                                          "taxValue": 100
+                                       }
+                                    ]
+                                 }
+                              },
+                                                            {
+                                 "commercialName": "ServiceCharge",
+                                 "commercialInitialAmount": 1750,
+                                 "commercialCalculationPercentage": 5,
+                                 "commercialCalculationAmount": 0,
+                                 "commercialAmount": 87.5,
+                                 "commercialTotalAmount": 1837.5,
+                                 "commercialCurrency": null,
+                                 "commercialFareComponent": "Basic,YQ",
+                                 "fareBreakUp":                                  {
+                                    "baseFare": 1680,
+                                    "taxDetails":                                     [
+                                                                              {
+                                          "taxName": "YQ",
+                                          "taxValue": 157.5
+                                       },
+                                                                              {
+                                          "taxName": "RT",
+                                          "taxValue": 50
+                                       },
+                                                                              {
+                                          "taxName": "ABC",
+                                          "taxValue": 100
+                                       }
+                                    ]
+                                 }
+                              },
+                                                            {
+                                 "commercialName": "Standard",
+                                 "commercialInitialAmount": 1650,
+                                 "commercialCalculationPercentage": 5,
+                                 "commercialCalculationAmount": 0,
+                                 "commercialAmount": 82.5,
+                                 "commercialTotalAmount": 1567.5,
+                                 "commercialCurrency": null,
+                                 "commercialFareComponent": "Basic,RT",
+                                 "fareBreakUp":                                  {
+                                    "baseFare": 1520,
+                                    "taxDetails":                                     [
+                                                                              {
+                                          "taxName": "YQ",
+                                          "taxValue": 150
+                                       },
+                                                                              {
+                                          "taxName": "RT",
+                                          "taxValue": 47.5
+                                       },
+                                                                              {
+                                          "taxName": "ABC",
+                                          "taxValue": 100
+                                       }
+                                    ]
+                                 }
+                              },
+                                                            {
+                                 "commercialName": "IssuanceFee",
+                                 "commercialInitialAmount": 1750,
+                                 "commercialCalculationPercentage": 5,
+                                 "commercialCalculationAmount": 0,
+                                 "commercialAmount": 87.5,
+                                 "commercialTotalAmount": 1837.5,
+                                 "commercialCurrency": null,
+                                 "commercialFareComponent": "Basic,YQ",
+                                 "fareBreakUp":                                  {
+                                    "baseFare": 1680,
+                                    "taxDetails":                                     [
+                                                                              {
+                                          "taxName": "YQ",
+                                          "taxValue": 157.5
+                                       },
+                                                                              {
+                                          "taxName": "RT",
+                                          "taxValue": 50
+                                       },
+                                                                              {
+                                          "taxName": "ABC",
+                                          "taxValue": 100
+                                       }
+                                    ]
+                                 }
+                              },
+                                                            {
+                                 "commercialName": "SegmentFee",
+                                 "commercialInitialAmount": 1670,
+                                 "commercialCalculationPercentage": 5,
+                                 "commercialCalculationAmount": 0,
+                                 "commercialAmount": 83.5,
+                                 "commercialTotalAmount": 1586.5,
+                                 "commercialCurrency": null,
+                                 "commercialFareComponent": "Basic,YQ",
+                                 "fareBreakUp":                                  {
+                                    "baseFare": 1444,
+                                    "taxDetails":                                     [
+                                                                              {
+                                          "taxName": "YQ",
+                                          "taxValue": 142.5
+                                       },
+                                                                              {
+                                          "taxName": "RT",
+                                          "taxValue": 47.5
+                                       },
+                                                                              {
+                                          "taxName": "ABC",
+                                          "taxValue": 100
+                                       }
+                                    ]
+                                 }
+                              },
+                                                            {
+                                 "commercialName": "Overriding",
+                                 "commercialInitialAmount": 1567.5,
+                                 "commercialCalculationPercentage": 10,
+                                 "commercialCalculationAmount": 0,
+                                 "commercialAmount": 156.75,
+                                 "commercialTotalAmount": 1410.75,
+                                 "commercialCurrency": null,
+                                 "commercialFareComponent": "Total",
+                                 "fareBreakUp":                                  {
+                                    "baseFare": 1368,
+                                    "taxDetails":                                     [
+                                                                              {
+                                          "taxName": "YQ",
+                                          "taxValue": 135
+                                       },
+                                                                              {
+                                          "taxName": "RT",
+                                          "taxValue": 42.75
+                                       },
+                                                                              {
+                                          "taxName": "ABC",
+                                          "taxValue": 90
+                                       }
+                                    ]
+                                 }
+                              },
+                                                            {
+                                 "commercialName": "PLB",
+                                 "commercialInitialAmount": 1503,
+                                 "commercialCalculationPercentage": 5,
+                                 "commercialCalculationAmount": 0,
+                                 "commercialAmount": 75.15,
+                                 "commercialTotalAmount": 1427.85,
+                                 "commercialCurrency": null,
+                                 "commercialFareComponent": "Basic,YQ",
+                                 "fareBreakUp":                                  {
+                                    "baseFare": 1299.6,
+                                    "taxDetails":                                     [
+                                                                              {
+                                          "taxName": "YQ",
+                                          "taxValue": 128.25
+                                       },
+                                                                              {
+                                          "taxName": "RT",
+                                          "taxValue": 42.75
+                                       },
+                                                                              {
+                                          "taxName": "ABC",
+                                          "taxValue": 90
+                                       }
+                                    ]
+                                 }
+                              }
+                           ]
+                        },
+                                                {
+                           "passengerType": "CHD",
+                           "commercialsApplied":                            [
+                              "Standard",
+                              "ManagementFee",
+                              "ServiceCharge",
+                              "Commission",
+                              "IssuanceFee",
+                              "SectorWiseIncentive",
+                              "SegmentFee",
+                              "Overriding",
+                              "PLB"
+                           ],
+                           "totalFare": 1500,
+                           "totalReceivables": 494.86249999999995,
+                           "totalPayables": 222,
+                           "fareBreakUp":                            {
+                              "baseFare": 1450,
+                              "taxDetails":                               [
+                                                                  {
+                                    "taxName": "YQ",
+                                    "taxValue": 30
+                                 },
+                                                                  {
+                                    "taxName": "RT",
+                                    "taxValue": 20
+                                 }
+                              ]
+                           },
+                           "commercialDetails":                            [
+                                                            {
+                                 "commercialName": "Standard",
+                                 "commercialInitialAmount": 1470,
+                                 "commercialCalculationPercentage": 5,
+                                 "commercialCalculationAmount": 0,
+                                 "commercialAmount": 73.5,
+                                 "commercialTotalAmount": 1396.5,
+                                 "commercialCurrency": null,
+                                 "commercialFareComponent": "Basic,RT",
+                                 "fareBreakUp":                                  {
+                                    "baseFare": 1377.5,
+                                    "taxDetails":                                     [
+                                                                              {
+                                          "taxName": "YQ",
+                                          "taxValue": 30
+                                       },
+                                                                              {
+                                          "taxName": "RT",
+                                          "taxValue": 19
+                                       }
+                                    ]
+                                 }
+                              },
+                                                            {
+                                 "commercialName": "ManagementFee",
+                                 "commercialInitialAmount": 1480,
+                                 "commercialCalculationPercentage": 5,
+                                 "commercialCalculationAmount": 0,
+                                 "commercialAmount": 74,
+                                 "commercialTotalAmount": 1554,
+                                 "commercialCurrency": null,
+                                 "commercialFareComponent": "Basic,YQ",
+                                 "fareBreakUp":                                  {
+                                    "baseFare": 1522.5,
+                                    "taxDetails":                                     [
+                                                                              {
+                                          "taxName": "YQ",
+                                          "taxValue": 31.5
+                                       },
+                                                                              {
+                                          "taxName": "RT",
+                                          "taxValue": 20
+                                       }
+                                    ]
+                                 }
+                              },
+                                                            {
+                                 "commercialName": "ServiceCharge",
+                                 "commercialInitialAmount": 1480,
+                                 "commercialCalculationPercentage": 5,
+                                 "commercialCalculationAmount": 0,
+                                 "commercialAmount": 74,
+                                 "commercialTotalAmount": 1554,
+                                 "commercialCurrency": null,
+                                 "commercialFareComponent": "Basic,YQ",
+                                 "fareBreakUp":                                  {
+                                    "baseFare": 1522.5,
+                                    "taxDetails":                                     [
+                                                                              {
+                                          "taxName": "YQ",
+                                          "taxValue": 31.5
+                                       },
+                                                                              {
+                                          "taxName": "RT",
+                                          "taxValue": 20
+                                       }
+                                    ]
+                                 }
+                              },
+                                                            {
+                                 "commercialName": "Commission",
+                                 "commercialInitialAmount": 1480,
+                                 "commercialCalculationPercentage": 5,
+                                 "commercialCalculationAmount": 0,
+                                 "commercialAmount": 74,
+                                 "commercialTotalAmount": 1406,
+                                 "commercialCurrency": null,
+                                 "commercialFareComponent": "Basic,YQ",
+                                 "fareBreakUp":                                  {
+                                    "baseFare": 1377.5,
+                                    "taxDetails":                                     [
+                                                                              {
+                                          "taxName": "YQ",
+                                          "taxValue": 28.5
+                                       },
+                                                                              {
+                                          "taxName": "RT",
+                                          "taxValue": 20
+                                       }
+                                    ]
+                                 }
+                              },
+                                                            {
+                                 "commercialName": "IssuanceFee",
+                                 "commercialInitialAmount": 1480,
+                                 "commercialCalculationPercentage": 5,
+                                 "commercialCalculationAmount": 0,
+                                 "commercialAmount": 74,
+                                 "commercialTotalAmount": 1554,
+                                 "commercialCurrency": null,
+                                 "commercialFareComponent": "Basic,YQ",
+                                 "fareBreakUp":                                  {
+                                    "baseFare": 1522.5,
+                                    "taxDetails":                                     [
+                                                                              {
+                                          "taxName": "YQ",
+                                          "taxValue": 31.5
+                                       },
+                                                                              {
+                                          "taxName": "RT",
+                                          "taxValue": 20
+                                       }
+                                    ]
+                                 }
+                              },
+                                                            {
+                                 "commercialName": "SectorWiseIncentive",
+                                 "commercialInitialAmount": 1480,
+                                 "commercialCalculationPercentage": 5,
+                                 "commercialCalculationAmount": 0,
+                                 "commercialAmount": 74,
+                                 "commercialTotalAmount": 1406,
+                                 "commercialCurrency": null,
+                                 "commercialFareComponent": "Basic,YQ",
+                                 "fareBreakUp":                                  {
+                                    "baseFare": 1377.5,
+                                    "taxDetails":                                     [
+                                                                              {
+                                          "taxName": "YQ",
+                                          "taxValue": 28.5
+                                       },
+                                                                              {
+                                          "taxName": "RT",
+                                          "taxValue": 20
+                                       }
+                                    ]
+                                 }
+                              },
+                                                            {
+                                 "commercialName": "SegmentFee",
+                                 "commercialInitialAmount": 1407.5,
+                                 "commercialCalculationPercentage": 5,
+                                 "commercialCalculationAmount": 0,
+                                 "commercialAmount": 70.375,
+                                 "commercialTotalAmount": 1337.125,
+                                 "commercialCurrency": null,
+                                 "commercialFareComponent": "Basic,YQ",
+                                 "fareBreakUp":                                  {
+                                    "baseFare": 1308.625,
+                                    "taxDetails":                                     [
+                                                                              {
+                                          "taxName": "YQ",
+                                          "taxValue": 28.5
+                                       },
+                                                                              {
+                                          "taxName": "RT",
+                                          "taxValue": 19
+                                       }
+                                    ]
+                                 }
+                              },
+                                                            {
+                                 "commercialName": "Overriding",
+                                 "commercialInitialAmount": 1396.5,
+                                 "commercialCalculationPercentage": 10,
+                                 "commercialCalculationAmount": 0,
+                                 "commercialAmount": 139.65,
+                                 "commercialTotalAmount": 1256.85,
+                                 "commercialCurrency": null,
+                                 "commercialFareComponent": "Total",
+                                 "fareBreakUp":                                  {
+                                    "baseFare": 1239.75,
+                                    "taxDetails":                                     [
+                                                                              {
+                                          "taxName": "YQ",
+                                          "taxValue": 27
+                                       },
+                                                                              {
+                                          "taxName": "RT",
+                                          "taxValue": 17.1
+                                       }
+                                    ]
+                                 }
+                              },
+                                                            {
+                                 "commercialName": "PLB",
+                                 "commercialInitialAmount": 1266.75,
+                                 "commercialCalculationPercentage": 5,
+                                 "commercialCalculationAmount": 0,
+                                 "commercialAmount": 63.337500000000006,
+                                 "commercialTotalAmount": 1203.4125,
+                                 "commercialCurrency": null,
+                                 "commercialFareComponent": "Basic,YQ",
+                                 "fareBreakUp":                                  {
+                                    "baseFare": 1177.7625,
+                                    "taxDetails":                                     [
+                                                                              {
+                                          "taxName": "YQ",
+                                          "taxValue": 25.65
+                                       },
+                                                                              {
+                                          "taxName": "RT",
+                                          "taxValue": 17.1
+                                       }
+                                    ]
+                                 }
+                              }
+                           ]
+                        }
+                     ]
+                  }],
+                  "ruleFlowName": "SpiceJet_India_China,StandardCommercialBase_9,ServiceChargeCommercialBase_9,IssuanceFeeCommercialBase_9,ManagementFeeCommercialBase_9,SectorWiseIncentiveCommercialBase_9,CommissionCommercialBase_9,CommissionCommercialCalculation_13,ManagementFeeCommercialCalculation_13,StandardCommercialCalculation_13,SegmentFeeCommercialBase_9,OverridingCommercialBase_9,SectorWiseIncentiveCommercialCalculation_13,ServiceChargeCommercialCalculation_13,ManagementFeeCommercialCalculation_13,ServiceChargeCommercialCalculation_13,StandardCommercialCalculation_13,IssuanceFeeCommercialCalculation_13,CommissionCommercialCalculation_13,IssuanceFeeCommercialCalculation_13,SectorWiseIncentiveCommercialCalculation_13,SegmentFeeCommercialCalculation_13,SegmentFeeCommercialCalculation_13,OverridingCommercialCalculation_13,PLBCommercialBase_9,PLBCommercialCalculation_13,OverridingCommercialCalculation_13,PLBCommercialCalculation_13",
+                  "selectedRow": "SpiceJet_India_China",
+                  "commonElements":                   {
+                     "supplier": "SpiceJet",
+                     "supplierMarket": "China",
+                     "segment": "Active",
+                     "contractValidity": 1486665000000,
+                     "productName": "Flights",
+                     "clientType": "B2B",
+                     "clientGroup": "TravelAgent",
+                     "clientName": "AkbarTravels",
+                     "rateType": null,
+                     "rateCode": null,
+                     "iatanumber": null
+                  },
+                  "commercialHead":                   [
+                                          {
+                        "commercialHeadName": "Standard",
+                        "nettOffCommercialHeadName": null,
+                        "commercialType": "Receivable",
+                        "settlementTransactionWise": false,
+                        "contractType": "Final",
+                        "commissionable": true,
+                        "markDownApplicable": false,
+                        "markDownClientType": null,
+                        "minimumMarkUpPercentage": 2,
+                        "maximumMarkUpPercentage": 10,
+                        "markUpClientType": "B2B",
+                        "status": "COMPLETED"
+                     },
+                                          {
+                        "commercialHeadName": "Overriding",
+                        "nettOffCommercialHeadName": "Standard",
+                        "commercialType": "Receivable",
+                        "settlementTransactionWise": false,
+                        "contractType": "Final",
+                        "commissionable": false,
+                        "markDownApplicable": false,
+                        "markDownClientType": null,
+                        "minimumMarkUpPercentage": 0,
+                        "maximumMarkUpPercentage": 0,
+                        "markUpClientType": null,
+                        "status": "COMPLETED"
+                     },
+                                          {
+                        "commercialHeadName": "PLB",
+                        "nettOffCommercialHeadName": "Overriding",
+                        "commercialType": "Receivable",
+                        "settlementTransactionWise": false,
+                        "contractType": "Final",
+                        "commissionable": false,
+                        "markDownApplicable": false,
+                        "markDownClientType": null,
+                        "minimumMarkUpPercentage": 0,
+                        "maximumMarkUpPercentage": 0,
+                        "markUpClientType": null,
+                        "status": "COMPLETED"
+                     },
+                                          {
+                        "commercialHeadName": "SectorWiseIncentive",
+                        "nettOffCommercialHeadName": null,
+                        "commercialType": "Receivable",
+                        "settlementTransactionWise": false,
+                        "contractType": "Final",
+                        "commissionable": false,
+                        "markDownApplicable": false,
+                        "markDownClientType": null,
+                        "minimumMarkUpPercentage": 0,
+                        "maximumMarkUpPercentage": 0,
+                        "markUpClientType": null,
+                        "status": "COMPLETED"
+                     },
+                                          {
+                        "commercialHeadName": "SegmentFee",
+                        "nettOffCommercialHeadName": "Standard",
+                        "commercialType": "Receivable",
+                        "settlementTransactionWise": false,
+                        "contractType": "Final",
+                        "commissionable": false,
+                        "markDownApplicable": false,
+                        "markDownClientType": null,
+                        "minimumMarkUpPercentage": 0,
+                        "maximumMarkUpPercentage": 0,
+                        "markUpClientType": null,
+                        "status": "COMPLETED"
+                     },
+                                          {
+                        "commercialHeadName": "IssuanceFee",
+                        "nettOffCommercialHeadName": null,
+                        "commercialType": "Payable",
+                        "settlementTransactionWise": true,
+                        "contractType": "Final",
+                        "commissionable": false,
+                        "markDownApplicable": false,
+                        "markDownClientType": null,
+                        "minimumMarkUpPercentage": 0,
+                        "maximumMarkUpPercentage": 0,
+                        "markUpClientType": null,
+                        "status": "COMPLETED"
+                     },
+                                          {
+                        "commercialHeadName": "ServiceCharge",
+                        "nettOffCommercialHeadName": null,
+                        "commercialType": "Payable",
+                        "settlementTransactionWise": false,
+                        "contractType": "Final",
+                        "commissionable": false,
+                        "markDownApplicable": false,
+                        "markDownClientType": null,
+                        "minimumMarkUpPercentage": 0,
+                        "maximumMarkUpPercentage": 0,
+                        "markUpClientType": null,
+                        "status": "COMPLETED"
+                     },
+                                          {
+                        "commercialHeadName": "Commission",
+                        "nettOffCommercialHeadName": null,
+                        "commercialType": "Receivable",
+                        "settlementTransactionWise": false,
+                        "contractType": "Provisional",
+                        "commissionable": false,
+                        "markDownApplicable": false,
+                        "markDownClientType": null,
+                        "minimumMarkUpPercentage": 0,
+                        "maximumMarkUpPercentage": 0,
+                        "markUpClientType": null,
+                        "status": "COMPLETED"
+                     },
+                                          {
+                        "commercialHeadName": "ManagementFee",
+                        "nettOffCommercialHeadName": null,
+                        "commercialType": "Payable",
+                        "settlementTransactionWise": false,
+                        "contractType": "Final",
+                        "commissionable": false,
+                        "markDownApplicable": false,
+                        "markDownClientType": null,
+                        "minimumMarkUpPercentage": 0,
+                        "maximumMarkUpPercentage": 0,
+                        "markUpClientType": null,
+                        "status": "COMPLETED"
+                     }
+                  ],
+                  "slabDetails":                   [
+                                          {
+                        "slabType": "TotalRevenue",
+                        "slabTypeValue": 1500,
+                        "isCompleted": false
+                     },
+                                          {
+                        "slabType": "TotalPassengers",
+                        "slabTypeValue": 4500,
+                        "isCompleted": false
+                     }
+                  ]
+               }
+            ]
+         }}]
+      }],
+      "facts": [      {
+         "key": "BusinessRuleIntake",
+         "value": {"org.drools.core.common.DefaultFactHandle": {"external-form": "0:1:1627634014:1627634014:1599:DEFAULT:NON_TRAIT:cnk.air_commercialscalculationengine.Root"}}
+      }]
+   }}
+}s

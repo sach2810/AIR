@@ -1,0 +1,263 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bus="http://www.coxandkings.com/integ/air/businessruleintake" xmlns:bus1="http://www.coxandkings.com/integ/suppl/businessruleintake_header">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <bus:root>
+         <bus1:MessageHeader>
+            <bus1:UserID>ABCD</bus1:UserID>
+            <bus1:TransactionID>123456</bus1:TransactionID>
+            <bus1:SessionID>Session</bus1:SessionID>
+            <bus1:OperationName>Search</bus1:OperationName>
+            <bus1:Status>SUCESS</bus1:Status>
+         </bus1:MessageHeader>
+         <!--1 or more repetitions:-->
+         <bus:BusinessRuleIntake>
+            <bus:CommonElements>
+               <bus:Supplier>Indigo</bus:Supplier>
+               <bus:SupplierMarket>India</bus:SupplierMarket>
+               <bus:ProductCategory>Transportation</bus:ProductCategory>
+               <bus:ProductCategorySubType>Flights</bus:ProductCategorySubType>
+               <bus:ContractValidity>2017-05-10T00:00:00</bus:ContractValidity>
+               <bus:IATANumber>123456</bus:IATANumber>
+               <bus:Segment>Active</bus:Segment>
+               <bus:CommercialType/>
+               <bus:ProductChain>Chain1</bus:ProductChain>
+               <bus:ProductBrand>Brand1</bus:ProductBrand>
+               <bus:ProductName>Flights</bus:ProductName>
+               <bus:ClientType>B2B</bus:ClientType>
+               <bus:ClientGroup>CG1</bus:ClientGroup>
+               <bus:ClientName>AkbarTravels</bus:ClientName>
+               <bus:RateType>RT1</bus:RateType>
+               <bus:RateCode>RC1</bus:RateCode>
+               <bus:SlabDetails>
+                  <bus:SlabType>TotalRevenue</bus:SlabType>
+                  <bus:SlabTypeValue>1500</bus:SlabTypeValue>
+               </bus:SlabDetails>
+               <bus:SlabDetails>
+                  <bus:SlabType>TotalPassengers</bus:SlabType>
+                  <bus:SlabTypeValue>4500</bus:SlabTypeValue>
+               </bus:SlabDetails>
+            </bus:CommonElements>
+            <bus:AdvancedDefinition>
+               <bus:TicketingDate>2017-02-10T00:00:00</bus:TicketingDate>
+               <bus:TravelDate>2017-04-10T00:00:00</bus:TravelDate>
+               <bus:SalesDate>2017-02-12T00:00:00</bus:SalesDate>
+               <bus:TravelType>SITI</bus:TravelType>
+               <bus:JourneyType>OneWay</bus:JourneyType>
+               <bus:FlightType>Via</bus:FlightType>
+               <bus:FlightLineType>Online</bus:FlightLineType>
+               <bus:CodeShareFlightIncluded>true</bus:CodeShareFlightIncluded>
+               <bus:TravelProductName>Flights</bus:TravelProductName>
+               <bus:From>
+                  <bus:Continent>Asia</bus:Continent>
+                  <bus:Country>India</bus:Country>
+                  <bus:City>Mumbai</bus:City>
+               </bus:From>
+               <bus:Via>
+                  <bus:Continent>Asia</bus:Continent>
+                  <bus:Country>India</bus:Country>
+                  <bus:City>Chennai</bus:City>
+               </bus:Via>
+               <bus:To>
+                  <bus:Continent>Asia</bus:Continent>
+                  <bus:Country>India</bus:Country>
+                  <bus:City>Delhi</bus:City>
+               </bus:To>
+               <bus:ConnectivitySupplier>Indigo</bus:ConnectivitySupplier>
+               <bus:ConnectivitySupplierType>LCC</bus:ConnectivitySupplierType>
+               <bus:CabinClass>Economy</bus:CabinClass>
+               <bus:RBD>S</bus:RBD>
+               <bus:FareBasisValue>YEEYEE</bus:FareBasisValue>
+               <bus:DealCode>DC01</bus:DealCode>
+               <bus:CredentialsName>Indigo</bus:CredentialsName>
+               <bus:BookingType>Online</bus:BookingType>
+               <bus:isAdvanceDefinition>false</bus:isAdvanceDefinition>
+            </bus:AdvancedDefinition>
+            <bus:AdditionalElements>
+               <bus:BaseElement attrName="FLIGHT_NUMBER" attrValue=" 402" isAdvanced="false">
+                  <!--You have a CHOICE of the next 2 items at this level-->
+                  <!--Zero or more repetitions:-->
+                  <bus:PassengerType attrName="PASSENGER_TYPE" attrValue="ADT" commercialsApplied="">
+                     <bus:BaseElementValue>1900</bus:BaseElementValue>
+                     <bus:BaseElementModTotalValue>1900</bus:BaseElementModTotalValue>
+                     <bus:FareBreakUp BaseFare="1600">
+                        <bus:TaxDetails>
+                           <bus:Tax TaxName="YQ" TaxValue="150"/>
+                           <bus:Tax TaxName="RT" TaxValue="50"/>
+                           <bus:Tax TaxName="ABC" TaxValue="100"/>
+                        </bus:TaxDetails>
+                     </bus:FareBreakUp>
+
+                  </bus:PassengerType>
+                  <bus:PassengerType attrName="PASSENGER_TYPE" attrValue="CHD" commercialsApplied="">
+                     <bus:BaseElementValue>1500</bus:BaseElementValue>
+                     <bus:BaseElementModTotalValue>1500</bus:BaseElementModTotalValue>
+                     <bus:FareBreakUp BaseFare="1450">
+                        <bus:TaxDetails>
+                           <bus:Tax TaxName="YQ" TaxValue="30"/>
+                           <bus:Tax TaxName="RT" TaxValue="20"/>
+                        </bus:TaxDetails>
+                     </bus:FareBreakUp>
+                  </bus:PassengerType>
+               </bus:BaseElement>
+               <bus:BaseElement attrName="FLIGHT_NUMBER" attrValue=" 303" isAdvanced="false">
+                  <bus:PassengerType attrName="PASSENGER_TYPE" attrValue="ADT" commercialsApplied="">
+                     <bus:BaseElementValue>1800</bus:BaseElementValue>
+                     <bus:BaseElementModTotalValue>1800</bus:BaseElementModTotalValue>
+                     <bus:FareBreakUp BaseFare="1300">
+                        <bus:TaxDetails>
+                           <bus:Tax TaxName="YQ" TaxValue="200"/>
+                           <bus:Tax TaxName="RT" TaxValue="300"/>
+                        </bus:TaxDetails>
+                     </bus:FareBreakUp>
+                  </bus:PassengerType>
+                  <bus:PassengerType attrName="PASSENGER_TYPE" attrValue="CHD" commercialsApplied="">
+                     <bus:BaseElementValue>1500</bus:BaseElementValue>
+                     <bus:BaseElementModTotalValue>1500</bus:BaseElementModTotalValue>
+                  </bus:PassengerType>
+               </bus:BaseElement>
+            </bus:AdditionalElements>
+                  <bus:LoyaltyBonus>
+                     <bus:FeeDetails>
+                        <bus:ApplicableCommercialHead>LicenceFees</bus:ApplicableCommercialHead>
+                        <bus:ApplicableCommercialAmount>1100</bus:ApplicableCommercialAmount>
+                     </bus:FeeDetails>
+                     <bus:FeeDetails>
+                        <bus:ApplicableCommercialHead>WebServiceFees</bus:ApplicableCommercialHead>
+                        <bus:ApplicableCommercialAmount>1700</bus:ApplicableCommercialAmount>
+                     </bus:FeeDetails>
+                     <bus:isAdultPassenger>false</bus:isAdultPassenger>
+                  </bus:LoyaltyBonus>
+                  <bus:LookToBook>
+                     <bus:NumberofLooks>1200</bus:NumberofLooks>
+                     <bus:NumberofBooks>1</bus:NumberofBooks>
+                  </bus:LookToBook>            
+         </bus:BusinessRuleIntake>
+
+
+
+         <bus:BusinessRuleIntake>
+            <bus:CommonElements>
+               <bus:Supplier>SpiceJet</bus:Supplier>
+               <bus:SupplierMarket>India</bus:SupplierMarket>
+               <bus:ProductCategory>Transportation</bus:ProductCategory>
+               <bus:ProductCategorySubType>Flights</bus:ProductCategorySubType>
+               <bus:ContractValidity>2017-05-10T00:00:00</bus:ContractValidity>
+               <bus:IATANumber>123456</bus:IATANumber>
+               <bus:Segment>Active</bus:Segment>
+               <bus:CommercialType/>
+               <bus:ProductChain>Chain1</bus:ProductChain>
+               <bus:ProductBrand>Brand1</bus:ProductBrand>
+               <bus:ProductName>Flights</bus:ProductName>
+               <bus:ClientType>B2B</bus:ClientType>
+               <bus:ClientGroup>CG1</bus:ClientGroup>
+               <bus:ClientName>AkbarTravels</bus:ClientName>
+               <bus:RateType>RT1</bus:RateType>
+               <bus:RateCode>RC1</bus:RateCode>
+               <bus:SlabDetails>
+                  <bus:SlabType>TotalRevenue</bus:SlabType>
+                  <bus:SlabTypeValue>1500</bus:SlabTypeValue>
+               </bus:SlabDetails>
+               <bus:SlabDetails>
+                  <bus:SlabType>TotalPassengers</bus:SlabType>
+                  <bus:SlabTypeValue>4500</bus:SlabTypeValue>
+               </bus:SlabDetails>
+            </bus:CommonElements>
+            <bus:AdvancedDefinition>
+               <bus:TicketingDate>2017-02-10T00:00:00</bus:TicketingDate>
+               <bus:TravelDate>2017-04-10T00:00:00</bus:TravelDate>
+               <bus:SalesDate>2017-02-12T00:00:00</bus:SalesDate>
+               <bus:TravelType>SITI</bus:TravelType>
+               <bus:JourneyType>OneWay</bus:JourneyType>
+               <bus:FlightType>Via</bus:FlightType>
+               <bus:FlightLineType>Online</bus:FlightLineType>
+               <bus:CodeShareFlightIncluded>true</bus:CodeShareFlightIncluded>
+               <bus:TravelProductName>Flights</bus:TravelProductName>
+               <bus:From>
+                  <bus:Continent>Asia</bus:Continent>
+                  <bus:Country>India</bus:Country>
+                  <bus:City>Mumbai</bus:City>
+               </bus:From>
+               <bus:Via>
+                  <bus:Continent>Asia</bus:Continent>
+                  <bus:Country>India</bus:Country>
+                  <bus:City>Chennai</bus:City>
+               </bus:Via>
+               <bus:To>
+                  <bus:Continent>Asia</bus:Continent>
+                  <bus:Country>India</bus:Country>
+                  <bus:City>Delhi</bus:City>
+               </bus:To>
+               <bus:ConnectivitySupplier>Indigo</bus:ConnectivitySupplier>
+               <bus:ConnectivitySupplierType>LCC</bus:ConnectivitySupplierType>
+               <bus:CabinClass>Economy</bus:CabinClass>
+               <bus:RBD>S</bus:RBD>
+               <bus:FareBasisValue>YEEYEE</bus:FareBasisValue>
+               <bus:DealCode>DC01</bus:DealCode>
+               <bus:CredentialsName>Indigo</bus:CredentialsName>
+               <bus:BookingType>Online</bus:BookingType>
+               <bus:isAdvanceDefinition>false</bus:isAdvanceDefinition>
+            </bus:AdvancedDefinition>
+            <bus:AdditionalElements>
+               <bus:BaseElement attrName="FLIGHT_NUMBER" attrValue=" 402" isAdvanced="false">
+                  <!--You have a CHOICE of the next 2 items at this level-->
+                  <!--Zero or more repetitions:-->
+                  <bus:PassengerType attrName="PASSENGER_TYPE" attrValue="ADT" commercialsApplied="">
+                     <bus:BaseElementValue>1900</bus:BaseElementValue>
+                     <bus:BaseElementModTotalValue>1900</bus:BaseElementModTotalValue>
+                     <bus:FareBreakUp BaseFare="1600">
+                        <bus:TaxDetails>
+                           <bus:Tax TaxName="YQ" TaxValue="150"/>
+                           <bus:Tax TaxName="RT" TaxValue="50"/>
+                           <bus:Tax TaxName="ABC" TaxValue="100"/>
+                        </bus:TaxDetails>
+                     </bus:FareBreakUp>
+
+                  </bus:PassengerType>
+                  <bus:PassengerType attrName="PASSENGER_TYPE" attrValue="CHD" commercialsApplied="">
+                     <bus:BaseElementValue>1500</bus:BaseElementValue>
+                     <bus:BaseElementModTotalValue>1500</bus:BaseElementModTotalValue>
+                     <bus:FareBreakUp BaseFare="1450">
+                        <bus:TaxDetails>
+                           <bus:Tax TaxName="YQ" TaxValue="30"/>
+                           <bus:Tax TaxName="RT" TaxValue="20"/>
+                        </bus:TaxDetails>
+                     </bus:FareBreakUp>
+                  </bus:PassengerType>
+               </bus:BaseElement>
+<!--               <bus:BaseElement attrName="FLIGHT_NUMBER" attrValue=" 303" isAdvanced="false">
+                  <bus:PassengerType attrName="PASSENGER_TYPE" attrValue="ADT" commercialsApplied="">
+                     <bus:BaseElementValue>1800</bus:BaseElementValue>
+                     <bus:BaseElementModTotalValue>1800</bus:BaseElementModTotalValue>
+                     <bus:FareBreakUp BaseFare="1300">
+                        <bus:TaxDetails>
+                           <bus:Tax TaxName="YQ" TaxValue="200"/>
+                           <bus:Tax TaxName="RT" TaxValue="300"/>
+                        </bus:TaxDetails>
+                     </bus:FareBreakUp>
+                  </bus:PassengerType>
+                  <bus:PassengerType attrName="PASSENGER_TYPE" attrValue="CHD" commercialsApplied="">
+                     <bus:BaseElementValue>1500</bus:BaseElementValue>
+                     <bus:BaseElementModTotalValue>1500</bus:BaseElementModTotalValue>
+                  </bus:PassengerType>
+               </bus:BaseElement>-->
+            </bus:AdditionalElements>
+                              <bus:LoyaltyBonus>
+                     <bus:FeeDetails>
+                        <bus:ApplicableCommercialHead>LicenceFees</bus:ApplicableCommercialHead>
+                        <bus:ApplicableCommercialAmount>1100</bus:ApplicableCommercialAmount>
+                     </bus:FeeDetails>
+                     <bus:FeeDetails>
+                        <bus:ApplicableCommercialHead>WebServiceFees</bus:ApplicableCommercialHead>
+                        <bus:ApplicableCommercialAmount>1700</bus:ApplicableCommercialAmount>
+                     </bus:FeeDetails>
+                     <bus:isAdultPassenger>true</bus:isAdultPassenger>
+                  </bus:LoyaltyBonus>
+                                    <bus:LookToBook>
+                     <bus:NumberofLooks>2001</bus:NumberofLooks>
+                     <bus:NumberofBooks>1</bus:NumberofBooks>
+                  </bus:LookToBook>
+         </bus:BusinessRuleIntake>
+         
+      </bus:root>
+   </soapenv:Body>
+</soapenv:Envelope>

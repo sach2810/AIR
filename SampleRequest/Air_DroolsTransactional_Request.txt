@@ -1,0 +1,223 @@
+{ "lookup" : "ksession",
+  "commands" : [ 
+    
+    { "insert" : {"out-identifier":"BusinessRuleIntake","return-object":false,"entry-point":"DEFAULT",
+    "object":{"cnk.air_commercialscalculationengine.Root":{
+      
+        "header":{
+    		"transactionID":"12345",
+    		"sessionId":"abc@123",
+    		"operationName":"Search",
+    		"userID":"Sachin"
+    		},
+    	
+      "businessRuleIntake": [
+        {
+          "commonElements": {
+            "supplier": "Indigo",
+            "supplierMarket": "India",
+            "contractValidity": "2017-02-10T00:00:00+05:30",
+            "productName": "Flights",
+            "segment":"Active",
+            "clientType":"B2B",
+            "clientGroup":"TravelAgent",
+            "clientName":"AkbarTravels",
+            "iatanumber":"123455"	
+          },
+          "slabDetails" : [
+          {
+            "slabType": "TotalRevenue",
+            "slabTypeValue": "1500"
+          },
+          {
+            "slabType": "TotalPassengers",
+            "slabTypeValue": "4500"
+          }
+        ],
+          "advancedDefinition": {
+        "ticketingDate": "2017-02-10T00:00:00+05:30",
+        "travelDate": "2017-04-10T00:00:00+05:30",
+        "travelType": "SITI",
+        "journeyType": "OneWay",
+        "flightType": "Via",
+        "flightLineType": "Online",
+        "codeShareFlightIncluded": "true",
+        "travelProductName": "Flights",
+        "fromContinent": "Asia",
+        "fromCountry": "India",
+        "fromCity": "Mumbai",
+        "viaContinent": "Asia",
+        "viaCountry": "India",
+        "viaCity": "Chennai",
+        "toContinent": "Asia",
+        "toCountry": "India",
+        "toCity": "Delhi",
+        "connectivitySupplierType": "LCC",        
+        "connectivitySupplier": "Indigo",
+        "cabinClass": "Economy",
+        "rbd": "S",
+        "fareBasisValue": "YEEYEE",
+        "dealCode": "DC01",
+        "credentialsName": "Indigo",
+        "bookingType": "Online"
+      },
+      "flightDetails": [
+          {
+            "flightNumber": "402",
+            "flightTiming": "2017-04-10T06:00:00+05:30",
+            "passengerDetails": [
+              {
+                "passengerType": "ADT",
+                "totalFare": "1900",
+                "fareBreakUp": {
+                  "baseFare": "1600",
+                  "taxDetails" :[
+                      {
+                        "taxName": "YQ",
+                        "taxValue": "150"
+                      },
+                      {
+                        "taxName": "RT",
+                        "taxValue": "50"
+                      },
+                      {
+                        "taxName": "ABC",
+                        "taxValue": "100"
+                      }
+                    ]
+                }
+              },
+              {
+                "passengerType": "CHD",
+                "totalFare": "1500",
+                "fareBreakUp": {
+                  "baseFare": "1450",
+                  "taxDetails": [
+                      {
+                        "taxName": "YQ",
+                        "taxValue": "30"
+                      },
+                      {
+                        "taxName": "RT",
+                        "taxValue": "20"
+                      }
+                    ]
+                }
+              }
+            ]
+          },
+          {
+            "flightNumber": "303",
+            "flightTiming": "2017-04-10T06:00:00+05:30",
+            "passengerDetails": [
+              {
+                "passengerType": "ADT",
+                "totalFare": "1800",
+                "fareBreakUp": {
+                  "baseFare": "1300",
+                  "taxDetails" :[
+                      {
+                        "taxName": "YQ",
+                        "taxValue": "200"
+                      },
+                      {
+                        "taxName": "RT",
+                        "taxValue": "300"
+                      }
+                    ]
+                }
+              },
+              {
+                "passengerType": "CHD",
+                "totalFare": "1500"
+              }
+            ]
+          }
+          ]
+        },
+        {
+        "commonElements": {
+            "supplier": "SpiceJet",
+            "supplierMarket": "China",
+            "contractValidity": "2017-02-10T00:00:00+05:30",
+            "productName": "Flights",
+            "segment":"Active",
+            "clientType":"B2B",
+            "clientGroup":"TravelAgent",
+            "clientName":"AkbarTravels",
+            "IATAANumber":"123455"	
+          },
+          "slabDetails" : [
+          {
+            "slabType": "TotalRevenue",
+            "slabTypeValue": "1500"
+          },
+          {
+            "slabType": "TotalPassengers",
+            "slabTypeValue": "4500"
+          }
+        ],
+          "advancedDefinition":{
+          	"ticketingDate": "2017-03-10T00:00:00+05:30"
+          	},
+          "flightDetails": [
+          {
+            "flightNumber": "402",
+            "flightTiming": "2017-04-10T06:00:00+05:30",
+            "passengerDetails": [
+              {
+                "passengerType": "ADT",
+                "totalFare": "1900",
+                "fareBreakUp": {
+                  "baseFare": "1600",
+                  "taxDetails" :[
+                      {
+                        "taxName": "YQ",
+                        "taxValue": "150"
+                      },
+                      {
+                        "taxName": "RT",
+                        "taxValue": "50"
+                      },
+                      {
+                        "taxName": "ABC",
+                        "taxValue": "100"
+                      }
+                    ]
+                }
+              },
+              {
+                "passengerType": "CHD",
+                "totalFare": "1500",
+                "fareBreakUp": {
+                  "baseFare": "1450",
+                  "taxDetails": [
+                      {
+                        "taxName": "YQ",
+                        "taxValue": "30"
+                      },
+                      {
+                        "taxName": "RT",
+                        "taxValue": "20"
+                      }
+                    ]
+                }
+              }
+            ]
+          }
+          ]
+        }
+        ]
+        
+      
+      
+      	
+        }}}},
+         
+        
+   
+	    
+		 
+    { "fire-all-rules" : {} },{"get-objects": {"out-identifier":"Response"}}
+  ]
+}
